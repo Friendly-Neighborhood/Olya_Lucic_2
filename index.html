@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Чому обирають мої тури — Ольга Лучич</title>
-    <!-- Fonts: Montserrat, Caveat -->
+    <title>Ольга Лучич</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><circle cx=%2216%22 cy=%2216%22 r=%2215%22 fill=%22none%22/><clipPath id=%22c%22><circle cx=%2216%22 cy=%2216%22 r=%2215%22/></clipPath><g clip-path=%22url(%23c)%22><rect width=%2232%22 height=%2232%22 fill=%22%23FFFFFF%22/><rect y=%220%22 width=%2232%22 height=%2210.6%22 fill=%22%23EF3340%22/><rect y=%2221.4%22 width=%2232%22 height=%2210.6%22 fill=%22%23EF3340%22/></g></svg>"> <!-- Tailwind Config Customization -->
+  <!-- Fonts: Montserrat, Caveat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -34,7 +35,7 @@
     </script>
     <style>
 .hero-bg {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.1) 100%), 
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.1) 100%), 
                 url('./ChatGPT Image 24 сент. 2026 г., 14_13_42.png') center/cover no-repeat;
 }
 
@@ -293,18 +294,24 @@ img, svg {
                 <p class="text-[10px] sm:text-xs uppercase tracking-widest mt-1 opacity-80">Гід у Відні та Австрії</p>
             </a>
 
-            <div class="hidden lg:flex items-center justify-end gap-1 xl:gap-2 text-[11px] xl:text-[14px] font-semibold tracking-wide">
-                <a href="#about" class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-orange-300 transition-colors">Про мене</a>
-                <a href="#why-me" class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-orange-300 transition-colors">Переваги</a>
-                <a href="#tours" class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-orange-300 transition-colors">Тури</a>
-                <a href="#how-to-book" class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-orange-300 transition-colors">Бронювання</a>
-                <a href="#reviews" class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-orange-300 transition-colors">Відгуки</a>
-                <a href="#contacts" class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-orange-300 transition-colors">Контакти</a>
-            </div>
+            <div class="flex items-center justify-end gap-2">
+                <div class="hidden lg:flex items-center justify-end gap-1 xl:gap-2 text-[11px] xl:text-[14px] font-semibold tracking-wide">
+                    <a href="#about" class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-orange-300 transition-colors">Про мене</a>
+                    <a href="#why-me" class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-orange-300 transition-colors">Переваги</a>
+                    <a href="#tours" class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-orange-300 transition-colors">Тури</a>
+                    <a href="#how-to-book" class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-orange-300 transition-colors">Бронювання</a>
+                    <a href="#reviews" class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-orange-300 transition-colors">Відгуки</a>
+                    <a href="#contacts" class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-orange-300 transition-colors">Контакти</a>
+                </div>
 
-            <button id="mobileMenuBtn" type="button" aria-label="Відкрити меню" aria-controls="mobileMenu" aria-expanded="false" class="lg:hidden shrink-0 w-12 h-12 inline-flex items-center justify-center rounded-xl bg-white text-slate-900 shadow-xl border border-white/80 hover:bg-slate-100 active:scale-95 transition-all">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-            </button>
+                <button type="button" data-lang-toggle data-lang-mode="compact" aria-label="Переключити на російську" class="shrink-0 h-10 min-w-10 px-3 inline-flex items-center justify-center rounded-xl border border-white/60 bg-white/15 text-white font-extrabold text-sm tracking-wide backdrop-blur-md shadow-lg hover:bg-white hover:text-slate-900 active:scale-95 transition-all">
+                    <span data-lang-label>RU</span>
+                </button>
+
+                <button id="mobileMenuBtn" type="button" aria-label="Відкрити меню" aria-controls="mobileMenu" aria-expanded="false" class="lg:hidden shrink-0 w-12 h-12 inline-flex items-center justify-center rounded-xl bg-white text-slate-900 shadow-xl border border-white/80 hover:bg-slate-100 active:scale-95 transition-all">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
 
             <div id="mobileMenu" class="hidden lg:hidden absolute top-full left-0 right-0 mt-3 p-2.5 rounded-2xl bg-white/95 text-slate-900 backdrop-blur-xl border border-white/80 shadow-2xl">
                 <a href="#home" class="block px-4 py-3 rounded-xl text-sm font-semibold hover:bg-slate-100 active:bg-slate-200 transition-colors">Головна</a>
@@ -319,7 +326,7 @@ img, svg {
 
         <!-- Головний контент Hero -->
         <div class="hero-main relative z-10 my-auto max-w-7xl mx-auto w-full py-8 flex flex-col lg:flex-row items-center justify-between gap-8">
-            <div class="hero-copy max-w-2xl -ml-12 mt-16">
+            <div class="hero-copy max-w-2xl lg:-ml-12 lg:mt-16">
                 <h2 class="hero-title text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 drop-shadow-lg">
                     АВТОРСЬКІ ТУРИ <br>
                     <span class="hero-line whitespace-nowrap">
@@ -623,10 +630,7 @@ img, svg {
         <div class="max-w-7xl mx-auto relative z-10">
             <!-- Заголовок -->
             <div class="text-center mb-8">
-                <span class="text-[#E67E22] font-bold text-xs uppercase tracking-widest block mb-1">
-                    НАЙБЛИЖЧІ ПОДОРОЖІ
-                </span>
-                <h2 class="text-2xl md:text-3xl font-black text-gray-900 tracking-tight uppercase">
+                <h2 class="text-3xl md:text-4xl font-black text-gray-900 tracking-tight uppercase">
                     ПОПУЛЯРНІ ТУРИ
                 </h2>
                 <p class="text-gray-600 text-sm md:text-base mt-1 font-medium">
@@ -637,7 +641,7 @@ img, svg {
             <!-- Оболочка слайдера со стрелками -->
             <div class="relative group">
                 <!-- Кнопка «Влево» -->
-                <button id="prevBtn" aria-label="Previous tour" class="absolute -left-2 md:-left-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white/90 backdrop-blur-md text-gray-700 hover:text-blue-600 rounded-full shadow-md flex items-center justify-center transition-all hover:scale-110 focus:outline-none border border-blue-50">
+                <button id="prevBtn" aria-label="Попередній тур" class="absolute -left-2 md:-left-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white/90 backdrop-blur-md text-gray-700 hover:text-blue-600 rounded-full shadow-md flex items-center justify-center transition-all hover:scale-110 focus:outline-none border border-blue-50">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path>
                     </svg>
@@ -827,7 +831,7 @@ img, svg {
                 </div>
 
                 <!-- Кнопка «Вправо» -->
-                <button id="nextBtn" aria-label="Next tour" class="absolute -right-2 md:-right-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white/90 backdrop-blur-md text-gray-700 hover:text-blue-600 rounded-full shadow-md flex items-center justify-center transition-all hover:scale-110 focus:outline-none border border-blue-50">
+                <button id="nextBtn" aria-label="Наступний тур" class="absolute -right-2 md:-right-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white/90 backdrop-blur-md text-gray-700 hover:text-blue-600 rounded-full shadow-md flex items-center justify-center transition-all hover:scale-110 focus:outline-none border border-blue-50">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
                     </svg>
@@ -921,7 +925,7 @@ img, svg {
         <!-- Оболочка слайдера со стрелками -->
         <div class="relative group max-w-3xl mx-auto">
             <!-- Кнопка «Влево» -->
-            <button id="reviewsPrevBtn" aria-label="Previous review" class="absolute -left-4 sm:-left-12 md:-left-16 top-1/2 -translate-y-1/2 z-20 w-12 h-12 md:w-14 md:h-14 bg-white text-gray-800 hover:text-orange-500 rounded-full shadow-xl flex items-center justify-center transition-all hover:scale-110 focus:outline-none border border-gray-200">
+            <button id="reviewsPrevBtn" aria-label="Попередній відгук" class="absolute -left-4 sm:-left-12 md:-left-16 top-1/2 -translate-y-1/2 z-20 w-12 h-12 md:w-14 md:h-14 bg-white text-gray-800 hover:text-orange-500 rounded-full shadow-xl flex items-center justify-center transition-all hover:scale-110 focus:outline-none border border-gray-200">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path>
                 </svg>
@@ -1013,7 +1017,7 @@ img, svg {
             </div>
 
             <!-- Кнопка «Вправо» -->
-            <button id="reviewsNextBtn" aria-label="Next review" class="absolute -right-4 sm:-right-12 md:-right-16 top-1/2 -translate-y-1/2 z-20 w-12 h-12 md:w-14 md:h-14 bg-white text-gray-800 hover:text-orange-500 rounded-full shadow-xl flex items-center justify-center transition-all hover:scale-110 focus:outline-none border border-gray-200">
+            <button id="reviewsNextBtn" aria-label="Наступний відгук" class="absolute -right-4 sm:-right-12 md:-right-16 top-1/2 -translate-y-1/2 z-20 w-12 h-12 md:w-14 md:h-14 bg-white text-gray-800 hover:text-orange-500 rounded-full shadow-xl flex items-center justify-center transition-all hover:scale-110 focus:outline-none border border-gray-200">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
                 </svg>
@@ -1074,6 +1078,12 @@ img, svg {
             </a>
 
         </div>
+
+        <!-- Перемикач мови -->
+        <button type="button" data-lang-toggle data-lang-mode="full" aria-label="Переключити на російську" class="w-full mb-8 py-3.5 px-6 inline-flex items-center justify-center gap-2.5 rounded-2xl border border-slate-200 bg-slate-50 text-slate-800 font-bold text-sm shadow-sm hover:bg-white hover:border-orange-200 hover:text-orange-600 hover:shadow-md active:scale-[0.99] transition-all">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21a9 9 0 100-18 9 9 0 000 18zm0 0c2.21 0 4-4.03 4-9s-1.79-9-4-9-4 4.03-4 9 1.79 9 4 9zm-8.5-6h17M3.5 9h17"></path></svg>
+            <span data-lang-label>Русский</span>
+        </button>
 
         <!-- Копирайт -->
         <div class="text-xs sm:text-sm text-gray-500 font-medium pt-6 border-t border-gray-100">
@@ -1214,17 +1224,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!menuBtn || !menu) return;
 
+    const menuLabel = (isOpen) => {
+        const isRussian = document.documentElement.lang === 'ru';
+        if (isOpen) return isRussian ? 'Закрыть меню' : 'Закрити меню';
+        return isRussian ? 'Открыть меню' : 'Відкрити меню';
+    };
+
     const closeMenu = () => {
         menu.classList.add('hidden');
         menuBtn.setAttribute('aria-expanded', 'false');
-        menuBtn.setAttribute('aria-label', 'Відкрити меню');
+        menuBtn.setAttribute('aria-label', menuLabel(false));
     };
 
     menuBtn.addEventListener('click', () => {
         const willOpen = menu.classList.contains('hidden');
         menu.classList.toggle('hidden');
         menuBtn.setAttribute('aria-expanded', String(willOpen));
-        menuBtn.setAttribute('aria-label', willOpen ? 'Закрити меню' : 'Відкрити меню');
+        menuBtn.setAttribute('aria-label', menuLabel(willOpen));
     });
 
     menu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
@@ -1236,6 +1252,105 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', () => {
         if (window.innerWidth >= 1024) closeMenu();
     });
+});
+</script>
+
+<script>
+// === UA / RU language switcher ===
+document.addEventListener('DOMContentLoaded', () => {
+    const uaToRu = {"Гід у Відні та Австрії":"Гид в Вене и Австрии","Про мене":"Обо мне","Переваги":"Преимущества","Тури":"Туры","Бронювання":"Бронирование","Відгуки":"Отзывы","Контакти":"Контакты","Головна":"Главная","АВТОРСЬКІ ТУРИ":"АВТОРСКИЕ ТУРЫ","ВІДНЮ":"ВЕНЕ","ТА":"И","АВСТРІЇ":"АВСТРИИ","Комфортні подорожі з душею, які залишають спогади на все життя":"Комфортные путешествия с душой, которые оставляют воспоминания на всю жизнь","Переглянути тури":"Посмотреть туры","ТУРИ, ЯКІ":"ТУРЫ, КОТОРЫЕ","ЗАКОХУЮТЬ":"ВЛЮБЛЯЮТ","З ПЕРШОГО":"С ПЕРВОГО","ПОГЛЯДУ":"ВЗГЛЯДА","АВТОБУСНІ ТУРИ":"АВТОБУСНЫЕ ТУРЫ","комфортні групові подорожі Європою":"комфортные групповые путешествия по Европе","АВТОРСЬКИЙ ПІДХІД":"АВТОРСКИЙ ПОДХОД","унікальні маршрути та програми":"уникальные маршруты и программы","ТУРБОТА ТА ПІДТРИМКА":"ЗАБОТА И ПОДДЕРЖКА","підтримка 24/7 під час подорожі":"поддержка 24/7 во время путешествия","МАЛІ ГРУПИ":"МАЛЫЕ ГРУППЫ","дружня атмосфера та нові знайомства":"дружеская атмосфера и новые знакомства","ПРО МЕНЕ":"ОБО МНЕ","Привіт! Я —":"Привет! Я —","Ваш гід у світі яскравих подорожей!":"Ваш гид в мире ярких путешествий!","Я організовую та супроводжую авторські тури по всьому світу. Обожнюю відкривати нові місця разом з вами, ділитися атмосферою країн та створювати подорожі, які залишаються в серці назавжди.":"Я организую и сопровождаю авторские туры по всему миру. Обожаю открывать новые места вместе с вами, делиться атмосферой стран и создавать путешествия, которые навсегда остаются в сердце.","Австрія":"Австрия","Ісландія":"Исландия","Індія":"Индия","Доломіти":"Доломиты","Азори":"Азорские острова","і ще багато інших дивовижних місць!":"и ещё много других удивительных мест!","Чому обирають":"Почему выбирают","мої тури?":"мои туры?","Кожна подорож продумана так, щоб ви відпочивали душею та тілом.":"Каждое путешествие продумано так, чтобы вы отдыхали душой и телом.","Авторські маршрути":"Авторские маршруты","Затишні локації, секретні оглядові майданчики та атмосфера без туристичного натовпу.":"Уютные локации, секретные смотровые площадки и атмосфера без туристических толп.","Унікальна програма":"Уникальная программа","Гнучкість у всьому":"Гибкость во всём","Ніякого поспіху. Змінилася погода чи настрій? Легко адаптуємо план під вас.":"Никакой спешки. Изменилась погода или настроение? Легко адаптируем план под вас.","Комфортний ритм":"Комфортный ритм","Індивідуальна турбота":"Индивидуальная забота","Допоможу з вибором кав'ярні, підкажу найкращі ракурси для фото та відповілю на все.":"Помогу с выбором кафе, подскажу лучшие ракурсы для фото и отвечу на все вопросы.","Увага до деталей":"Внимание к деталям","Дружня атмосфера":"Дружеская атмосфера","Подорожі невеликими компаніями. Легке спілкування, душевність і нові друзі.":"Путешествия небольшими компаниями. Лёгкое общение, душевность и новые друзья.","Затишне коло":"Уютный круг","Супровід 24/7":"Сопровождение 24/7","Я на зв'язку від моменту бронювання до вашого повернення додому. Повний спокій.":"Я на связи с момента бронирования до вашего возвращения домой. Полное спокойствие.","Безпека та затишок":"Безопасность и уют","Яскраві спогади":"Яркие воспоминания","Ви привезете з подорожі не лише масу емоцій, а й чудові фотографії на згадку.":"Вы привезёте из путешествия не только массу эмоций, но и замечательные фотографии на память.","Незабутні моменти":"Незабываемые моменты","НАЙБЛИЖЧІ ПОДОРОЖІ":"БЛИЖАЙШИЕ ПУТЕШЕСТВИЯ","ПОПУЛЯРНІ ТУРИ":"ПОПУЛЯРНЫЕ ТУРЫ","Найкращі маршрути для незабутніх вражень":"Лучшие маршруты для незабываемых впечатлений","26-27 ВЕРЕСНЯ":"26-27 СЕНТЯБРЯ","ВЕНЕЦІЯ":"ВЕНЕЦИЯ","цілий день на морі!":"целый день на море!","3 дні / 2 ночі":"3 дня / 2 ночи","Детальніше":"Подробнее","7-17 ЛИСТОПАДА":"7-17 НОЯБРЯ","ІНДІЯ":"ИНДИЯ","унікальний тур з комфортом і безпекою":"уникальный тур с комфортом и безопасностью","10 днів":"10 дней","12-15 ЖОВТНЯ":"12-15 ОКТЯБРЯ","АВСТРІЯ":"АВСТРИЯ","затишні альпійські пейзажі та Відень":"уютные альпийские пейзажи и Вена","4 дні / 3 ночі":"4 дня / 3 ночи","20-25 ЖОВТНЯ":"20-25 ОКТЯБРЯ","РИМ ТА ВАТИКАН":"РИМ И ВАТИКАН","велична архітектура та видатні місця":"величественная архитектура и знаковые места","5 днів / 4 ночі":"5 дней / 4 ночи","1-5 ЛИСТОПАДА":"1-5 НОЯБРЯ","романтика, Лувр та Ейфелева вежа":"романтика, Лувр и Эйфелева башня","10-12 ЛИСТОПАДА":"10-12 НОЯБРЯ","казкова атмосфера та старовинні вулички":"сказочная атмосфера и старинные улочки","18-24 ЛИСТОПАДА":"18-24 НОЯБРЯ","архітектура Ґауді та тепле море":"архитектура Гауди и тёплое море","7 днів / 6 ночей":"7 дней / 6 ночей","1-3 ГРУДНЯ":"1-3 ДЕКАБРЯ","термальні купальні та вечірній Дунай":"термальные купальни и вечерний Дунай","Як забронювати":"Как забронировать","Три кроки до вашої ідеальної подорожі без зайвого клопоту.":"Три шага до вашего идеального путешествия без лишних хлопот.","Написали":"Написали","Зв'яжіться зі мною у зручному месенджері, оберіть напрямок та бажану дату.":"Свяжитесь со мной в удобном мессенджере, выберите направление и желаемую дату.","Узгодили час":"Согласовали время","Обговоримо всі деталі майбутньої програми, зручний час та організаційні нюанси.":"Обсудим все детали будущей программы, удобное время и организационные нюансы.","Зустрілись":"Встретились","Зустрічаємось у Відні та вирушаємо насолоджуватися новими емоціями!":"Встречаемся в Вене и отправляемся наслаждаться новыми эмоциями!","ЩО КАЖУТЬ МОЇ МАНДРІВНИКИ":"ЧТО ГОВОРЯТ МОИ ПУТЕШЕСТВЕННИКИ","«Це була найкраща подорож у моєму житті! Ольга продумала все до дрібниць, тур був комфортним і дуже насиченим. Рекомендую від щирого серця!»":"«Это было лучшее путешествие в моей жизни! Ольга продумала всё до мелочей, тур был комфортным и очень насыщенным. Рекомендую от всего сердца!»","Марина, Київ":"Марина, Киев","«Рим вражає своєю величчю! Дуже зручно, що все продумано до дрібниць: готелі, трансфери, екскурсії. Жодних турбот, тільки насолода відпочинком.»":"«Рим впечатляет своим величием! Очень удобно, что всё продумано до мелочей: отели, трансферы, экскурсии. Никаких забот, только удовольствие от отдыха.»","Лукас, Львів":"Лукас, Львов","«Париж закохав у себе з першої секунди. Неймовірна атмосфера, чудовий супровід групи та комфортний автобус. Обов'язково поїду з вами ще!»":"«Париж влюбил в себя с первой секунды. Невероятная атмосфера, отличное сопровождение группы и комфортный автобус. Обязательно поеду с вами ещё!»","Максим, Одеса":"Максим, Одесса","«Казкова Прага, неймовірна архітектура та смачне пиво. Сервіс на найвищому рівні. Дякую команді за чудові вихідні!»":"«Сказочная Прага, невероятная архитектура и вкусное пиво. Сервис на высшем уровне. Спасибо команде за прекрасные выходные!»","Андрій, Харків":"Андрей, Харьков","Авторські тури по Відню та Австрії":"Авторские туры по Вене и Австрии","© 2026 Olya Lucic. Всі права захищені.":"© 2026 Olya Lucic. Все права защищены."};
+    const ruToUa = Object.fromEntries(Object.entries(uaToRu).map(([ua, ru]) => [ru, ua]));
+    const attrUaToRu = {"На головну":"На главную","Відкрити меню":"Открыть меню","Закрити меню":"Закрыть меню","Попередній тур":"Предыдущий тур","Наступний тур":"Следующий тур","Попередній відгук":"Предыдущий отзыв","Наступний відгук":"Следующий отзыв","Австрія":"Австрия","Ісландія":"Исландия","Індія":"Индия","Доломіти":"Доломиты","Азори":"Азорские острова","Мадейра":"Мадейра","Венеція":"Венеция","Рим":"Рим","Париж":"Париж","Прага":"Прага","Барселона":"Барселона","Будапешт":"Будапешт","Марина":"Марина","Лукас":"Лукас","Максим":"Максим","Андрій":"Андрей"};
+    const attrRuToUa = Object.fromEntries(Object.entries(attrUaToRu).map(([ua, ru]) => [ru, ua]));
+
+    const translateTextNodes = (map) => {
+        const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+        const nodes = [];
+        while (walker.nextNode()) nodes.push(walker.currentNode);
+
+        nodes.forEach((node) => {
+            const parentTag = node.parentElement?.tagName;
+            if (parentTag === 'SCRIPT' || parentTag === 'STYLE') return;
+            const raw = node.nodeValue;
+            const trimmed = raw.trim();
+            if (!trimmed || !(trimmed in map)) return;
+            const leading = raw.match(/^\s*/)?.[0] || '';
+            const trailing = raw.match(/\s*$/)?.[0] || '';
+            node.nodeValue = leading + map[trimmed] + trailing;
+        });
+    };
+
+    const translateAttributes = (map) => {
+        document.querySelectorAll('[aria-label], [alt]').forEach((el) => {
+            ['aria-label', 'alt'].forEach((attr) => {
+                if (!el.hasAttribute(attr)) return;
+                const value = el.getAttribute(attr);
+                if (value in map) el.setAttribute(attr, map[value]);
+            });
+        });
+    };
+
+    const updateDynamicAria = (lang) => {
+        const isRu = lang === 'ru';
+        document.querySelectorAll('#dotsContainer button').forEach((dot, index) => {
+            dot.setAttribute('aria-label', isRu ? `Перейти к туру ${index + 1}` : `Перейти до туру ${index + 1}`);
+        });
+        document.querySelectorAll('#reviewsDotsContainer button').forEach((dot, index) => {
+            dot.setAttribute('aria-label', isRu ? `Перейти к отзыву ${index + 1}` : `Перейти до відгуку ${index + 1}`);
+        });
+    };
+
+    const updateLanguageButtons = (lang) => {
+        const isRu = lang === 'ru';
+        document.querySelectorAll('[data-lang-toggle]').forEach((button) => {
+            const label = button.querySelector('[data-lang-label]');
+            const mode = button.dataset.langMode || 'compact';
+            if (label) label.textContent = isRu
+                ? (mode === 'full' ? 'Українська' : 'UA')
+                : (mode === 'full' ? 'Русский' : 'RU');
+            button.setAttribute('aria-label', isRu ? 'Переключить на украинский' : 'Переключити на російську');
+            button.setAttribute('title', isRu ? 'Українська' : 'Русский');
+        });
+    };
+
+    const applyLanguage = (lang, save = true) => {
+        const target = lang === 'ru' ? 'ru' : 'uk';
+        const current = document.documentElement.lang === 'ru' ? 'ru' : 'uk';
+
+        if (current !== target) {
+            const textMap = target === 'ru' ? uaToRu : ruToUa;
+            const attrMap = target === 'ru' ? attrUaToRu : attrRuToUa;
+            translateTextNodes(textMap);
+            translateAttributes(attrMap);
+        }
+
+        document.documentElement.lang = target;
+        updateLanguageButtons(target);
+        updateDynamicAria(target);
+
+        const menuBtn = document.getElementById('mobileMenuBtn');
+        if (menuBtn) {
+            const isOpen = menuBtn.getAttribute('aria-expanded') === 'true';
+            menuBtn.setAttribute('aria-label', target === 'ru'
+                ? (isOpen ? 'Закрыть меню' : 'Открыть меню')
+                : (isOpen ? 'Закрити меню' : 'Відкрити меню'));
+        }
+
+        if (save) {
+            try { localStorage.setItem('olya-lucic-lang', target); } catch (e) {}
+        }
+    };
+
+    document.querySelectorAll('[data-lang-toggle]').forEach((button) => {
+        button.addEventListener('click', () => {
+            const next = document.documentElement.lang === 'ru' ? 'uk' : 'ru';
+            applyLanguage(next);
+        });
+    });
+
+    let saved = 'uk';
+    try { saved = localStorage.getItem('olya-lucic-lang') || 'uk'; } catch (e) {}
+    applyLanguage(saved === 'ru' ? 'ru' : 'uk', false);
 });
 </script>
 
