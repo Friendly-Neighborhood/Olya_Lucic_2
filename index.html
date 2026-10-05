@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lang="uk" class="scroll-smooth">
+
+<html class="scroll-smooth" lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ольга Лучич</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Оля Лучіч — гід у Відні та Австрії</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><circle cx=%2216%22 cy=%2216%22 r=%2215%22 fill=%22none%22/><clipPath id=%22c%22><circle cx=%2216%22 cy=%2216%22 r=%2215%22/></clipPath><g clip-path=%22url(%23c)%22><rect width=%2232%22 height=%2232%22 fill=%22%23FFFFFF%22/><rect y=%220%22 width=%2232%22 height=%2210.6%22 fill=%22%23EF3340%22/><rect y=%2221.4%22 width=%2232%22 height=%2210.6%22 fill=%22%23EF3340%22/></g></svg>"> <!-- Tailwind Config Customization -->
-  <!-- Fonts: Montserrat, Caveat -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
+ 
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><circle cx=%2216%22 cy=%2216%22 r=%2215%22 fill=%22none%22/><clipPath id=%22c%22><circle cx=%2216%22 cy=%2216%22 r=%2215%22/></clipPath><g clip-path=%22url(%23c)%22><rect width=%2232%22 height=%2232%22 fill=%22%23FFFFFF%22/><rect y=%220%22 width=%2232%22 height=%2210.6%22 fill=%22%23EF3340%22/><rect y=%2221.4%22 width=%2232%22 height=%2210.6%22 fill=%22%23EF3340%22/></g></svg>"> <!-- Tailwind Config Customization -->
+ <!-- Fonts: Montserrat, Caveat -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&amp;family=Montserrat:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
         tailwind.config = {
             theme: {
                 extend: {
@@ -33,7 +36,7 @@
             }
         }
     </script>
-    <style>
+<style>
 .hero-bg {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.1) 100%), 
                 url('./ChatGPT Image 24 сент. 2026 г., 14_13_42.png') center/cover no-repeat;
@@ -280,755 +283,666 @@ img, svg {
 }
     </style>
 </head>
-<body class="bg-slate-100 text-slate-800 antialiased font-sans">
-
-    <!-- ==================== HERO SECTION ==================== -->
+<body class="bg-slate-100 text-slate-800 antialiased font-sans"><!--
+CONTENT NOTES / ПРИМЕЧАНИЯ К КОНТЕНТУ
+- Only the supplied text is used. Descriptions of tours 1–5 were referenced but
+  not supplied in full. Missing paragraphs are explicitly marked in both languages.
+- The Wachau total 1055 € is copied verbatim. 710 + 55 * 7 = 1095; confirm the
+  client price before publication. No price is silently corrected.
+- Review copy is missing; visible placeholders replace template testimonials.
+- Existing contact URLs and all image sources are retained. Social account
+  details and the three local image files were not included in this upload.
+-->
+<!-- ==================== HERO SECTION ==================== -->
 <section id="home" class="hero-bg relative min-h-screen text-white flex flex-col justify-between pt-6 pb-0 px-4 md:px-8 overflow-x-hidden overflow-y-hidden scroll-mt-4">
-        
-        <div class="absolute inset-0 z-0 pointer-events-none"></div>
 
-        <!-- Навігація -->
-        <nav class="relative z-30 flex justify-between items-center mb-8 md:mb-12 max-w-7xl mx-auto w-full gap-4">
-            <a href="#home" class="block shrink-0" aria-label="На головну">
-                <h1 class="text-2xl sm:text-3xl font-bold tracking-tight">olya.lucic</h1>
-                <p class="text-[10px] sm:text-xs uppercase tracking-widest mt-1 opacity-80">Гід у Відні та Австрії</p>
-            </a>
+    <div class="absolute inset-0 z-0 pointer-events-none"></div>
 
-            <div class="flex items-center justify-end gap-2">
-                <div class="hidden lg:flex items-center justify-end gap-1 xl:gap-2 text-[11px] xl:text-[14px] font-semibold tracking-wide">
-                    <a href="#about" class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-orange-300 transition-colors">Про мене</a>
-                    <a href="#why-me" class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-orange-300 transition-colors">Переваги</a>
-                    <a href="#tours" class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-orange-300 transition-colors">Тури</a>
-                    <a href="#how-to-book" class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-orange-300 transition-colors">Бронювання</a>
-                    <a href="#reviews" class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-orange-300 transition-colors">Відгуки</a>
-                    <a href="#contacts" class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-orange-300 transition-colors">Контакти</a>
-                </div>
+    <!-- Навігація -->
+    <nav class="relative z-30 flex justify-between items-center mb-8 md:mb-12 max-w-7xl mx-auto w-full gap-4">
 
-                <button type="button" data-lang-toggle data-lang-mode="compact" aria-label="Переключити на російську" class="shrink-0 h-10 min-w-10 px-3 inline-flex items-center justify-center rounded-xl border border-white/60 bg-white/15 text-white font-extrabold text-sm tracking-wide backdrop-blur-md shadow-lg hover:bg-white hover:text-slate-900 active:scale-95 transition-all">
-                    <span data-lang-label>RU</span>
-                </button>
+        <a href="#home" class="block shrink-0" aria-label="На головну">
+            <h1 class="text-2xl sm:text-3xl font-bold tracking-tight">olya.lucic</h1>
+            <p class="text-[10px] sm:text-xs uppercase tracking-widest mt-1 opacity-80">Гід у Відні та Австрії</p>
+        </a>
 
-                <button id="mobileMenuBtn" type="button" aria-label="Відкрити меню" aria-controls="mobileMenu" aria-expanded="false" class="lg:hidden shrink-0 w-12 h-12 inline-flex items-center justify-center rounded-xl bg-white text-slate-900 shadow-xl border border-white/80 hover:bg-slate-100 active:scale-95 transition-all">
-                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-                </button>
+        <div class="flex items-center justify-end gap-2">
+
+            <div class="hidden lg:flex items-center justify-end gap-1 xl:gap-2 text-[11px] xl:text-[14px] font-semibold tracking-wide">
+                <a href="#about" class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-orange-300 transition-colors">Про мене</a>
+                <a href="#why-me" class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-orange-300 transition-colors">Переваги</a>
+                <a href="#tours" class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-orange-300 transition-colors">Тури</a>
+                <a href="#how-to-book" class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-orange-300 transition-colors">Бронювання</a>
+                <a href="#reviews" class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-orange-300 transition-colors">Відгуки</a>
+                <a href="#contacts" class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-orange-300 transition-colors">Контакти</a>
             </div>
 
-            <div id="mobileMenu" class="hidden lg:hidden absolute top-full left-0 right-0 mt-3 p-2.5 rounded-2xl bg-white/95 text-slate-900 backdrop-blur-xl border border-white/80 shadow-2xl">
-                <a href="#home" class="block px-4 py-3 rounded-xl text-sm font-semibold hover:bg-slate-100 active:bg-slate-200 transition-colors">Головна</a>
-                <a href="#about" class="block px-4 py-3 rounded-xl text-sm font-semibold hover:bg-slate-100 active:bg-slate-200 transition-colors">Про мене</a>
-                <a href="#why-me" class="block px-4 py-3 rounded-xl text-sm font-semibold hover:bg-slate-100 active:bg-slate-200 transition-colors">Переваги</a>
-                <a href="#tours" class="block px-4 py-3 rounded-xl text-sm font-semibold hover:bg-slate-100 active:bg-slate-200 transition-colors">Тури</a>
-                <a href="#how-to-book" class="block px-4 py-3 rounded-xl text-sm font-semibold hover:bg-slate-100 active:bg-slate-200 transition-colors">Бронювання</a>
-                <a href="#reviews" class="block px-4 py-3 rounded-xl text-sm font-semibold hover:bg-slate-100 active:bg-slate-200 transition-colors">Відгуки</a>
-                <a href="#contacts" class="block px-4 py-3 rounded-xl text-sm font-semibold hover:bg-slate-100 active:bg-slate-200 transition-colors">Контакти</a>
-            </div>
-        </nav>
+            <button type="button" data-lang-toggle data-lang-mode="compact" aria-label="Переключити на російську" class="shrink-0 h-10 min-w-10 px-3 inline-flex items-center justify-center rounded-xl border border-white/60 bg-white/15 text-white font-extrabold text-sm tracking-wide backdrop-blur-md shadow-lg hover:bg-white hover:text-slate-900 active:scale-95 transition-all">
+                <span data-lang-label>RU</span>
+            </button>
 
-        <!-- Головний контент Hero -->
-        <div class="hero-main relative z-10 my-auto max-w-7xl mx-auto w-full py-8 flex flex-col lg:flex-row items-center justify-between gap-8">
-            <div class="hero-copy max-w-2xl lg:-ml-12 lg:mt-16">
-                <h2 class="hero-title text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 drop-shadow-lg">
-                    АВТОРСЬКІ ТУРИ <br>
-                    <span class="hero-line whitespace-nowrap">
-                        ПО <span class="text-orange-400">ВІДНЮ</span> ТА <span class="text-orange-400">АВСТРІЇ</span>
-                    </span>
-                </h2>
-                <p class="hero-subtitle text-lg md:text-xl mb-8 leading-relaxed opacity-95 drop-shadow-md max-w-lg">
-                    Комфортні подорожі з душею, які залишають спогади на все життя
+            <button id="mobileMenuBtn" type="button" aria-label="Відкрити меню" aria-controls="mobileMenu" aria-expanded="false" class="lg:hidden shrink-0 w-12 h-12 inline-flex items-center justify-center rounded-xl bg-white text-slate-900 shadow-xl border border-white/80 hover:bg-slate-100 active:scale-95 transition-all">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+
+        </div>
+
+        <div id="mobileMenu" class="hidden lg:hidden absolute top-full left-0 right-0 mt-3 p-2.5 rounded-2xl bg-white/95 text-slate-900 backdrop-blur-xl border border-white/80 shadow-2xl">
+            <a href="#home" class="block px-4 py-3 rounded-xl text-sm font-semibold hover:bg-slate-100 active:bg-slate-200 transition-colors">Головна</a>
+            <a href="#about" class="block px-4 py-3 rounded-xl text-sm font-semibold hover:bg-slate-100 active:bg-slate-200 transition-colors">Про мене</a>
+            <a href="#why-me" class="block px-4 py-3 rounded-xl text-sm font-semibold hover:bg-slate-100 active:bg-slate-200 transition-colors">Переваги</a>
+            <a href="#tours" class="block px-4 py-3 rounded-xl text-sm font-semibold hover:bg-slate-100 active:bg-slate-200 transition-colors">Тури</a>
+            <a href="#how-to-book" class="block px-4 py-3 rounded-xl text-sm font-semibold hover:bg-slate-100 active:bg-slate-200 transition-colors">Бронювання</a>
+            <a href="#reviews" class="block px-4 py-3 rounded-xl text-sm font-semibold hover:bg-slate-100 active:bg-slate-200 transition-colors">Відгуки</a>
+            <a href="#contacts" class="block px-4 py-3 rounded-xl text-sm font-semibold hover:bg-slate-100 active:bg-slate-200 transition-colors">Контакти</a>
+        </div>
+
+    </nav>
+
+    <!-- Головний контент Hero -->
+    <div class="hero-main relative z-10 my-auto max-w-7xl mx-auto w-full py-8 flex flex-col lg:flex-row items-center justify-between gap-8">
+
+        <div class="hero-copy max-w-2xl lg:-ml-12 lg:mt-16">
+
+            <h2 class="hero-title text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 drop-shadow-lg">
+                Відень, який <br>
+                <span class="hero-line whitespace-nowrap">
+                    ви <span class="text-orange-400">полюбите</span><br>
+                    так само, <span class="text-orange-400">як я</span>
+                </span>
+            </h2>
+
+            <p class="hero-subtitle text-lg md:text-xl mb-8 leading-relaxed opacity-95 drop-shadow-md max-w-lg">
+                Саме в такому Відні я колись зрозуміла, чим хочу займатися все життя.
+            </p>
+
+            <div class="hero-actions flex flex-wrap items-center gap-3">
+
+                <a href="#tours" class="inline-flex items-center justify-center bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 px-8 rounded-xl transition duration-300 shadow-xl text-lg border border-orange-400/30">
+                    Дивитись тури
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
+
+                <!-- Socials -->
+                <a href="https://www.instagram.com/olya.lucic/" target="_blank" aria-label="Instagram" class="w-14 h-14 inline-flex items-center justify-center bg-gradient-to-r from-purple-600 via-pink-500 to-amber-500 hover:scale-105 text-white rounded-xl transition-all duration-300 shadow-xl border border-white">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+                    </svg>
+                </a>
+
+                <a href="https://wa.me/436769688959" target="_blank" aria-label="WhatsApp" class="w-14 h-14 inline-flex items-center justify-center bg-[#25D366] hover:bg-[#20ba5a] hover:scale-105 text-white rounded-xl transition-all duration-300 shadow-xl border border-white">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path>
+                    </svg>
+                </a>
+
+                <a href="https://t.me/Olya_Lucic" target="_blank" aria-label="Telegram" class="w-14 h-14 inline-flex items-center justify-center bg-[#229ED9] hover:bg-[#1d8ec3] hover:scale-105 text-white rounded-xl transition-all duration-300 shadow-xl border border-white">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"></path>
+                    </svg>
+                </a>
+
+            </div>
+        </div>
+
+        <!-- Декоративний знак -->
+        <div class="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 z-10 rotate-6 transform">
+            <div class="w-52 h-52 border-2 border-dashed border-white/80 rounded-full flex flex-col items-center justify-center text-center p-3 backdrop-blur-[2px] bg-black/40 shadow-xl">
+                <p class="font-bold leading-snug uppercase tracking-wider text-white drop-shadow-md" style="font-size: 21px;">
+                    <span class="text-sky-400">ТУРИ, ЯКІ</span><br>
+                    <span class="text-sky-400">ЗАКОХУЮТЬ</span><br>
+                    З ПЕРШОГО<br>
+                    ПОГЛЯДУ
                 </p>
-
-                <div class="hero-actions flex flex-wrap items-center gap-3">
-                    <a href="#tours" class="inline-flex items-center justify-center bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 px-8 rounded-xl transition duration-300 shadow-xl text-lg border border-orange-400/30">
-                        Переглянути тури
-                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                    </a>
-
-                    <!-- Socials -->
-                    <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="w-14 h-14 inline-flex items-center justify-center bg-gradient-to-r from-purple-600 via-pink-500 to-amber-500 hover:scale-105 text-white rounded-xl transition-all duration-300 shadow-xl border border-white">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                    </a>
-                    <a href="https://wa.me/380000000000" target="_blank" aria-label="WhatsApp" class="w-14 h-14 inline-flex items-center justify-center bg-[#25D366] hover:bg-[#20ba5a] hover:scale-105 text-white rounded-xl transition-all duration-300 shadow-xl border border-white">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-                    </a>
-                    <a href="https://t.me/telegram" target="_blank" aria-label="Telegram" class="w-14 h-14 inline-flex items-center justify-center bg-[#229ED9] hover:bg-[#1d8ec3] hover:scale-105 text-white rounded-xl transition-all duration-300 shadow-xl border border-white">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
-                    </a>
-                </div>
             </div>
+        </div>
 
-            <!-- Декоративний знак -->
-<div class="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 z-10 rotate-6 transform">
-    <div class="w-52 h-52 border-2 border-dashed border-white/80 rounded-full flex flex-col items-center justify-center text-center p-3 backdrop-blur-[2px] bg-black/40 shadow-xl">
-        <p class="font-bold leading-snug uppercase tracking-wider text-white drop-shadow-md" style="font-size: 21px;">
-            <span class="text-sky-400">ТУРИ, ЯКІ</span><br>
-            <span class="text-sky-400">ЗАКОХУЮТЬ</span><br>
-            З ПЕРШОГО<br>
-            ПОГЛЯДУ
-        </p>
     </div>
-</div>
-        </div>
 
-        <!-- Плашка переваг (щільно притиснута донизу секції) -->
-        <div class="hero-benefits-wrap relative z-20 w-full mt-auto -mx-4 md:-mx-8 w-[calc(100%+2rem)] md:w-[calc(100%+4rem)]">
-            <div class="bg-white/95 backdrop-blur-md text-gray-800 py-4 px-6 shadow-2xl border-t border-white/40 w-full">
-                <div class="hero-benefits-grid max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 divide-y md:divide-y-0 md:divide-x divide-gray-200">
-                    
-                    <div class="hero-benefit flex items-center space-x-4 pt-2 md:pt-0">
-                        <div class="flex-shrink-0 text-blue-500">
-                            <svg class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h8m-8 4h8m-9 8h10M5 3h14a2 2 0 012 2v11a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z"></path></svg>
-                        </div>
-                        <div class="flex flex-col justify-center">
-                            <h4 class="font-bold text-xs md:text-sm tracking-wide text-gray-900 uppercase leading-tight">АВТОБУСНІ ТУРИ</h4>
-                            <p class="text-xs text-gray-500 mt-0.5 leading-tight">комфортні групові подорожі Європою</p>
-                        </div>
+    <!-- Плашка переваг -->
+    <div class="hero-benefits-wrap relative z-20 w-full mt-auto -mx-4 md:-mx-8 w-[calc(100%+2rem)] md:w-[calc(100%+4rem)]">
+
+        <div class="bg-white/95 backdrop-blur-md text-gray-800 py-4 px-6 shadow-2xl border-t border-white/40 w-full">
+
+            <div class="hero-benefits-grid max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 divide-y md:divide-y-0 md:divide-x divide-gray-200">
+
+                <div class="hero-benefit flex items-center space-x-4 pt-2 md:pt-0">
+                    <div class="flex-shrink-0 text-blue-500">
+                        <svg class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h8m-8 4h8m-9 8h10M5 3h14a2 2 0 012 2v11a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z"></path>
+                        </svg>
                     </div>
 
-                    <div class="hero-benefit flex items-center space-x-4 pt-2 md:pt-0 md:pl-6">
-                        <div class="flex-shrink-0 text-orange-500">
-                            <svg class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
-                        </div>
-                        <div class="flex flex-col justify-center">
-                            <h4 class="font-bold text-xs md:text-sm tracking-wide text-gray-900 uppercase leading-tight">АВТОРСЬКИЙ ПІДХІД</h4>
-                            <p class="text-xs text-gray-500 mt-0.5 leading-tight">унікальні маршрути та програми</p>
-                        </div>
+                    <div class="flex flex-col justify-center">
+                        <h4 class="font-bold text-xs md:text-sm tracking-wide text-gray-900 uppercase leading-tight">групові автобусні тури</h4>
+                        <p class="text-xs text-gray-500 mt-0.5 leading-tight">Австрією та Європою щовихідних</p>
                     </div>
-
-                    <div class="hero-benefit flex items-center space-x-4 pt-2 md:pt-0 md:pl-6">
-                        <div class="flex-shrink-0 text-blue-500">
-                            <svg class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                        </div>
-                        <div class="flex flex-col justify-center">
-                            <h4 class="font-bold text-xs md:text-sm tracking-wide text-gray-900 uppercase leading-tight">ТУРБОТА ТА ПІДТРИМКА</h4>
-                            <p class="text-xs text-gray-500 mt-0.5 leading-tight">підтримка 24/7 під час подорожі</p>
-                        </div>
-                    </div>
-
-                    <div class="hero-benefit flex items-center space-x-2.5 pt-2 md:pt-0 md:pl-3">
-                        <div class="flex-shrink-0 text-orange-500">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-                        </div>
-                        <div class="flex flex-col justify-center min-w-0">
-                            <h4 class="font-bold text-xs md:text-sm tracking-wide text-gray-900 uppercase leading-tight whitespace-nowrap">МАЛІ ГРУПИ</h4>
-                            <p class="text-[11px] md:text-xs text-gray-500 mt-0.5 leading-tight whitespace-nowrap">дружня атмосфера та нові знайомства</p>
-                        </div>
-                    </div>
-
                 </div>
+
+                <div class="hero-benefit flex items-center space-x-4 pt-2 md:pt-0 md:pl-6">
+                    <div class="flex-shrink-0 text-orange-500">
+                        <svg class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                        </svg>
+                    </div>
+
+                    <div class="flex flex-col justify-center">
+                        <h4 class="font-bold text-xs md:text-sm tracking-wide text-gray-900 uppercase leading-tight">індивідуальні екскурсії</h4>
+                        <p class="text-xs text-gray-500 mt-0.5 leading-tight">Віднем — для пар, друзів, родин</p>
+                    </div>
+                </div>
+
+                <div class="hero-benefit flex items-center space-x-4 pt-2 md:pt-0 md:pl-6">
+                    <div class="flex-shrink-0 text-blue-500">
+                        <svg class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+
+                    <div class="flex flex-col justify-center">
+                        <h4 class="font-bold text-xs md:text-sm tracking-wide text-gray-900 uppercase leading-tight">VIP-супровід</h4>
+                        <p class="text-xs text-gray-500 mt-0.5 leading-tight">і приватні програми під ключ</p>
+                    </div>
+                </div>
+
+                <div class="hero-benefit flex items-center space-x-2.5 pt-2 md:pt-0 md:pl-3">
+                    <div class="flex-shrink-0 text-orange-500">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
+                    </div>
+
+                    <div class="flex flex-col justify-center min-w-0">
+                        <h4 class="font-bold text-xs md:text-sm tracking-wide text-gray-900 uppercase leading-tight whitespace-nowrap">екскурсії</h4>
+                        <p class="text-[11px] md:text-xs text-gray-500 mt-0.5 leading-tight whitespace-nowrap">українською та російською мовами</p>
+                    </div>
+                </div>
+
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- ==================== ABOUT SECTION ==================== -->
-    <section id="about" class="scroll-mt-4 bg-white py-14 md:py-20 overflow-hidden">
-        <div class="max-w-6xl mx-auto px-6 md:px-12">
-            
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-                
-                <!-- Polaroid Photo -->
-                <div class="lg:col-span-5 flex justify-center">
-                    <div class="about-photo relative p-3.5 pb-5 bg-white shadow-[0_20px_40px_rgba(0,0,0,0.12)] -rotate-2 max-w-sm w-full border border-gray-100 rounded-sm">
-                        <div class="absolute -top-4 -left-6 w-24 h-8 bg-amber-100/80 shadow-sm -rotate-45 z-10 border border-amber-200/40 backdrop-blur-[1px]"></div>
-                        <img class="w-full h-[360px] md:h-[450px] object-cover rounded-sm" src="./ChatGPT Image 11 сент. 2026 г., 17_40_02.png" alt="Ольга Лучич">
-                    </div>
-                </div>
-
-                <!-- Text content -->
-                <div class="lg:col-span-7 flex flex-col justify-center space-y-4">
-                    <div>
-                        <span class="text-[#E67E22] font-bold text-xs uppercase tracking-widest block mb-1">
+</section>
+<!-- ==================== ABOUT SECTION ==================== -->
+<section class="scroll-mt-4 bg-white py-14 md:py-20 overflow-hidden" id="about">
+<div class="max-w-6xl mx-auto px-6 md:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+<!-- Polaroid Photo -->
+<div class="lg:col-span-5 flex justify-center">
+<div class="about-photo relative p-3.5 pb-5 bg-white shadow-[0_20px_40px_rgba(0,0,0,0.12)] -rotate-2 max-w-sm w-full border border-gray-100 rounded-sm">
+<div class="absolute -top-4 -left-6 w-24 h-8 bg-amber-100/80 shadow-sm -rotate-45 z-10 border border-amber-200/40 backdrop-blur-[1px]"></div>
+<img alt="Оля Лучіч" class="w-full h-[360px] md:h-[450px] object-cover rounded-sm" src="./ChatGPT Image 11 сент. 2026 г., 17_40_02.png"/>
+</div>
+</div>
+<!-- Text content -->
+<div class="lg:col-span-7 flex flex-col justify-center space-y-4">
+<div>
+<span class="text-[#E67E22] font-bold text-xs uppercase tracking-widest block mb-1">
                             ПРО МЕНЕ
                         </span>
-                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight">
-                            Привіт! Я — <span class="text-[#E67E22]">Ольга Лучич</span>
-                        </h2>
-                    </div>
-
-                    <div class="text-slate-700 text-base md:text-lg leading-relaxed max-w-md space-y-3">
-                        <p class="font-semibold text-slate-900">
-                            Ваш гід у світі яскравих подорожей!
-                        </p>
-                        <p>
-                            Я організовую та супроводжую авторські тури по всьому світу. 
-                            Обожнюю відкривати нові місця разом з вами, ділитися атмосферою 
-                            країн та створювати подорожі, які залишаються в серці назавжди.
-                        </p>
-                    </div>
-
-                    <!-- Flags -->
-                    <div class="pt-3">
-                        <div class="about-flags flex flex-wrap items-center gap-5 md:gap-6">
-                            <div class="flex flex-col items-center gap-1.5">
-                                <img class="w-10 h-10 rounded-full object-cover shadow-sm border border-slate-100" src="https://flagcdn.com/w80/at.png" alt="Австрія">
-                                <span class="text-xs font-medium text-slate-700">Австрія</span>
-                            </div>
-                            <div class="flex flex-col items-center gap-1.5">
-                                <img class="w-10 h-10 rounded-full object-cover shadow-sm border border-slate-100" src="https://flagcdn.com/w80/is.png" alt="Ісландія">
-                                <span class="text-xs font-medium text-slate-700">Ісландія</span>
-                            </div>
-                            <div class="flex flex-col items-center gap-1.5">
-                                <img class="w-10 h-10 rounded-full object-cover shadow-sm border border-slate-100" src="https://flagcdn.com/w80/in.png" alt="Індія">
-                                <span class="text-xs font-medium text-slate-700">Індія</span>
-                            </div>
-                            <div class="flex flex-col items-center gap-1.5">
-                                <img class="w-10 h-10 rounded-full object-cover shadow-sm border border-slate-100" src="https://flagcdn.com/w80/it.png" alt="Доломіти">
-                                <span class="text-xs font-medium text-slate-700">Доломіти</span>
-                            </div>
-                            <div class="flex flex-col items-center gap-1.5">
-                                <img class="w-10 h-10 rounded-full object-cover shadow-sm border border-slate-100" src="https://flagcdn.com/w80/pt.png" alt="Азори">
-                                <span class="text-xs font-medium text-slate-700">Азори</span>
-                            </div>
-                            <div class="flex flex-col items-center gap-1.5">
-                                <img class="w-10 h-10 rounded-full object-cover shadow-sm border border-slate-100" src="https://flagcdn.com/w80/pt.png" alt="Мадейра">
-                                <span class="text-xs font-medium text-slate-700">Мадейра</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Handwriting caption right below About -->
-            <div class="text-center pt-8">
-                <p class="hand-caption font-handwriting italic text-3xl md:text-4xl text-[#1D70B8] inline-flex items-center gap-2 tracking-wide -rotate-2 transform transition-transform hover:rotate-0">
+<h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight">Мене звати <span class="text-[#E67E22]">Оля Лучіч</span></h2>
+</div>
+<div class="text-slate-700 text-base md:text-lg leading-relaxed max-w-md space-y-3">
+<p class="font-semibold text-slate-900">До Австрії я приїхала понад двадцять років тому за програмою au-pair — з однією валізою, кількома словами німецькою і дуже великими планами.</p>
+<p>Відень я побачила вперше у житті й закохалася миттєво: у палаци, у вузькі вулички, де за кожним рогом чиясь історія, у музику, що звучить тут буквально з кожного двору.</p>
+<p><a class="inline-flex items-center text-blue-600 hover:text-blue-700 font-bold text-base" data-detail-open="about-story" href="#about-story">Детальніше <svg class="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></a></p></div>
+<!-- Flags -->
+<div class="pt-3">
+<div class="about-flags flex flex-wrap items-center gap-5 md:gap-6">
+<div class="flex flex-col items-center gap-1.5">
+<img alt="Австрія" class="w-10 h-10 rounded-full object-cover shadow-sm border border-slate-100" src="https://flagcdn.com/w80/at.png"/>
+<span class="text-xs font-medium text-slate-700">Австрія</span>
+</div>
+<div class="flex flex-col items-center gap-1.5">
+<img alt="Ісландія" class="w-10 h-10 rounded-full object-cover shadow-sm border border-slate-100" src="https://flagcdn.com/w80/is.png"/>
+<span class="text-xs font-medium text-slate-700">Ісландія</span>
+</div>
+<div class="flex flex-col items-center gap-1.5">
+<img alt="Індія" class="w-10 h-10 rounded-full object-cover shadow-sm border border-slate-100" src="https://flagcdn.com/w80/in.png"/>
+<span class="text-xs font-medium text-slate-700">Індія</span>
+</div>
+<div class="flex flex-col items-center gap-1.5">
+<img alt="Доломіти" class="w-10 h-10 rounded-full object-cover shadow-sm border border-slate-100" src="https://flagcdn.com/w80/it.png"/>
+<span class="text-xs font-medium text-slate-700">Доломіти</span>
+</div>
+<div class="flex flex-col items-center gap-1.5">
+<img alt="Азори" class="w-10 h-10 rounded-full object-cover shadow-sm border border-slate-100" src="https://flagcdn.com/w80/pt.png"/>
+<span class="text-xs font-medium text-slate-700">Азори</span>
+</div>
+<div class="flex flex-col items-center gap-1.5">
+<img alt="Мадейра" class="w-10 h-10 rounded-full object-cover shadow-sm border border-slate-100" src="https://flagcdn.com/w80/pt.png"/>
+<span class="text-xs font-medium text-slate-700">Мадейра</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Handwriting caption right below About -->
+<div class="text-center pt-8">
+<p class="hand-caption font-handwriting italic text-3xl md:text-4xl text-[#1D70B8] inline-flex items-center gap-2 tracking-wide -rotate-2 transform transition-transform hover:rotate-0">
                     і ще багато інших дивовижних місць! 
-                    <svg class="w-8 h-8 text-amber-500 fill-none stroke-current stroke-[2] inline-block -mt-1" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                    </svg>
-                </p>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="why-me" class="scroll-mt-4 bg-slate-100/70 py-16 md:py-16 relative overflow-hidden">
-    
-    <!-- Мягкое фоновое свечение -->
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-orange-100/40 rounded-full blur-[120px] pointer-events-none"></div>
-
-    <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-        
-        <!-- Заголовок -->
-        <div class="text-center max-w-2xl mx-auto mb-16">
-            <h2 class="text-3xl md:text-5xl font-black text-slate-900 tracking-tight">
+                    <svg class="w-8 h-8 text-amber-500 fill-none stroke-current stroke-[2] inline-block -mt-1" viewbox="0 0 24 24">
+<path d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</p>
+</div>
+</div>
+</section>
+<section class="scroll-mt-4 bg-slate-100/70 py-16 md:py-16 relative overflow-hidden" id="why-me">
+<!-- Мягкое фоновое свечение -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-orange-100/40 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+<!-- Заголовок -->
+<div class="text-center max-w-2xl mx-auto mb-16">
+<h2 class="text-3xl md:text-5xl font-black text-slate-900 tracking-tight">
                 Чому обирають <span class="text-[#E67E22]">мої тури?</span>
-            </h2>
-            <p class="text-slate-600 mt-4 text-base md:text-lg leading-relaxed">
-                Кожна подорож продумана так, щоб ви відпочивали душею та тілом.
-            </p>
-        </div>
-
-        <!-- Сетка карток -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-            <!-- Картка 1 -->
-            <div class="bg-white rounded-3xl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-slate-200/80 hover:shadow-xl hover:border-orange-200 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
-                <div>
-                    <div class="w-12 h-12 rounded-xl bg-orange-50 text-[#E67E22] flex items-center justify-center mb-6 font-black text-lg group-hover:bg-[#E67E22] group-hover:text-white transition-colors">
+</h2>
+<p class="text-slate-600 mt-4 text-base md:text-lg leading-relaxed">Я підлаштовуюся під вас, а не навпаки.</p>
+</div>
+<!-- Сетка карток -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Картка 1 -->
+<div class="bg-white rounded-3xl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-slate-200/80 hover:shadow-xl hover:border-orange-200 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 rounded-xl bg-orange-50 text-[#E67E22] flex items-center justify-center mb-6 font-black text-lg group-hover:bg-[#E67E22] group-hover:text-white transition-colors">
                         01
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">Авторські маршрути</h3>
-                    <p class="text-slate-600 text-sm md:text-base leading-relaxed">
-                        Затишні локації, секретні оглядові майданчики та атмосфера без туристичного натовпу.
-                    </p>
-                </div>
-                <div class="mt-8 flex items-center text-xs font-bold text-[#E67E22] uppercase tracking-wider">
-                    <span>Унікальна програма</span>
-                </div>
-            </div>
-
-            <!-- Картка 2 -->
-            <div class="bg-white rounded-3xl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-slate-200/80 hover:shadow-xl hover:border-sky-200 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
-                <div>
-                    <div class="w-12 h-12 rounded-xl bg-sky-50 text-[#1D70B8] flex items-center justify-center mb-6 font-black text-lg group-hover:bg-[#1D70B8] group-hover:text-white transition-colors">
+<h3 class="text-xl font-bold text-slate-900 mb-2">Я не заваливаю датами. Це точно.</h3>
+<p class="text-slate-600 text-sm md:text-base leading-relaxed">Ви приїхали відпочивати, а не складати іспит з історії.</p>
+</div>
+<div class="mt-8 flex items-center text-xs font-bold text-[#E67E22] uppercase tracking-wider">
+<a data-detail-open="format-story" href="#format-story">Детальніше</a>
+</div>
+</div>
+<!-- Картка 2 -->
+<div class="bg-white rounded-3xl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-slate-200/80 hover:shadow-xl hover:border-sky-200 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 rounded-xl bg-sky-50 text-[#1D70B8] flex items-center justify-center mb-6 font-black text-lg group-hover:bg-[#1D70B8] group-hover:text-white transition-colors">
                         02
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">Гнучкість у всьому</h3>
-                    <p class="text-slate-600 text-sm md:text-base leading-relaxed">
-                        Ніякого поспіху. Змінилася погода чи настрій? Легко адаптуємо план під вас.
-                    </p>
-                </div>
-                <div class="mt-8 flex items-center text-xs font-bold text-[#1D70B8] uppercase tracking-wider">
-                    <span>Комфортний ритм</span>
-                </div>
-            </div>
-
-            <!-- Картка 3 -->
-            <div class="bg-white rounded-3xl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-slate-200/80 hover:shadow-xl hover:border-orange-200 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
-                <div>
-                    <div class="w-12 h-12 rounded-xl bg-orange-50 text-[#E67E22] flex items-center justify-center mb-6 font-black text-lg group-hover:bg-[#E67E22] group-hover:text-white transition-colors">
+<h3 class="text-xl font-bold text-slate-900 mb-2">Я підлаштовуюся під вас, а не навпаки.</h3>
+<p class="text-slate-600 text-sm md:text-base leading-relaxed">Але якщо вам хочеться глибше — я тільки за.</p>
+</div>
+<div class="mt-8 flex items-center text-xs font-bold text-[#1D70B8] uppercase tracking-wider">
+<a data-detail-open="flexibility-story" href="#flexibility-story">Детальніше</a>
+</div>
+</div>
+<!-- Картка 3 -->
+<div class="bg-white rounded-3xl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-slate-200/80 hover:shadow-xl hover:border-orange-200 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 rounded-xl bg-orange-50 text-[#E67E22] flex items-center justify-center mb-6 font-black text-lg group-hover:bg-[#E67E22] group-hover:text-white transition-colors">
                         03
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">Індивідуальна турбота</h3>
-                    <p class="text-slate-600 text-sm md:text-base leading-relaxed">
-                        Допоможу з вибором кав'ярні, підкажу найкращі ракурси для фото та відповілю на все.
-                    </p>
-                </div>
-                <div class="mt-8 flex items-center text-xs font-bold text-[#E67E22] uppercase tracking-wider">
-                    <span>Увага до деталей</span>
-                </div>
-            </div>
-
-            <!-- Картка 4 -->
-            <div class="bg-white rounded-3xl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-slate-200/80 hover:shadow-xl hover:border-sky-200 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
-                <div>
-                    <div class="w-12 h-12 rounded-xl bg-sky-50 text-[#1D70B8] flex items-center justify-center mb-6 font-black text-lg group-hover:bg-[#1D70B8] group-hover:text-white transition-colors">
+<h3 class="text-xl font-bold text-slate-900 mb-2">Формати, з якими я працюю щодня:</h3>
+<p class="text-slate-600 text-sm md:text-base leading-relaxed">індивідуальні екскурсії Віднем — для пар, друзів, родин</p>
+</div>
+<div class="mt-8 flex items-center text-xs font-bold text-[#E67E22] uppercase tracking-wider">
+<a data-detail-open="formats-story" href="#formats-story">Детальніше</a>
+</div>
+</div>
+<!-- Картка 4 -->
+<div class="bg-white rounded-3xl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-slate-200/80 hover:shadow-xl hover:border-sky-200 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 rounded-xl bg-sky-50 text-[#1D70B8] flex items-center justify-center mb-6 font-black text-lg group-hover:bg-[#1D70B8] group-hover:text-white transition-colors">
                         04
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">Дружня атмосфера</h3>
-                    <p class="text-slate-600 text-sm md:text-base leading-relaxed">
-                        Подорожі невеликими компаніями. Легке спілкування, душевність і нові друзі.
-                    </p>
-                </div>
-                <div class="mt-8 flex items-center text-xs font-bold text-[#1D70B8] uppercase tracking-wider">
-                    <span>Затишне коло</span>
-                </div>
-            </div>
-
-            <!-- Картка 5 -->
-            <div class="bg-white rounded-3xl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-slate-200/80 hover:shadow-xl hover:border-orange-200 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
-                <div>
-                    <div class="w-12 h-12 rounded-xl bg-orange-50 text-[#E67E22] flex items-center justify-center mb-6 font-black text-lg group-hover:bg-[#E67E22] group-hover:text-white transition-colors">
+<h3 class="text-xl font-bold text-slate-900 mb-2">Я вмію обидві.</h3>
+<p class="text-slate-600 text-sm md:text-base leading-relaxed">Індивідуальний турист і автобусна група на 50 осіб — це дві абсолютно різні професії.</p>
+</div>
+<div class="mt-8 flex items-center text-xs font-bold text-[#1D70B8] uppercase tracking-wider">
+<a data-detail-open="experience-story" href="#experience-story">Детальніше</a>
+</div>
+</div>
+<!-- Картка 5 -->
+<div class="bg-white rounded-3xl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-slate-200/80 hover:shadow-xl hover:border-orange-200 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 rounded-xl bg-orange-50 text-[#E67E22] flex items-center justify-center mb-6 font-black text-lg group-hover:bg-[#E67E22] group-hover:text-white transition-colors">
                         05
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">Супровід 24/7</h3>
-                    <p class="text-slate-600 text-sm md:text-base leading-relaxed">
-                        Я на зв'язку від моменту бронювання до вашого повернення додому. Повний спокій.
-                    </p>
-                </div>
-                <div class="mt-8 flex items-center text-xs font-bold text-[#E67E22] uppercase tracking-wider">
-                    <span>Безпека та затишок</span>
-                </div>
-            </div>
-
-            <!-- Картка 6 -->
-            <div class="bg-white rounded-3xl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-slate-200/80 hover:shadow-xl hover:border-sky-200 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
-                <div>
-                    <div class="w-12 h-12 rounded-xl bg-sky-50 text-[#1D70B8] flex items-center justify-center mb-6 font-black text-lg group-hover:bg-[#1D70B8] group-hover:text-white transition-colors">
+<h3 class="text-xl font-bold text-slate-900 mb-2">Не тільки екскурсія</h3>
+<p class="text-slate-600 text-sm md:text-base leading-relaxed">Найчастіше після першої зустрічі мене питають: «Олю, а можете ще…?»</p>
+</div>
+<div class="mt-8 flex items-center text-xs font-bold text-[#E67E22] uppercase tracking-wider">
+<a data-detail-open="concierge-story" href="#concierge-story">Детальніше</a>
+</div>
+</div>
+<!-- Картка 6 -->
+<div class="bg-white rounded-3xl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-slate-200/80 hover:shadow-xl hover:border-sky-200 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
+<div>
+<div class="w-12 h-12 rounded-xl bg-sky-50 text-[#1D70B8] flex items-center justify-center mb-6 font-black text-lg group-hover:bg-[#1D70B8] group-hover:text-white transition-colors">
                         06
                     </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-2">Яскраві спогади</h3>
-                    <p class="text-slate-600 text-sm md:text-base leading-relaxed">
-                        Ви привезете з подорожі не лише масу емоцій, а й чудові фотографії на згадку.
-                    </p>
-                </div>
-                <div class="mt-8 flex items-center text-xs font-bold text-[#1D70B8] uppercase tracking-wider">
-                    <span>Незабутні моменти</span>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
+<h3 class="text-xl font-bold text-slate-900 mb-2">Ви в надійних руках.</h3>
+<p class="text-slate-600 text-sm md:text-base leading-relaxed">Це те, за що мене найчастіше дякують.</p>
+</div>
+<div class="mt-8 flex items-center text-xs font-bold text-[#1D70B8] uppercase tracking-wider">
+<a data-detail-open="care-story" href="#care-story">Детальніше</a>
+</div>
+</div>
+</div>
+</div>
 </section>
-
-    <!-- ==================== TOURS SECTION (SCROLLABLE CAROUSEL) ==================== -->
-    <section id="tours" class="scroll-mt-4 py-12 px-4 bg-slate-50 relative overflow-hidden">
-        <!-- Фоновое блекло-голубое свечение за карточками -->
-        <div class="absolute top-1/2 left-1/4 -translate-y-1/2 w-[500px] h-[300px] bg-blue-200/40 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="absolute top-1/2 right-1/4 -translate-y-1/2 w-[500px] h-[300px] bg-sky-200/35 rounded-full blur-3xl pointer-events-none"></div>
-
-        <div class="max-w-7xl mx-auto relative z-10">
-            <!-- Заголовок -->
-            <div class="text-center mb-8">
-                <h2 class="text-3xl md:text-4xl font-black text-gray-900 tracking-tight uppercase">
+<!-- ==================== TOURS SECTION (SCROLLABLE CAROUSEL) ==================== -->
+<section class="scroll-mt-4 py-12 px-4 bg-slate-50 relative overflow-hidden" id="tours">
+<!-- Фоновое блекло-голубое свечение за карточками -->
+<div class="absolute top-1/2 left-1/4 -translate-y-1/2 w-[500px] h-[300px] bg-blue-200/40 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/2 right-1/4 -translate-y-1/2 w-[500px] h-[300px] bg-sky-200/35 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto relative z-10">
+<!-- Заголовок -->
+<div class="text-center mb-8">
+<span class="text-[#E67E22] font-bold text-xs uppercase tracking-widest block mb-1">ТУРИ</span>
+<h2 class="text-2xl md:text-3xl font-black text-gray-900 tracking-tight uppercase">
                     ПОПУЛЯРНІ ТУРИ
                 </h2>
-                <p class="text-gray-600 text-sm md:text-base mt-1 font-medium">
-                    Найкращі маршрути для незабутніх вражень
-                </p>
-            </div>
+<p class="text-gray-600 text-sm md:text-base mt-1 font-medium">Це лише основні маршрути</p>
+</div>
+<!-- Оболочка слайдера со стрелками -->
+<div class="relative group">
+<!-- Кнопка «Влево» -->
+<button aria-label="Попередній тур" class="absolute -left-2 md:-left-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white/90 backdrop-blur-md text-gray-700 hover:text-blue-600 rounded-full shadow-md flex items-center justify-center transition-all hover:scale-110 focus:outline-none border border-blue-50" id="prevBtn">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</button>
+<!-- Слайдер (с запасом для правой карточки) -->
+<div class="flex space-x-6 overflow-x-auto pb-6 pt-2 px-4 md:px-12 scroll-smooth scrollbar-none" id="slider" style="scrollbar-width: none; -ms-overflow-style: none;">
 
-            <!-- Оболочка слайдера со стрелками -->
-            <div class="relative group">
-                <!-- Кнопка «Влево» -->
-                <button id="prevBtn" aria-label="Попередній тур" class="absolute -left-2 md:-left-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white/90 backdrop-blur-md text-gray-700 hover:text-blue-600 rounded-full shadow-md flex items-center justify-center transition-all hover:scale-110 focus:outline-none border border-blue-50">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path>
-                    </svg>
-                </button>
+<div class="card-item flex-shrink-0 w-full sm:w-[350px] md:w-[380px] bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-blue-100/60 flex flex-col">
+<div class="relative h-64 w-full overflow-hidden">
+<img alt="Венеція" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1514890547357-a9ee288728e0?auto=format&amp;fit=crop&amp;w=800&amp;q=80"/>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-4 py-1.5 rounded-full shadow-sm">
+<span class="text-xs font-bold text-orange-600 uppercase tracking-wider">3 години</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow justify-between">
+<div>
+<h3 class="text-xl font-bold text-orange-500 uppercase">«Keep Calm and love Vienna»</h3>
+<p class="text-gray-700 text-sm mt-1 flex items-center gap-1.5 font-medium"><span class="w-1.5 h-1.5 rounded-full bg-gray-800"></span> Ідеальне перше побачення з Віднем</p>
+</div>
+<div class="mt-6 pt-4 border-t border-gray-100 flex flex-col gap-3">
+<p class="text-gray-600 text-sm font-semibold">від 390 €</p>
+<a class="inline-flex items-center text-blue-600 hover:text-blue-700 font-bold text-base" data-detail-open="tour-keep-calm" href="#tour-keep-calm">
+                                    Детальніше <svg class="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+</div>
+</div>
 
-                <!-- Слайдер (с запасом для правой карточки) -->
-                <div id="slider" class="flex space-x-6 overflow-x-auto pb-6 pt-2 px-4 md:px-12 scroll-smooth scrollbar-none" style="scrollbar-width: none; -ms-overflow-style: none;">
-                    
-                    <!-- 1. Венеция -->
-                    <div class="card-item flex-shrink-0 w-full sm:w-[350px] md:w-[380px] bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-blue-100/60 flex flex-col">
-                        <div class="relative h-64 w-full overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1514890547357-a9ee288728e0?auto=format&fit=crop&w=800&q=80" alt="Венеція" class="w-full h-full object-cover">
-                            <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-4 py-1.5 rounded-full shadow-sm">
-                                <span class="text-xs font-bold text-orange-600 uppercase tracking-wider">26-27 ВЕРЕСНЯ</span>
-                            </div>
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow justify-between">
-                            <div>
-                                <h3 class="text-xl font-bold text-orange-500 uppercase">ВЕНЕЦІЯ</h3>
-                                <p class="text-gray-700 text-sm mt-1 flex items-center gap-1.5 font-medium">
-                                    <span class="w-1.5 h-1.5 rounded-full bg-gray-800"></span> цілий день на морі!
-                                </p>
-                            </div>
-                            <div class="mt-6 pt-4 border-t border-gray-100 flex flex-col gap-3">
-                                <p class="text-gray-600 text-sm font-semibold">3 дні / 2 ночі</p>
-                                <a href="https://t.me/telegram" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-bold text-base">
-                                    Детальніше <svg class="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+<div class="card-item flex-shrink-0 w-full sm:w-[350px] md:w-[380px] bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-blue-100/60 flex flex-col">
+<div class="relative h-64 w-full overflow-hidden">
+<img alt="Індія" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&amp;fit=crop&amp;w=800&amp;q=80"/>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-4 py-1.5 rounded-full shadow-sm">
+<span class="text-xs font-bold text-orange-600 uppercase tracking-wider">2 години</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow justify-between">
+<div>
+<h3 class="text-xl font-bold text-orange-500 uppercase">«Віденський марафон»</h3>
+<p class="text-gray-700 text-sm mt-1 font-medium">Пішки центром, де найцікавіше заховано у дворах</p>
+</div>
+<div class="mt-6 pt-4 border-t border-gray-100 flex flex-col gap-3">
+<p class="text-gray-600 text-sm font-semibold">300 € за екскурсію</p>
+<a class="inline-flex items-center text-blue-600 hover:text-blue-700 font-bold text-base" data-detail-open="tour-vienna-marathon" href="#tour-vienna-marathon">
+                                    Детальніше <svg class="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+</div>
+</div>
 
-                    <!-- 2. Индия -->
-                    <div class="card-item flex-shrink-0 w-full sm:w-[350px] md:w-[380px] bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-blue-100/60 flex flex-col">
-                        <div class="relative h-64 w-full overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=800&q=80" alt="Індія" class="w-full h-full object-cover">
-                            <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-4 py-1.5 rounded-full shadow-sm">
-                                <span class="text-xs font-bold text-orange-600 uppercase tracking-wider">7-17 ЛИСТОПАДА</span>
-                            </div>
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow justify-between">
-                            <div>
-                                <h3 class="text-xl font-bold text-orange-500 uppercase">ІНДІЯ</h3>
-                                <p class="text-gray-700 text-sm mt-1 font-medium">унікальний тур з комфортом і безпекою</p>
-                            </div>
-                            <div class="mt-6 pt-4 border-t border-gray-100 flex flex-col gap-3">
-                                <p class="text-gray-600 text-sm font-semibold">10 днів</p>
-                                <a href="https://t.me/telegram" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-bold text-base">
-                                    Детальніше <svg class="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+<div class="card-item flex-shrink-0 w-full sm:w-[350px] md:w-[380px] bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-blue-100/60 flex flex-col">
+<div class="relative h-64 w-full overflow-hidden">
+<img alt="Австрія" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&amp;fit=crop&amp;w=800&amp;q=80"/>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-4 py-1.5 rounded-full shadow-sm">
+<span class="text-xs font-bold text-orange-600 uppercase tracking-wider">4 години</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow justify-between">
+<div>
+<h3 class="text-xl font-bold text-orange-500 uppercase">«Передмістя Відня і Віденський ліс»</h3>
+<p class="text-gray-700 text-sm mt-1 font-medium">Це моя улюблена екскурсія. Справді.</p>
+</div>
+<div class="mt-6 pt-4 border-t border-gray-100 flex flex-col gap-3">
+<p class="text-gray-600 text-sm font-semibold">від 550 €</p>
+<a class="inline-flex items-center text-blue-600 hover:text-blue-700 font-bold text-base" data-detail-open="tour-vienna-woods" href="#tour-vienna-woods">
+                                    Детальніше <svg class="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+</div>
+</div>
 
-                    <!-- 3. Австрия -->
-                    <div class="card-item flex-shrink-0 w-full sm:w-[350px] md:w-[380px] bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-blue-100/60 flex flex-col">
-                        <div class="relative h-64 w-full overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=800&q=80" alt="Австрія" class="w-full h-full object-cover">
-                            <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-4 py-1.5 rounded-full shadow-sm">
-                                <span class="text-xs font-bold text-orange-600 uppercase tracking-wider">12-15 ЖОВТНЯ</span>
-                            </div>
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow justify-between">
-                            <div>
-                                <h3 class="text-xl font-bold text-orange-500 uppercase">АВСТРІЯ</h3>
-                                <p class="text-gray-700 text-sm mt-1 font-medium">затишні альпійські пейзажі та Відень</p>
-                            </div>
-                            <div class="mt-6 pt-4 border-t border-gray-100 flex flex-col gap-3">
-                                <p class="text-gray-600 text-sm font-semibold">4 дні / 3 ночі</p>
-                                <a href="https://t.me/telegram" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-bold text-base">
-                                    Детальніше <svg class="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+<div class="card-item flex-shrink-0 w-full sm:w-[350px] md:w-[380px] bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-blue-100/60 flex flex-col">
+<div class="relative h-64 w-full overflow-hidden">
+<img alt="Рим" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&amp;fit=crop&amp;w=800&amp;q=80"/>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-4 py-1.5 rounded-full shadow-sm">
+<span class="text-xs font-bold text-orange-600 uppercase tracking-wider">6-7 годин</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow justify-between">
+<div>
+<h3 class="text-xl font-bold text-orange-500 uppercase">Долина Вахау</h3>
+<p class="text-gray-700 text-sm mt-1 font-medium">Якщо Відень ви вже подивилися і до Віденського лісу з’їздили — час до Вахау.</p>
+</div>
+<div class="mt-6 pt-4 border-t border-gray-100 flex flex-col gap-3">
+<p class="text-gray-600 text-sm font-semibold">від 690 €</p>
+<a class="inline-flex items-center text-blue-600 hover:text-blue-700 font-bold text-base" data-detail-open="tour-wachau" href="#tour-wachau">
+                                    Детальніше <svg class="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+</div>
+</div>
 
-                    <!-- 4. Рим -->
-                    <div class="card-item flex-shrink-0 w-full sm:w-[350px] md:w-[380px] bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-blue-100/60 flex flex-col">
-                        <div class="relative h-64 w-full overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80" alt="Рим" class="w-full h-full object-cover">
-                            <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-4 py-1.5 rounded-full shadow-sm">
-                                <span class="text-xs font-bold text-orange-600 uppercase tracking-wider">20-25 ЖОВТНЯ</span>
-                            </div>
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow justify-between">
-                            <div>
-                                <h3 class="text-xl font-bold text-orange-500 uppercase">РИМ ТА ВАТИКАН</h3>
-                                <p class="text-gray-700 text-sm mt-1 font-medium">велична архітектура та видатні місця</p>
-                            </div>
-                            <div class="mt-6 pt-4 border-t border-gray-100 flex flex-col gap-3">
-                                <p class="text-gray-600 text-sm font-semibold">5 днів / 4 ночі</p>
-                                <a href="https://t.me/telegram" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-bold text-base">
-                                    Детальніше <svg class="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+<div class="card-item flex-shrink-0 w-full sm:w-[350px] md:w-[380px] bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-blue-100/60 flex flex-col">
+<div class="relative h-64 w-full overflow-hidden">
+<img alt="Париж" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&amp;fit=crop&amp;w=800&amp;q=80"/>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-4 py-1.5 rounded-full shadow-sm">
+<span class="text-xs font-bold text-orange-600 uppercase tracking-wider">повний день</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow justify-between">
+<div>
+<h3 class="text-xl font-bold text-orange-500 uppercase">Гальштат, Зальцкаммергут і оглядовий майданчик «5 пальців»</h3>
+<p class="text-gray-700 text-sm mt-1 font-medium">Один день, заради якого варто виїхати з Відня</p>
+</div>
+<div class="mt-6 pt-4 border-t border-gray-100 flex flex-col gap-3">
+<p class="text-gray-600 text-sm font-semibold">за запитом</p>
+<a class="inline-flex items-center text-blue-600 hover:text-blue-700 font-bold text-base" data-detail-open="tour-hallstatt" href="#tour-hallstatt">
+                                    Детальніше <svg class="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+</div>
+</div>
 
-                    <!-- 5. Париж -->
-                    <div class="card-item flex-shrink-0 w-full sm:w-[350px] md:w-[380px] bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-blue-100/60 flex flex-col">
-                        <div class="relative h-64 w-full overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80" alt="Париж" class="w-full h-full object-cover">
-                            <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-4 py-1.5 rounded-full shadow-sm">
-                                <span class="text-xs font-bold text-orange-600 uppercase tracking-wider">1-5 ЛИСТОПАДА</span>
-                            </div>
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow justify-between">
-                            <div>
-                                <h3 class="text-xl font-bold text-orange-500 uppercase">ПАРИЖ</h3>
-                                <p class="text-gray-700 text-sm mt-1 font-medium">романтика, Лувр та Ейфелева вежа</p>
-                            </div>
-                            <div class="mt-6 pt-4 border-t border-gray-100 flex flex-col gap-3">
-                                <p class="text-gray-600 text-sm font-semibold">5 днів / 4 ночі</p>
-                                <a href="https://t.me/telegram" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-bold text-base">
-                                    Детальніше <svg class="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+<div class="card-item flex-shrink-0 w-full sm:w-[350px] md:w-[380px] bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-blue-100/60 flex flex-col">
+<div class="relative h-64 w-full overflow-hidden">
+<img alt="Прага" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1541849546-216549ae216d?auto=format&amp;fit=crop&amp;w=800&amp;q=80"/>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-4 py-1.5 rounded-full shadow-sm">
+<span class="text-xs font-bold text-orange-600 uppercase tracking-wider">під ваш запит</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow justify-between">
+<div>
+<h3 class="text-xl font-bold text-orange-500 uppercase">Індивідуальний тур під ваш запит</h3>
+<p class="text-gray-700 text-sm mt-1 font-medium">Це лише основні маршрути</p>
+</div>
+<div class="mt-6 pt-4 border-t border-gray-100 flex flex-col gap-3">
+<p class="text-gray-600 text-sm font-semibold">під ваш бюджет</p>
+<a class="inline-flex items-center text-blue-600 hover:text-blue-700 font-bold text-base" data-detail-open="tour-custom" href="#tour-custom">
+                                    Детальніше <svg class="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+</div>
+</div>
 
-                    <!-- 6. Прага -->
-                    <div class="card-item flex-shrink-0 w-full sm:w-[350px] md:w-[380px] bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-blue-100/60 flex flex-col">
-                        <div class="relative h-64 w-full overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1541849546-216549ae216d?auto=format&fit=crop&w=800&q=80" alt="Прага" class="w-full h-full object-cover">
-                            <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-4 py-1.5 rounded-full shadow-sm">
-                                <span class="text-xs font-bold text-orange-600 uppercase tracking-wider">10-12 ЛИСТОПАДА</span>
-                            </div>
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow justify-between">
-                            <div>
-                                <h3 class="text-xl font-bold text-orange-500 uppercase">ПРАГА</h3>
-                                <p class="text-gray-700 text-sm mt-1 font-medium">казкова атмосфера та старовинні вулички</p>
-                            </div>
-                            <div class="mt-6 pt-4 border-t border-gray-100 flex flex-col gap-3">
-                                <p class="text-gray-600 text-sm font-semibold">3 дні / 2 ночі</p>
-                                <a href="https://t.me/telegram" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-bold text-base">
-                                    Детальніше <svg class="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
 
-                    <!-- 7. Барселона -->
-                    <div class="card-item flex-shrink-0 w-full sm:w-[350px] md:w-[380px] bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-blue-100/60 flex flex-col">
-                        <div class="relative h-64 w-full overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?auto=format&fit=crop&w=800&q=80" alt="Барселона" class="w-full h-full object-cover">
-                            <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-4 py-1.5 rounded-full shadow-sm">
-                                <span class="text-xs font-bold text-orange-600 uppercase tracking-wider">18-24 ЛИСТОПАДА</span>
-                            </div>
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow justify-between">
-                            <div>
-                                <h3 class="text-xl font-bold text-orange-500 uppercase">БАРСЕЛОНА</h3>
-                                <p class="text-gray-700 text-sm mt-1 font-medium">архітектура Ґауді та тепле море</p>
-                            </div>
-                            <div class="mt-6 pt-4 border-t border-gray-100 flex flex-col gap-3">
-                                <p class="text-gray-600 text-sm font-semibold">7 днів / 6 ночей</p>
-                                <a href="https://t.me/telegram" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-bold text-base">
-                                    Детальніше <svg class="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
 
-                    <!-- 8. Будапешт -->
-                    <div class="card-item flex-shrink-0 w-full sm:w-[350px] md:w-[380px] bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-blue-100/60 flex flex-col">
-                        <div class="relative h-64 w-full overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=800&q=80" alt="Будапешт" class="w-full h-full object-cover">
-                            <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-4 py-1.5 rounded-full shadow-sm">
-                                <span class="text-xs font-bold text-orange-600 uppercase tracking-wider">1-3 ГРУДНЯ</span>
-                            </div>
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow justify-between">
-                            <div>
-                                <h3 class="text-xl font-bold text-orange-500 uppercase">БУДАПЕШТ</h3>
-                                <p class="text-gray-700 text-sm mt-1 font-medium">термальні купальні та вечірній Дунай</p>
-                            </div>
-                            <div class="mt-6 pt-4 border-t border-gray-100 flex flex-col gap-3">
-                                <p class="text-gray-600 text-sm font-semibold">3 дні / 2 ночі</p>
-                                <a href="https://t.me/telegram" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-bold text-base">
-                                    Детальніше <svg class="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
 
-                </div>
-
-                <!-- Кнопка «Вправо» -->
-                <button id="nextBtn" aria-label="Наступний тур" class="absolute -right-2 md:-right-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white/90 backdrop-blur-md text-gray-700 hover:text-blue-600 rounded-full shadow-md flex items-center justify-center transition-all hover:scale-110 focus:outline-none border border-blue-50">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
-                    </svg>
-                </button>
-            </div>
-
-            <!-- Ровно 6 точек пагинации -->
-            <div id="dotsContainer" class="flex justify-center items-center space-x-2 mt-6"></div>
-        </div>
-    </section>
-
-<section id="how-to-book" class="scroll-mt-4 bg-slate-100/70 py-16 md:py-16 relative overflow-hidden">
-    
-    <div class="max-w-4xl mx-auto px-6 md:px-12 relative z-10">
-        
-        <!-- Заголовок -->
-        <div class="text-center max-w-2xl mx-auto mb-16">
-            <h2 class="text-3xl md:text-5xl font-black text-slate-900 tracking-tight">
-                Як забронювати <span class="text-[#E67E22]">тур</span>
-            </h2>
-            <p class="text-slate-600 mt-4 text-base md:text-lg leading-relaxed">
-                Три кроки до вашої ідеальної подорожі без зайвого клопоту.
-            </p>
-        </div>
-
-        <!-- Единый блок-контейнер для всех шагов -->
-        <div class="bg-white rounded-3xl p-8 md:p-12 shadow-[0_4px_25px_rgba(0,0,0,0.03)] border border-slate-200/80 relative">
-            
-            <div class="space-y-10 md:space-y-12 relative">
-                
-                <!-- Шаг 1 -->
-                <div class="flex items-start gap-6 relative">
-                    <div class="step-number flex-shrink-0 w-12 h-12 rounded-2xl bg-orange-50 text-[#E67E22] flex items-center justify-center font-black text-lg shadow-sm">
+</div>
+<!-- Кнопка «Вправо» -->
+<button aria-label="Наступний тур" class="absolute -right-2 md:-right-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white/90 backdrop-blur-md text-gray-700 hover:text-blue-600 rounded-full shadow-md flex items-center justify-center transition-all hover:scale-110 focus:outline-none border border-blue-50" id="nextBtn">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</button>
+</div>
+<!-- Ровно 6 точек пагинации -->
+<div class="flex justify-center items-center space-x-2 mt-6" id="dotsContainer"></div>
+</div>
+</section>
+<section class="scroll-mt-4 bg-slate-100/70 py-16 md:py-16 relative overflow-hidden" id="how-to-book">
+<div class="max-w-4xl mx-auto px-6 md:px-12 relative z-10">
+<!-- Заголовок -->
+<div class="text-center max-w-2xl mx-auto mb-16">
+<h2 class="text-3xl md:text-5xl font-black text-slate-900 tracking-tight">Як це <span class="text-[#E67E22]">працює</span></h2>
+<p class="text-slate-600 mt-4 text-base md:text-lg leading-relaxed">Просто напишіть мені.</p>
+</div>
+<!-- Единый блок-контейнер для всех шагов -->
+<div class="bg-white rounded-3xl p-8 md:p-12 shadow-[0_4px_25px_rgba(0,0,0,0.03)] border border-slate-200/80 relative">
+<div class="space-y-10 md:space-y-12 relative">
+<!-- Шаг 1 -->
+<div class="flex items-start gap-6 relative">
+<div class="step-number flex-shrink-0 w-12 h-12 rounded-2xl bg-orange-50 text-[#E67E22] flex items-center justify-center font-black text-lg shadow-sm">
                         01
                     </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">Написали</h3>
-                        <p class="text-slate-600 text-sm md:text-base leading-relaxed">
-                            Зв'яжіться зі мною у зручному месенджері, оберіть напрямок та бажану дату.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Шаг 2 -->
-                <div class="flex items-start gap-6 relative">
-                    <div class="step-number flex-shrink-0 w-12 h-12 rounded-2xl bg-sky-50 text-[#1D70B8] flex items-center justify-center font-black text-lg shadow-sm">
+<div>
+<h3 class="text-xl font-bold text-slate-900 mb-2">Просто напишіть мені.</h3>
+<p class="text-slate-600 text-sm md:text-base leading-relaxed">Розкажіть, скільки у вас днів, з ким ви їдете, що вже бачили і чого хочеться, — і я запропоную варіант.</p>
+</div>
+</div>
+<!-- Шаг 2 -->
+<div class="flex items-start gap-6 relative">
+<div class="step-number flex-shrink-0 w-12 h-12 rounded-2xl bg-sky-50 text-[#1D70B8] flex items-center justify-center font-black text-lg shadow-sm">
                         02
                     </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">Узгодили час</h3>
-                        <p class="text-slate-600 text-sm md:text-base leading-relaxed">
-                            Обговоримо всі деталі майбутньої програми, зручний час та організаційні нюанси.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Шаг 3 -->
-                <div class="flex items-start gap-6 relative">
-                    <div class="step-number flex-shrink-0 w-12 h-12 rounded-2xl bg-orange-50 text-[#E67E22] flex items-center justify-center font-black text-lg shadow-sm">
+<div>
+<h3 class="text-xl font-bold text-slate-900 mb-2">Не треба формулювати красиво</h3>
+<p class="text-slate-600 text-sm md:text-base leading-relaxed">Не треба формулювати красиво чи заздалегідь усе розуміти.</p>
+</div>
+</div>
+<!-- Шаг 3 -->
+<div class="flex items-start gap-6 relative">
+<div class="step-number flex-shrink-0 w-12 h-12 rounded-2xl bg-orange-50 text-[#E67E22] flex items-center justify-center font-black text-lg shadow-sm">
                         03
                     </div>
-                    <div>
-                        <h3 class="text-xl font-bold text-slate-900 mb-2">Зустрілись</h3>
-                        <p class="text-slate-600 text-sm md:text-base leading-relaxed">
-                            Зустрічаємось у Відні та вирушаємо насолоджуватися новими емоціями!
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
+<div>
+<h3 class="text-xl font-bold text-slate-900 mb-2">Цього мені вже достатньо</h3>
+<p class="text-slate-600 text-sm md:text-base leading-relaxed">Найчастіше люди пишуть щось на кшталт «у нас чотири дні, двоє дорослих і дитина, хочемо гори і щоб не дуже втомитися» — цього мені вже достатньо.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
-
-
-<section id="reviews" class="scroll-mt-4 reviews-bg relative py-20 px-4 overflow-hidden text-white">
-    
-    <!-- Біле напівпрозоре затемнення / фон -->
-    <div class="absolute inset-0 bg-white/30 z-0 pointer-events-none"></div>
-
-    <div class="max-w-5xl mx-auto relative z-10">
-        <!-- Заголовок -->
-        <div class="text-center mb-12">
-            <h2 class="text-2xl md:text-4xl font-black text-slate-900 tracking-tight uppercase drop-shadow-sm">
+<section class="scroll-mt-4 reviews-bg relative py-20 px-4 overflow-hidden text-white" id="reviews">
+<!-- Біле напівпрозоре затемнення / фон -->
+<div class="absolute inset-0 bg-white/30 z-0 pointer-events-none"></div>
+<div class="max-w-5xl mx-auto relative z-10">
+<!-- Заголовок -->
+<div class="text-center mb-12">
+<h2 class="text-2xl md:text-4xl font-black text-slate-900 tracking-tight uppercase drop-shadow-sm">
                 ЩО КАЖУТЬ МОЇ МАНДРІВНИКИ
             </h2>
-        </div>
-
-        <!-- Оболочка слайдера со стрелками -->
-        <div class="relative group max-w-3xl mx-auto">
-            <!-- Кнопка «Влево» -->
-            <button id="reviewsPrevBtn" aria-label="Попередній відгук" class="absolute -left-4 sm:-left-12 md:-left-16 top-1/2 -translate-y-1/2 z-20 w-12 h-12 md:w-14 md:h-14 bg-white text-gray-800 hover:text-orange-500 rounded-full shadow-xl flex items-center justify-center transition-all hover:scale-110 focus:outline-none border border-gray-200">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path>
-                </svg>
-            </button>
-
-            <!-- Слайдер отзывов -->
-            <div id="reviewsSlider" class="flex space-x-6 overflow-x-auto pb-6 pt-2 px-2 scroll-smooth scrollbar-none" style="scrollbar-width: none; -ms-overflow-style: none;">
-                
-                <!-- 1. Отзыв -->
-                <div class="review-item flex-shrink-0 w-full bg-white/90 backdrop-blur-md text-gray-800 rounded-3xl p-8 sm:p-10 shadow-2xl border border-white flex flex-col justify-between">
-                    <div>
-                        <div class="text-orange-400 mb-4">
-                            <svg class="w-10 h-10 inline-block" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.996v10h-9.996z"/>
-                            </svg>
-                        </div>
-                        <p class="text-gray-800 text-base sm:text-lg leading-relaxed font-medium mb-8">
-                            «Це була найкраща подорож у моєму житті! Ольга продумала все до дрібниць, тур був комфортним і дуже насиченим. Рекомендую від щирого серця!»
-                        </p>
-                    </div>
-                    <div class="flex items-center gap-4 pt-4 border-t border-gray-100">
-                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Марина" class="w-12 h-12 rounded-full object-cover shadow-sm">
-                        <div>
-                            <h3 class="font-bold text-gray-900 text-base">Марина, Київ</h3>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 2. Отзыв -->
-                <div class="review-item flex-shrink-0 w-full bg-white/90 backdrop-blur-md text-gray-800 rounded-3xl p-8 sm:p-10 shadow-2xl border border-white flex flex-col justify-between">
-                    <div>
-                        <div class="text-orange-400 mb-4">
-                            <svg class="w-10 h-10 inline-block" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.996v10h-9.996z"/>
-                            </svg>
-                        </div>
-                        <p class="text-gray-800 text-base sm:text-lg leading-relaxed font-medium mb-8">
-                            «Рим вражає своєю величчю! Дуже зручно, що все продумано до дрібниць: готелі, трансфери, екскурсії. Жодних турбот, тільки насолода відпочинком.»
-                        </p>
-                    </div>
-                    <div class="flex items-center gap-4 pt-4 border-t border-gray-100">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Лукас" class="w-12 h-12 rounded-full object-cover shadow-sm">
-                        <div>
-                            <h3 class="font-bold text-gray-900 text-base">Лукас, Львів</h3>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 3. Отзыв -->
-                <div class="review-item flex-shrink-0 w-full bg-white/90 backdrop-blur-md text-gray-800 rounded-3xl p-8 sm:p-10 shadow-2xl border border-white flex flex-col justify-between">
-                    <div>
-                        <div class="text-orange-400 mb-4">
-                            <svg class="w-10 h-10 inline-block" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.996v10h-9.996z"/>
-                            </svg>
-                        </div>
-                        <p class="text-gray-800 text-base sm:text-lg leading-relaxed font-medium mb-8">
-                            «Париж закохав у себе з першої секунди. Неймовірна атмосфера, чудовий супровід групи та комфортний автобус. Обов'язково поїду з вами ще!»
-                        </p>
-                    </div>
-                    <div class="flex items-center gap-4 pt-4 border-t border-gray-100">
-                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&q=80" alt="Максим" class="w-12 h-12 rounded-full object-cover shadow-sm">
-                        <div>
-                            <h3 class="font-bold text-gray-900 text-base">Максим, Одеса</h3>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 4. Отзыв -->
-                <div class="review-item flex-shrink-0 w-full bg-white/90 backdrop-blur-md text-gray-800 rounded-3xl p-8 sm:p-10 shadow-2xl border border-white flex flex-col justify-between">
-                    <div>
-                        <div class="text-orange-400 mb-4">
-                            <svg class="w-10 h-10 inline-block" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.996v10h-9.996z"/>
-                            </svg>
-                        </div>
-                        <p class="text-gray-800 text-base sm:text-lg leading-relaxed font-medium mb-8">
-                            «Казкова Прага, неймовірна архітектура та смачне пиво. Сервіс на найвищому рівні. Дякую команді за чудові вихідні!»
-                        </p>
-                    </div>
-                    <div class="flex items-center gap-4 pt-4 border-t border-gray-100">
-                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" alt="Андрій" class="w-12 h-12 rounded-full object-cover shadow-sm">
-                        <div>
-                            <h3 class="font-bold text-gray-900 text-base">Андрій, Харків</h3>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Кнопка «Вправо» -->
-            <button id="reviewsNextBtn" aria-label="Наступний відгук" class="absolute -right-4 sm:-right-12 md:-right-16 top-1/2 -translate-y-1/2 z-20 w-12 h-12 md:w-14 md:h-14 bg-white text-gray-800 hover:text-orange-500 rounded-full shadow-xl flex items-center justify-center transition-all hover:scale-110 focus:outline-none border border-gray-200">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
-                </svg>
-            </button>
-        </div>
-
-        <!-- Контейнер точек пагинации для отзывов -->
-        <div id="reviewsDotsContainer" class="flex justify-center items-center space-x-2 mt-8"></div>
-    </div>
+</div>
+<!-- Оболочка слайдера со стрелками -->
+<div class="relative group max-w-3xl mx-auto">
+<!-- Кнопка «Влево» -->
+<button aria-label="Попередній відгук" class="absolute -left-4 sm:-left-12 md:-left-16 top-1/2 -translate-y-1/2 z-20 w-12 h-12 md:w-14 md:h-14 bg-white text-gray-800 hover:text-orange-500 rounded-full shadow-xl flex items-center justify-center transition-all hover:scale-110 focus:outline-none border border-gray-200" id="reviewsPrevBtn">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</button>
+<!-- Слайдер отзывов -->
+<div class="flex items-start space-x-6 overflow-x-auto pb-6 pt-2 px-2 scroll-smooth scrollbar-none" id="reviewsSlider" style="scrollbar-width: none; -ms-overflow-style: none;">
+<!-- 1. Отзыв -->
+<div class="review-item flex-shrink-0 w-full bg-white/90 backdrop-blur-md text-gray-800 rounded-3xl p-8 sm:p-10 shadow-2xl border border-white flex flex-col self-start">
+<div>
+<div class="text-orange-400 mb-4">
+<svg class="w-10 h-10 inline-block" fill="currentColor" viewbox="0 0 24 24">
+<path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.996v10h-9.996z"></path>
+</svg>
+</div>
+<p class="text-gray-800 text-base sm:text-lg leading-relaxed font-medium mb-2">Дякуємо за прекрасну подорож Німеччиною та Францією (Нюнберг-Кольмар-Страсбург-Ротенбург на Тауері 13-15.12.2024р.). Ми з дитиною в захваті, купа емоцій, готуємося до нових турів разом з вами. Ви, Оля — чудовий гід, багато розповідали цікавих фактів і частували гостинцями, ваші колеги, які робили екскурсії по окремим містам справжні фахівці. Окрема подяка водію Василію. Дякуємо за різдвяний настрій! До нових зустрічей!</p>
+</div>
+<div class="flex items-center gap-4 mt-2 pt-3 border-t border-gray-100">
+<img alt="Фото-заглушка для відгуку" class="w-12 h-12 rounded-full object-cover shadow-sm" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&amp;fit=crop&amp;w=200&amp;q=80"/>
+<div>
+<h3 class="font-bold text-gray-900 text-base">Леся</h3>
+</div>
+</div>
+</div>
+<!-- 2. Отзыв -->
+<div class="review-item flex-shrink-0 w-full bg-white/90 backdrop-blur-md text-gray-800 rounded-3xl p-8 sm:p-10 shadow-2xl border border-white flex flex-col self-start">
+<div>
+<div class="text-orange-400 mb-4">
+<svg class="w-10 h-10 inline-block" fill="currentColor" viewbox="0 0 24 24">
+<path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.996v10h-9.996z"></path>
+</svg>
+</div>
+<p class="text-gray-800 text-base sm:text-lg leading-relaxed font-medium mb-2">Хочеться гідно оцінити вашу грандіозну організаційну роботу. Ви змогли передати людям величезну кількість корисної інформації про історію та побут у різних містах трьох європейських країн. Усе виконано винятково чудово й професійно. Неможливо не оцінити належним чином ваш ентузіазм і запал, турботу про кожного учасника цієї захопливої подорожі. З Вами добре, спокійно, легко і, головне, надійно.</p>
+</div>
+<div class="flex items-center gap-4 mt-2 pt-3 border-t border-gray-100">
+<img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=200&q=80"
+     alt="Alexander"
+     class="w-12 h-12 rounded-full object-cover shadow-sm"><div>
+<h3 class="font-bold text-gray-900 text-base">Олександр</h3>
+</div>
+</div>
+</div>
+<!-- 3. Отзыв -->
+<div class="review-item flex-shrink-0 w-full bg-white/90 backdrop-blur-md text-gray-800 rounded-3xl p-8 sm:p-10 shadow-2xl border border-white flex flex-col self-start">
+<div>
+<div class="text-orange-400 mb-4">
+<svg class="w-10 h-10 inline-block" fill="currentColor" viewbox="0 0 24 24">
+<path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.996v10h-9.996z"></path>
+</svg>
+</div>
+<p class="text-gray-800 text-base sm:text-lg leading-relaxed font-medium mb-2">Я хочу щиро подякувати Олі за чудові 3 дні. Організація була на найвищому рівні. Чотири обрані місця були дуже приємними, і кожне мало свій особливий шарм.
+Звісно, велика подяка також нашому водієві Василію, який безпечно доставляв нас з одного місця в інше.
+Особливо сподобалося, що програма була насиченою, але без зайвого поспіху.
+Я із задоволенням знову приєднаюся до одного з турів — подивимося, що буде далі. 😃</p>
+</div>
+<div class="flex items-center gap-4 mt-2 pt-3 border-t border-gray-100">
+<img alt="Фото-заглушка для відгуку" class="w-12 h-12 rounded-full object-cover shadow-sm" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&amp;fit=crop&amp;w=200&amp;q=80"/>
+<div>
+<h3 class="font-bold text-gray-900 text-base">Роберт</h3>
+</div>
+</div>
+</div>
+<!-- 4. Отзыв -->
+<div class="review-item flex-shrink-0 w-full bg-white/90 backdrop-blur-md text-gray-800 rounded-3xl p-8 sm:p-10 shadow-2xl border border-white flex flex-col self-start">
+<div>
+<div class="text-orange-400 mb-4">
+<svg class="w-10 h-10 inline-block" fill="currentColor" viewbox="0 0 24 24">
+<path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.996v10h-9.996z"></path>
+</svg>
+</div>
+<p class="text-gray-800 text-base sm:text-lg leading-relaxed font-medium mb-2">Ольго, величезна подяка вам за неймовірно красиву подорож, ми з донькою в захваті! Це була моя мрія 😌 Я дуже чекала на цю поїздку й до останнього не говорила доньці, куди ми їдемо і що там побачимо, тож для неї це був справжній сюрприз.
+Організація поїздки, стільки приємних моментів, чудова компанія та нові знайомства — усе склалося якнайкраще!
+Будемо стежити за новими поїздками й обов’язково хочемо знову приєднатися! 🤗</p>
+</div>
+<div class="flex items-center gap-4 mt-2 pt-3 border-t border-gray-100">
+<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80"
+     alt="Фото гості"
+     class="w-12 h-12 rounded-full object-cover shadow-sm"><div>
+<h3 class="font-bold text-gray-900 text-base">Анастасiя</h3>
+</div>
+</div>
+</div>
+</div>
+<!-- Кнопка «Вправо» -->
+<button aria-label="Наступний відгук" class="absolute -right-4 sm:-right-12 md:-right-16 top-1/2 -translate-y-1/2 z-20 w-12 h-12 md:w-14 md:h-14 bg-white text-gray-800 hover:text-orange-500 rounded-full shadow-xl flex items-center justify-center transition-all hover:scale-110 focus:outline-none border border-gray-200" id="reviewsNextBtn">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</button>
+</div>
+<!-- Контейнер точек пагинации для отзывов -->
+<div class="flex justify-center items-center space-x-2 mt-8" id="reviewsDotsContainer"></div>
+</div>
 </section>
-
 <!-- CSS стилі фону (якщо ще не додані) -->
 <style>
     .reviews-bg {
@@ -1038,62 +952,67 @@ img, svg {
         background-attachment: fixed;
     }
 </style>
-
-<footer id="contacts" class="scroll-mt-4 py-16 px-4 bg-white border-t border-gray-100">
-    <div class="max-w-md mx-auto text-center">
-        
-        <!-- Логотип / Название -->
-        <h3 class="text-2xl font-black text-gray-900 tracking-tight uppercase mb-2">
-            olya.lucic
-        </h3>
-        <p class="text-sm md:text-base text-gray-600 font-semibold mb-10">
-            Авторські тури по Відню та Австрії
-        </p>
-
-        <!-- Кнопки связи -->
-        <div class="flex flex-col space-y-4 mb-10">
-            
-            <!-- WhatsApp -->
-            <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3.5 w-full py-4 px-8 bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold text-base rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
-                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-                </svg>
-                <span>WhatsApp</span>
-            </a>
-
-            <!-- Telegram -->
-            <a href="https://t.me/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3.5 w-full py-4 px-8 bg-[#0088cc] hover:bg-[#007ab8] text-white font-bold text-base rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
-                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.14-.26.26-.534.26l.213-3.053 5.56-5.023c.242-.213-.054-.334-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.535-.195 1.006.132.832.936z"/>
-                </svg>
-                <span>Telegram</span>
-            </a>
-
-            <!-- Instagram -->
-            <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3.5 w-full py-4 px-8 bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] hover:opacity-95 text-white font-bold text-base rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]">
-                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                </svg>
-                <span>Instagram</span>
-            </a>
-
-        </div>
-
-        <!-- Перемикач мови -->
-        <button type="button" data-lang-toggle data-lang-mode="full" aria-label="Переключити на російську" class="w-full mb-8 py-3.5 px-6 inline-flex items-center justify-center gap-2.5 rounded-2xl border border-slate-200 bg-slate-50 text-slate-800 font-bold text-sm shadow-sm hover:bg-white hover:border-orange-200 hover:text-orange-600 hover:shadow-md active:scale-[0.99] transition-all">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21a9 9 0 100-18 9 9 0 000 18zm0 0c2.21 0 4-4.03 4-9s-1.79-9-4-9-4 4.03-4 9 1.79 9 4 9zm-8.5-6h17M3.5 9h17"></path></svg>
-            <span data-lang-label>Русский</span>
-        </button>
-
-        <!-- Копирайт -->
-        <div class="text-xs sm:text-sm text-gray-500 font-medium pt-6 border-t border-gray-100">
+<footer class="scroll-mt-4 py-16 px-4 bg-white border-t border-gray-100" id="contacts">
+<div class="max-w-md mx-auto text-center">
+<!-- Логотип / Название -->
+<h3 class="text-2xl font-black text-gray-900 tracking-tight uppercase mb-2">Давайте знайомитися</h3>
+<p class="text-sm md:text-base text-gray-600 font-semibold mb-10">Напишіть мені — розкажіть, скільки у вас днів, з ким ви їдете та що вам цікаво. Я запропоную маршрут, який підійде саме вам.<br/><br/>Дуже чекаю на нашу прогулянку. Обіцяю: Відень та Австрія вас не відпустять.</p>
+<!-- Кнопки связи -->
+<div class="flex flex-col space-y-4 mb-10">
+<!-- WhatsApp -->
+<a class="flex items-center justify-center gap-3.5 w-full py-4 px-8 bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold text-base rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]" href="https://wa.me/436769688959" rel="noopener noreferrer" target="_blank">
+<svg class="w-6 h-6 fill-current" viewbox="0 0 24 24">
+<path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path>
+</svg>
+<span>WhatsApp</span>
+</a>
+<!-- Telegram -->
+<a class="flex items-center justify-center gap-3.5 w-full py-4 px-8 bg-[#0088cc] hover:bg-[#007ab8] text-white font-bold text-base rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]" href="https://t.me/Olya_Lucic" rel="noopener noreferrer" target="_blank">
+<svg class="w-6 h-6 fill-current" viewbox="0 0 24 24">
+<path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.14-.26.26-.534.26l.213-3.053 5.56-5.023c.242-.213-.054-.334-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.535-.195 1.006.132.832.936z"></path>
+</svg>
+<span>Telegram</span>
+</a>
+<!-- Instagram -->
+<a class="flex items-center justify-center gap-3.5 w-full py-4 px-8 bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] hover:opacity-95 text-white font-bold text-base rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.02]" href="https://www.instagram.com/olya.lucic/" rel="noopener noreferrer" target="_blank">
+<svg class="w-6 h-6 fill-current" viewbox="0 0 24 24">
+<path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+</svg>
+<span>Instagram</span>
+</a>
+</div>
+<!-- Перемикач мови -->
+<button aria-label="Переключити на російську" class="w-full mb-8 py-3.5 px-6 inline-flex items-center justify-center gap-2.5 rounded-2xl border border-slate-200 bg-slate-50 text-slate-800 font-bold text-sm shadow-sm hover:bg-white hover:border-orange-200 hover:text-orange-600 hover:shadow-md active:scale-[0.99] transition-all" data-lang-mode="full" data-lang-toggle="" type="button">
+<svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M12 21a9 9 0 100-18 9 9 0 000 18zm0 0c2.21 0 4-4.03 4-9s-1.79-9-4-9-4 4.03-4 9 1.79 9 4 9zm-8.5-6h17M3.5 9h17" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span data-lang-label="">Русский</span>
+</button>
+<!-- Копирайт -->
+<div class="text-xs sm:text-sm text-gray-500 font-medium pt-6 border-t border-gray-100">
             © 2026 Olya Lucic. Всі права захищені.
         </div>
-
-    </div>
-</footer>
-
-    <script>
+</div>
+</footer><dialog aria-label="Детальніше" class="w-full max-w-3xl bg-white rounded-3xl p-8 sm:p-10 text-slate-800 border border-slate-200 shadow-2xl" id="contentDialog"><div class="flex justify-between items-center gap-4 mb-8"><p class="font-bold text-slate-900">Детальніше</p><button aria-label="Закрити" class="shrink-0 w-12 h-12 inline-flex items-center justify-center rounded-xl bg-white text-slate-900 shadow-xl border border-white/80 hover:bg-slate-100 active:scale-95 transition-all" id="closeDetails" type="button"><svg aria-hidden="true" class="w-7 h-7" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M6 6l12 12M6 18L18 6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></path></svg></button></div><article data-detail-panel="" hidden="" id="about-story"><h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight mb-4" id="about-story-title">Про мене</h2><div class="space-y-4 text-slate-700 text-base md:text-lg leading-relaxed"><p>Уявіть ранковий Відень. Сонце ще м’яке, легкий туман тримається над бруківкою, десь б’ють соборні дзвони, а перші трамваї сонно розганяються вулицями. Місто прокидається неквапливо, ніби точно знає: поспішати тут нікуди.</p>
+<p>Саме в такому Відні я колись зрозуміла, чим хочу займатися все життя.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Мене звати Оля Лучіч.</h3><p>Мене звати Оля Лучіч. До Австрії я приїхала понад двадцять років тому за програмою au-pair — з однією валізою, кількома словами німецькою і дуже великими планами.</p>
+<p>Відень я побачила вперше у житті й закохалася миттєво: у палаци, у вузькі вулички, де за кожним рогом чиясь історія, у музику, що звучить тут буквально з кожного двору.</p>
+<p>Мені захотілося зрозуміти це місто зсередини. Не просто говорити з віденцями, а розуміти, про що вони жартують, чому пишаються і що співають. Я вивчила німецьку, роками читала, ходила, розпитувала, збирала історії — і в якийсь момент зрозуміла, що моє захоплення переросло звичайне хобі.</p>
+<p>Тоді я склала державний іспит і стала ліцензованим гідом.</p>
+<p>Ось уже майже 15 років я щодня показую Австрію людям з усього світу. І досі найулюбленіший момент у моїй роботі — це коли вираз обличчя людини змінюється. Коли ви заходите у двір, про який не пише жоден путівник, і на кілька секунд просто замовкаєте.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Кілька слів про мене, поза роботою</h3><p>Я дуже люблю рух. Біг, довгі піші маршрути, гори, спортивний велосипед, активний спосіб життя — це моя нормальна неділя. Тому, до речі, я добре відчуваю темп групи й ніколи не змушу вас вибирати між «побачити все» і «не впасти від втоми».</p>
+<p>Я багато подорожую світом і щиро люблю чужі культури й традиції — за це, напевно, і вмію розповідати про австрійську так, щоб вона стала близькою. Історією цікавлюся постійно, не за обов’язком, а тому що це найкращий детектив, який хтось написав.</p>
+<p>А ще у мене є Instagram — і він давно перетворився на маленьку спільноту людей, які так само люблять Австрію. Дякую кожному, хто там зі мною.</p></div></article><article data-detail-panel="" hidden="" id="format-story"><h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight mb-4" id="format-story-title">Я не заваливаю датами. Це точно.</h2><div class="space-y-4 text-slate-700 text-base md:text-lg leading-relaxed"><p>Ви приїхали відпочивати, а не складати іспит з історії. Тому мої екскурсії — це радше прогулянка з людиною, яка дуже любить це місто і вміє про нього розповідати: з історіями, деталями, легендами, чутками з палацових коридорів і поясненням, чому оця булочка коштує саме стільки.</p>
+<p>Але якщо вам хочеться глибше — я тільки за. Із задоволенням піду в серйозну історичну розмову, у дискусію, у деталі, про які зазвичай не розповідають. Я підлаштовуюся під вас, а не навпаки.</p></div></article><article data-detail-panel="" hidden="" id="flexibility-story"><h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight mb-4" id="flexibility-story-title">Я підлаштовуюся під вас, а не навпаки.</h2><div class="space-y-4 text-slate-700 text-base md:text-lg leading-relaxed"><p>Ви приїхали відпочивати, а не складати іспит з історії. Тому мої екскурсії — це радше прогулянка з людиною, яка дуже любить це місто і вміє про нього розповідати: з історіями, деталями, легендами, чутками з палацових коридорів і поясненням, чому оця булочка коштує саме стільки.</p>
+<p>Але якщо вам хочеться глибше — я тільки за. Із задоволенням піду в серйозну історичну розмову, у дискусію, у деталі, про які зазвичай не розповідають. Я підлаштовуюся під вас, а не навпаки.</p></div></article><article data-detail-panel="" hidden="" id="formats-story"><h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight mb-4" id="formats-story-title">Формати, з якими я працюю щодня:</h2><div class="space-y-4 text-slate-700 text-base md:text-lg leading-relaxed"><ul class="space-y-3"><li>• індивідуальні екскурсії Віднем — для пар, друзів, родин</li><li>• сімейні прогулянки з дітьми: без нудьги, у ритмі дитини, з інтерактивом</li><li>• VIP-супровід і приватні програми під ключ</li><li>• групові автобусні тури Австрією та Європою щовихідних</li><li>• авторські маршрути Австрією та сусідніми країнами — під ваш час, темп і настрій</li><li>• екскурсії українською та російською мовами</li></ul></div></article><article data-detail-panel="" hidden="" id="experience-story"><h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight mb-4" id="experience-story-title">Я вмію обидві.</h2><div class="space-y-4 text-slate-700 text-base md:text-lg leading-relaxed"><p>Індивідуальний турист і автобусна група на 50 осіб — це дві абсолютно різні професії. Я вмію обидві. І саме тому спокійно збираю програму будь-якого формату: від романтичної прогулянки на дві години до тижневої подорожі з готелями, ресторанами й квитками.</p></div></article><article data-detail-panel="" hidden="" id="concierge-story"><h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight mb-4" id="concierge-story-title">Не тільки екскурсія: я поруч на весь час вашої подорожі</h2><div class="space-y-4 text-slate-700 text-base md:text-lg leading-relaxed"><p>Найчастіше після першої зустрічі мене питають: «Олю, а можете ще…?»</p>
+<p>Можу.</p><ul class="space-y-3"><li>• квитки на вистави, концерти, оперу, театр</li><li>• закриті виставки та події, на які складно потрапити з вулиці</li><li>• бронювання ресторанів — від затишної кав’ярні до столика, який «уже нема»</li><li>• супровід у форматі консьєржа протягом усього перебування в Австрії</li><li>• планування маршруту, трансфери, організація всіх деталей</li></ul><p>Ідея проста: ви приїжджаєте — і далі просто отримуєте задоволення. Без нескінченних вкладок у браузері, без «а куди піти ввечері» і без відчуття, що ви щось важливе пропустили.</p>
+<p>Ви в надійних руках. Це те, за що мене найчастіше дякують.</p></div></article><article data-detail-panel="" hidden="" id="care-story"><h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight mb-4" id="care-story-title">Ви в надійних руках.</h2><div class="space-y-4 text-slate-700 text-base md:text-lg leading-relaxed"><h3 class="text-xl font-bold text-slate-900 mb-2">Не тільки екскурсія: я поруч на весь час вашої подорожі</h3><p>Найчастіше після першої зустрічі мене питають: «Олю, а можете ще…?»</p>
+<p>Можу.</p><ul class="space-y-3"><li>• квитки на вистави, концерти, оперу, театр</li><li>• закриті виставки та події, на які складно потрапити з вулиці</li><li>• бронювання ресторанів — від затишної кав’ярні до столика, який «уже нема»</li><li>• супровід у форматі консьєржа протягом усього перебування в Австрії</li><li>• планування маршруту, трансфери, організація всіх деталей</li></ul><p>Ідея проста: ви приїжджаєте — і далі просто отримуєте задоволення. Без нескінченних вкладок у браузері, без «а куди піти ввечері» і без відчуття, що ви щось важливе пропустили.</p>
+<p>Ви в надійних руках. Це те, за що мене найчастіше дякують.</p></div></article><article data-detail-panel="" hidden="" id="tour-keep-calm"><h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight mb-4" id="tour-keep-calm-title">«Keep Calm and love Vienna»</h2><div class="space-y-4 text-slate-700 text-base md:text-lg leading-relaxed"><p class="font-semibold text-slate-900">Ідеальне перше побачення з Віднем</p><p class="text-sm text-gray-500">Повний опис екскурсії не надано. Нижче — лише наявні фрагменти та деталі.</p><p>Якщо ви у Відні вперше — починайте звідси.</p><p>Ви не самі в чужому місті.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Деталі</h3><p>Тривалість: 3 години</p><h3 class="text-xl font-bold text-slate-900 mb-2">Вартість</h3><div class="space-y-3"><p>1–2 особи — 390 €</p><p>3–5 осіб — 420 €</p><p>6–7 осіб — 450 € + оренда мінівена 55 €/год (615 € за 3-годинний тур)</p></div><p>Групи більшого розміру — за запитом.</p></div></article><article data-detail-panel="" hidden="" id="tour-vienna-marathon"><h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight mb-4" id="tour-vienna-marathon-title">«Віденський марафон»</h2><div class="space-y-4 text-slate-700 text-base md:text-lg leading-relaxed"><p class="font-semibold text-slate-900">Пішки центром, де найцікавіше заховано у дворах</p><p class="text-sm text-gray-500">Повний опис екскурсії не надано. Нижче — лише наявні фрагменти та деталі.</p><p>Ця екскурсія — для тих, хто любить ходити. Багато ходити.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Про що ви дізнаєтеся дорогою</h3><p>Текст цього розділу не надано.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Чесно: кому ця екскурсія НЕ підійде</h3><p>Текст цього розділу не надано.</p><p>«Віденський марафон» — для тих, хто тут уже був. Хто бачив головне й тепер хоче зазирнути глибше: у двори, у деталі, у те, повз що пройшов першого разу.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Деталі</h3><p>Тривалість: 2 години</p>
+<p>Формат: пішохідний, центр міста</p>
+<p>Вартість: 300 € за екскурсію</p></div></article><article data-detail-panel="" hidden="" id="tour-vienna-woods"><h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight mb-4" id="tour-vienna-woods-title">«Передмістя Відня і Віденський ліс»</h2><div class="space-y-4 text-slate-700 text-base md:text-lg leading-relaxed"><p class="font-semibold text-slate-900">Це моя улюблена екскурсія. Справді.</p><p class="text-sm text-gray-500">Повний опис екскурсії не надано. Нижче — лише наявні фрагменти та деталі.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Фортеця Ліхтенштайн</h3><p>Текст цього розділу не надано.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Підземне озеро</h3><p>Текст цього розділу не надано.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Монастир і реліквія</h3><p>Текст цього розділу не надано.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Історія принца Рудольфа</h3><p>Текст цього розділу не надано.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Баден</h3><p>Текст цього розділу не надано.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Що входить</h3><ul class="space-y-3"><li>• зустріч біля вашого готелю або в зручному місці</li><li>• комфортне авто і вся дорога між точками</li><li>• я з вами всі чотири години</li><li>• зупинки на каву і фото будь-якої миті, коли захочеться</li><li>• маршрут підлаштовую під вас: з дітьми, з літніми батьками, з обмеженим часом — скажіть, і я його перезберу</li></ul><h3 class="text-xl font-bold text-slate-900 mb-2">Деталі</h3><p>Тривалість: 4 години</p><h3 class="text-xl font-bold text-slate-900 mb-2">Вартість</h3><div class="space-y-3"><p>1–2 особи — 550 €</p><p>3–5 осіб — 590 €</p><p>6–7 осіб — 590 € + оренда мінівена 55 €/год (810 € за 4-годинний тур)</p></div><p>Вхід на підземне озеро — 19 € з людини, дітям знижка. Групи більшого розміру — за запитом.</p></div></article><article data-detail-panel="" hidden="" id="tour-wachau"><h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight mb-4" id="tour-wachau-title">Долина Вахау</h2><div class="space-y-4 text-slate-700 text-base md:text-lg leading-relaxed"><p class="font-semibold text-slate-900">Якщо Відень ви вже подивилися і до Віденського лісу з’їздили — час до Вахау.</p><p class="text-sm text-gray-500">Повний опис екскурсії не надано. Нижче — лише наявні фрагменти та деталі.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Монастир Мельк</h3><p>Текст цього розділу не надано.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Дюрнштайн</h3><p>Текст цього розділу не надано.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Дегустація</h3><p>Текст цього розділу не надано.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Виноградники і Кремс</h3><p>Текст цього розділу не надано.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Цей день можна скласти зовсім інакше</h3><p>Текст цього розділу не надано.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Що входить</h3><ul class="space-y-3"><li>• зустріч біля вашого готелю або в зручному місці</li><li>• комфортне авто і вся дорога</li><li>• я з вами весь день</li><li>• зупинки на каву, обід і фото тоді, коли захочеться вам</li><li>• маршрут підлаштовую під вас: з дітьми, з літніми батьками, з особливим інтересом до вина — скажіть заздалегідь</li></ul><h3 class="text-xl font-bold text-slate-900 mb-2">Деталі</h3><p>Тривалість: 6-7 годин</p><h3 class="text-xl font-bold text-slate-900 mb-2">Вартість</h3><div class="space-y-3"><p>1–2 особи — 690 €</p><p>3–5 осіб — 710 €</p><p>6–7 осіб — 710 € + оренда мінівена 55 €/год (1055 € за 7-годинний тур)</p></div><p>Групи більшого розміру — за запитом.</p></div></article><article data-detail-panel="" hidden="" id="tour-hallstatt"><h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight mb-4" id="tour-hallstatt-title">Гальштат, Зальцкаммергут і оглядовий майданчик «5 пальців»</h2><div class="space-y-4 text-slate-700 text-base md:text-lg leading-relaxed"><p class="font-semibold text-slate-900">Один день, заради якого варто виїхати з Відня</p><p class="text-sm text-gray-500">Повний опис екскурсії не надано. Нижче — лише наявні фрагменти та деталі.</p><p>Є місця, які просто гарні. А є такі, після яких людина замовкає і кілька секунд просто дивиться.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Що таке Зальцкаммергут</h3><p>Текст цього розділу не надано.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Дорогою: Траунзее і Гмунден</h3><p>Текст цього розділу не надано.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Три варіанти цього дня</h3><h3 class="text-xl font-bold text-slate-900 mb-2">Варіант 1. Неквапливий: озера і Гальштат</h3><p>Текст цього розділу не надано.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Варіант 2. Із соляною шахтою</h3><p>Текст цього розділу не надано.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Варіант 3. «5 пальців» і Крижана печера</h3><p>Текст цього розділу не надано.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Як ми все це організуємо</h3><p>Текст цього розділу не надано.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Деталі</h3><p>Тривалість: повний день</p>
+<p>Вартість: за запитом — залежить від обраного варіанта і кількості гостей</p></div></article><article data-detail-panel="" hidden="" id="tour-custom"><h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight mb-4" id="tour-custom-title">Індивідуальний тур під ваш запит</h2><div class="space-y-4 text-slate-700 text-base md:text-lg leading-relaxed"><p class="font-semibold text-slate-900">Це лише основні маршрути</p><p>Усе, що описано вище, — мої найпопулярніші тури. Ті, які замовляють найчастіше і які я можу провести із заплющеними очима.</p>
+<p>Але це далеко не все, що я вмію показувати.</p>
+<p>У запасі в мене ще десятки маршрутів Австрією: Зальцбург, альпійські озера, печери, водоспади, гірські дороги, гайкінги різної складності — від прогулянки, яку подолає дитина, до серйозного дня в горах. Щось із цього є в путівниках, а щось знають тільки місцеві.</p>
+<p>Скажіть, чого вам хочеться, — і я зберу маршрут під вас. Не оберу відповідний із готових, а саме зберу: під ваш темп, ваш склад, ваш інтерес і ваш бюджет.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Багатоденні подорожі</h3><p>Якщо у вас є кілька днів, Австрію можна побачити зовсім інакше.</p>
+<p>Я організовую багатоденні тури з ночівлями: з готелями, маршрутом, ресторанами й активностями на кожен день. Гори, озера, винні регіони, маленькі міста, куди звичайні тури не заїжджають. Ви просто прокидаєтеся і їдете далі, усе інше — мій клопіт.</p><h3 class="text-xl font-bold text-slate-900 mb-2">І все, що навколо подорожі</h3><p>Екскурсія — це часто лише частина того, по що люди до мене звертаються. Решту я теж беру на себе:</p><ul class="space-y-3"><li>• квитки в оперу, театри, на концерти й особливі вистави</li><li>• закриті виставки та події, на які складно потрапити самостійно</li><li>• бронювання ресторанів — від маленької кав’ярні до місць, де «місць немає»</li><li>• трансфери, планування днів, організація деталей, про які зазвичай згадують пізно</li></ul></div></article><div class="mt-8"><a class="inline-flex items-center justify-center bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 px-8 rounded-xl transition duration-300 shadow-xl text-lg border border-orange-400/30" data-detail-contact="" href="#contacts">Напишіть мені</a></div></dialog>
+<script>
         document.addEventListener('DOMContentLoaded', () => {
             const slider = document.getElementById('slider');
             const prevBtn = document.getElementById('prevBtn');
@@ -1216,7 +1135,6 @@ img, svg {
 
         });
     </script>
-
 <script>
 document.addEventListener('DOMContentLoaded', () => {
     const menuBtn = document.getElementById('mobileMenuBtn');
@@ -1254,105 +1172,329 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 </script>
-
 <script>
 // === UA / RU language switcher ===
 document.addEventListener('DOMContentLoaded', () => {
-    const uaToRu = {"Гід у Відні та Австрії":"Гид в Вене и Австрии","Про мене":"Обо мне","Переваги":"Преимущества","Тури":"Туры","Бронювання":"Бронирование","Відгуки":"Отзывы","Контакти":"Контакты","Головна":"Главная","АВТОРСЬКІ ТУРИ":"АВТОРСКИЕ ТУРЫ","ВІДНЮ":"ВЕНЕ","ТА":"И","АВСТРІЇ":"АВСТРИИ","Комфортні подорожі з душею, які залишають спогади на все життя":"Комфортные путешествия с душой, которые оставляют воспоминания на всю жизнь","Переглянути тури":"Посмотреть туры","ТУРИ, ЯКІ":"ТУРЫ, КОТОРЫЕ","ЗАКОХУЮТЬ":"ВЛЮБЛЯЮТ","З ПЕРШОГО":"С ПЕРВОГО","ПОГЛЯДУ":"ВЗГЛЯДА","АВТОБУСНІ ТУРИ":"АВТОБУСНЫЕ ТУРЫ","комфортні групові подорожі Європою":"комфортные групповые путешествия по Европе","АВТОРСЬКИЙ ПІДХІД":"АВТОРСКИЙ ПОДХОД","унікальні маршрути та програми":"уникальные маршруты и программы","ТУРБОТА ТА ПІДТРИМКА":"ЗАБОТА И ПОДДЕРЖКА","підтримка 24/7 під час подорожі":"поддержка 24/7 во время путешествия","МАЛІ ГРУПИ":"МАЛЫЕ ГРУППЫ","дружня атмосфера та нові знайомства":"дружеская атмосфера и новые знакомства","ПРО МЕНЕ":"ОБО МНЕ","Привіт! Я —":"Привет! Я —","Ваш гід у світі яскравих подорожей!":"Ваш гид в мире ярких путешествий!","Я організовую та супроводжую авторські тури по всьому світу. Обожнюю відкривати нові місця разом з вами, ділитися атмосферою країн та створювати подорожі, які залишаються в серці назавжди.":"Я организую и сопровождаю авторские туры по всему миру. Обожаю открывать новые места вместе с вами, делиться атмосферой стран и создавать путешествия, которые навсегда остаются в сердце.","Австрія":"Австрия","Ісландія":"Исландия","Індія":"Индия","Доломіти":"Доломиты","Азори":"Азорские острова","і ще багато інших дивовижних місць!":"и ещё много других удивительных мест!","Чому обирають":"Почему выбирают","мої тури?":"мои туры?","Кожна подорож продумана так, щоб ви відпочивали душею та тілом.":"Каждое путешествие продумано так, чтобы вы отдыхали душой и телом.","Авторські маршрути":"Авторские маршруты","Затишні локації, секретні оглядові майданчики та атмосфера без туристичного натовпу.":"Уютные локации, секретные смотровые площадки и атмосфера без туристических толп.","Унікальна програма":"Уникальная программа","Гнучкість у всьому":"Гибкость во всём","Ніякого поспіху. Змінилася погода чи настрій? Легко адаптуємо план під вас.":"Никакой спешки. Изменилась погода или настроение? Легко адаптируем план под вас.","Комфортний ритм":"Комфортный ритм","Індивідуальна турбота":"Индивидуальная забота","Допоможу з вибором кав'ярні, підкажу найкращі ракурси для фото та відповілю на все.":"Помогу с выбором кафе, подскажу лучшие ракурсы для фото и отвечу на все вопросы.","Увага до деталей":"Внимание к деталям","Дружня атмосфера":"Дружеская атмосфера","Подорожі невеликими компаніями. Легке спілкування, душевність і нові друзі.":"Путешествия небольшими компаниями. Лёгкое общение, душевность и новые друзья.","Затишне коло":"Уютный круг","Супровід 24/7":"Сопровождение 24/7","Я на зв'язку від моменту бронювання до вашого повернення додому. Повний спокій.":"Я на связи с момента бронирования до вашего возвращения домой. Полное спокойствие.","Безпека та затишок":"Безопасность и уют","Яскраві спогади":"Яркие воспоминания","Ви привезете з подорожі не лише масу емоцій, а й чудові фотографії на згадку.":"Вы привезёте из путешествия не только массу эмоций, но и замечательные фотографии на память.","Незабутні моменти":"Незабываемые моменты","НАЙБЛИЖЧІ ПОДОРОЖІ":"БЛИЖАЙШИЕ ПУТЕШЕСТВИЯ","ПОПУЛЯРНІ ТУРИ":"ПОПУЛЯРНЫЕ ТУРЫ","Найкращі маршрути для незабутніх вражень":"Лучшие маршруты для незабываемых впечатлений","26-27 ВЕРЕСНЯ":"26-27 СЕНТЯБРЯ","ВЕНЕЦІЯ":"ВЕНЕЦИЯ","цілий день на морі!":"целый день на море!","3 дні / 2 ночі":"3 дня / 2 ночи","Детальніше":"Подробнее","7-17 ЛИСТОПАДА":"7-17 НОЯБРЯ","ІНДІЯ":"ИНДИЯ","унікальний тур з комфортом і безпекою":"уникальный тур с комфортом и безопасностью","10 днів":"10 дней","12-15 ЖОВТНЯ":"12-15 ОКТЯБРЯ","АВСТРІЯ":"АВСТРИЯ","затишні альпійські пейзажі та Відень":"уютные альпийские пейзажи и Вена","4 дні / 3 ночі":"4 дня / 3 ночи","20-25 ЖОВТНЯ":"20-25 ОКТЯБРЯ","РИМ ТА ВАТИКАН":"РИМ И ВАТИКАН","велична архітектура та видатні місця":"величественная архитектура и знаковые места","5 днів / 4 ночі":"5 дней / 4 ночи","1-5 ЛИСТОПАДА":"1-5 НОЯБРЯ","романтика, Лувр та Ейфелева вежа":"романтика, Лувр и Эйфелева башня","10-12 ЛИСТОПАДА":"10-12 НОЯБРЯ","казкова атмосфера та старовинні вулички":"сказочная атмосфера и старинные улочки","18-24 ЛИСТОПАДА":"18-24 НОЯБРЯ","архітектура Ґауді та тепле море":"архитектура Гауди и тёплое море","7 днів / 6 ночей":"7 дней / 6 ночей","1-3 ГРУДНЯ":"1-3 ДЕКАБРЯ","термальні купальні та вечірній Дунай":"термальные купальни и вечерний Дунай","Як забронювати":"Как забронировать","Три кроки до вашої ідеальної подорожі без зайвого клопоту.":"Три шага до вашего идеального путешествия без лишних хлопот.","Написали":"Написали","Зв'яжіться зі мною у зручному месенджері, оберіть напрямок та бажану дату.":"Свяжитесь со мной в удобном мессенджере, выберите направление и желаемую дату.","Узгодили час":"Согласовали время","Обговоримо всі деталі майбутньої програми, зручний час та організаційні нюанси.":"Обсудим все детали будущей программы, удобное время и организационные нюансы.","Зустрілись":"Встретились","Зустрічаємось у Відні та вирушаємо насолоджуватися новими емоціями!":"Встречаемся в Вене и отправляемся наслаждаться новыми эмоциями!","ЩО КАЖУТЬ МОЇ МАНДРІВНИКИ":"ЧТО ГОВОРЯТ МОИ ПУТЕШЕСТВЕННИКИ","«Це була найкраща подорож у моєму житті! Ольга продумала все до дрібниць, тур був комфортним і дуже насиченим. Рекомендую від щирого серця!»":"«Это было лучшее путешествие в моей жизни! Ольга продумала всё до мелочей, тур был комфортным и очень насыщенным. Рекомендую от всего сердца!»","Марина, Київ":"Марина, Киев","«Рим вражає своєю величчю! Дуже зручно, що все продумано до дрібниць: готелі, трансфери, екскурсії. Жодних турбот, тільки насолода відпочинком.»":"«Рим впечатляет своим величием! Очень удобно, что всё продумано до мелочей: отели, трансферы, экскурсии. Никаких забот, только удовольствие от отдыха.»","Лукас, Львів":"Лукас, Львов","«Париж закохав у себе з першої секунди. Неймовірна атмосфера, чудовий супровід групи та комфортний автобус. Обов'язково поїду з вами ще!»":"«Париж влюбил в себя с первой секунды. Невероятная атмосфера, отличное сопровождение группы и комфортный автобус. Обязательно поеду с вами ещё!»","Максим, Одеса":"Максим, Одесса","«Казкова Прага, неймовірна архітектура та смачне пиво. Сервіс на найвищому рівні. Дякую команді за чудові вихідні!»":"«Сказочная Прага, невероятная архитектура и вкусное пиво. Сервис на высшем уровне. Спасибо команде за прекрасные выходные!»","Андрій, Харків":"Андрей, Харьков","Авторські тури по Відню та Австрії":"Авторские туры по Вене и Австрии","© 2026 Olya Lucic. Всі права захищені.":"© 2026 Olya Lucic. Все права защищены."};
-    const ruToUa = Object.fromEntries(Object.entries(uaToRu).map(([ua, ru]) => [ru, ua]));
-    const attrUaToRu = {"На головну":"На главную","Відкрити меню":"Открыть меню","Закрити меню":"Закрыть меню","Попередній тур":"Предыдущий тур","Наступний тур":"Следующий тур","Попередній відгук":"Предыдущий отзыв","Наступний відгук":"Следующий отзыв","Австрія":"Австрия","Ісландія":"Исландия","Індія":"Индия","Доломіти":"Доломиты","Азори":"Азорские острова","Мадейра":"Мадейра","Венеція":"Венеция","Рим":"Рим","Париж":"Париж","Прага":"Прага","Барселона":"Барселона","Будапешт":"Будапешт","Марина":"Марина","Лукас":"Лукас","Максим":"Максим","Андрій":"Андрей"};
-    const attrRuToUa = Object.fromEntries(Object.entries(attrUaToRu).map(([ua, ru]) => [ru, ua]));
-
-    const translateTextNodes = (map) => {
-        const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
-        const nodes = [];
-        while (walker.nextNode()) nodes.push(walker.currentNode);
-
-        nodes.forEach((node) => {
-            const parentTag = node.parentElement?.tagName;
-            if (parentTag === 'SCRIPT' || parentTag === 'STYLE') return;
-            const raw = node.nodeValue;
-            const trimmed = raw.trim();
-            if (!trimmed || !(trimmed in map)) return;
-            const leading = raw.match(/^\s*/)?.[0] || '';
-            const trailing = raw.match(/\s*$/)?.[0] || '';
-            node.nodeValue = leading + map[trimmed] + trailing;
+    const translations = {
+    "Гід у Відні та Австрії": "Гид в Вене и Австрии",
+    "Про мене": "Обо мне",
+    "Переваги": "Преимущества",
+    "Тури": "Туры",
+    "Бронювання": "Бронирование",
+    "Відгуки": "Отзывы",
+    "Контакти": "Контакты",
+    "Головна": "Главная",
+    "ТУРИ, ЯКІ": "ТУРЫ, КОТОРЫЕ",
+    "ЗАКОХУЮТЬ": "ВЛЮБЛЯЮТ",
+    "З ПЕРШОГО": "С ПЕРВОГО",
+    "ПОГЛЯДУ": "ВЗГЛЯДА",
+    "ПРО МЕНЕ": "ОБО МНЕ",
+    "Австрія": "Австрия",
+    "Ісландія": "Исландия",
+    "Індія": "Индия",
+    "Доломіти": "Доломиты",
+    "Азори": "Азорские острова",
+    "і ще багато інших дивовижних місць!": "и ещё много других удивительных мест!",
+    "Чому обирають": "Почему выбирают",
+    "мої тури?": "мои туры?",
+    "ПОПУЛЯРНІ ТУРИ": "ПОПУЛЯРНЫЕ ТУРЫ",
+    "Детальніше": "Подробнее",
+    "ЩО КАЖУТЬ МОЇ МАНДРІВНИКИ": "ЧТО ГОВОРЯТ МОИ ПУТЕШЕСТВЕННИКИ",
+    "© 2026 Olya Lucic. Всі права захищені.": "© 2026 Olya Lucic. Все права защищены.",
+    "Уявіть ранковий Відень. Сонце ще м’яке, легкий туман тримається над бруківкою, десь б’ють соборні дзвони, а перші трамваї сонно розганяються вулицями. Місто прокидається неквапливо, ніби точно знає: поспішати тут нікуди.": "Представьте утреннюю Вену. Солнце ещё мягкое, лёгкий туман держится над брусчаткой, где-то бьют соборные колокола, а первые трамваи сонно разгоняются по улицам. Город просыпается неторопливо, будто точно знает: спешить здесь некуда.",
+    "Саме в такому Відні я колись зрозуміла, чим хочу займатися все життя.": "Именно в такой Вене я когда-то поняла, чем хочу заниматься всю жизнь.",
+    "Мене звати Оля Лучіч. До Австрії я приїхала понад двадцять років тому за програмою au-pair — з однією валізою, кількома словами німецькою і дуже великими планами.": "Меня зовут Оля Лучич. В Австрию я приехала больше двадцати лет назад по программе au-pair — с одним чемоданом, несколькими словами на немецком и очень большими планами.",
+    "Відень я побачила вперше у житті й закохалася миттєво: у палаци, у вузькі вулички, де за кожним рогом чиясь історія, у музику, що звучить тут буквально з кожного двору.": "Вену я увидела впервые в жизни и влюбилась мгновенно: во дворцы, в узкие улочки, где за каждым углом чья-то история, в музыку, которая звучит здесь буквально из каждого двора.",
+    "Мені захотілося зрозуміти це місто зсередини. Не просто говорити з віденцями, а розуміти, про що вони жартують, чому пишаються і що співають. Я вивчила німецьку, роками читала, ходила, розпитувала, збирала історії — і в якийсь момент зрозуміла, що моє захоплення переросло звичайне хобі.": "Мне захотелось понять этот город изнутри. Не просто говорить с венцами, а понимать, о чём они шутят, чем гордятся и что поют. Я выучила немецкий, годами читала, ходила, расспрашивала, собирала истории — и в какой-то момент поняла, что моё увлечение переросло обычное хобби.",
+    "Тоді я склала державний іспит і стала ліцензованим гідом.": "Тогда я сдала государственный экзамен и стала лицензированным гидом.",
+    "Ось уже майже 15 років я щодня показую Австрію людям з усього світу. І досі найулюбленіший момент у моїй роботі — це коли вираз обличчя людини змінюється. Коли ви заходите у двір, про який не пише жоден путівник, і на кілька секунд просто замовкаєте.": "Вот уже почти 15 лет я каждый день показываю Австрию людям со всего мира. И до сих пор самый любимый момент в моей работе — это когда выражение лица человека меняется. Когда вы заходите во двор, о котором не пишет ни один путеводитель, и на несколько секунд просто замолкаете.",
+    "Кілька слів про мене, поза роботою": "Несколько слов обо мне, вне работы",
+    "Я дуже люблю рух. Біг, довгі піші маршрути, гори, спортивний велосипед, активний спосіб життя — це моя нормальна неділя. Тому, до речі, я добре відчуваю темп групи й ніколи не змушу вас вибирати між «побачити все» і «не впасти від втоми».": "Я очень люблю движение. Бег, длинные пешие маршруты, горы, спортивный велосипед, активный образ жизни — это моё обычное воскресенье. Поэтому, кстати, я хорошо чувствую темп группы и никогда не заставлю вас выбирать между «увидеть всё» и «не упасть от усталости».",
+    "Я багато подорожую світом і щиро люблю чужі культури й традиції — за це, напевно, і вмію розповідати про австрійську так, щоб вона стала близькою. Історією цікавлюся постійно, не за обов’язком, а тому що це найкращий детектив, який хтось написав.": "Я много путешествую по миру и искренне люблю чужие культуры и традиции — поэтому, наверное, и умею рассказывать об австрийской так, чтобы она стала близкой. Историей интересуюсь постоянно, не по обязанности, а потому что это лучший детектив, который кто-либо написал.",
+    "А ще у мене є Instagram — і він давно перетворився на маленьку спільноту людей, які так само люблять Австрію. Дякую кожному, хто там зі мною.": "А ещё у меня есть Instagram — и он давно превратился в маленькое сообщество людей, которые так же любят Австрию. Спасибо каждому, кто там со мной.",
+    "Я не заваливаю датами. Це точно.": "Я не заваливаю датами. Это точно.",
+    "Ви приїхали відпочивати, а не складати іспит з історії. Тому мої екскурсії — це радше прогулянка з людиною, яка дуже любить це місто і вміє про нього розповідати: з історіями, деталями, легендами, чутками з палацових коридорів і поясненням, чому оця булочка коштує саме стільки.": "Вы приехали отдыхать, а не сдавать экзамен по истории. Поэтому мои экскурсии — это скорее прогулка с человеком, который очень любит этот город и умеет о нём рассказывать: с историями, деталями, легендами, слухами из дворцовых коридоров и объяснением, почему вот эта булочка стоит именно столько.",
+    "Але якщо вам хочеться глибше — я тільки за. Із задоволенням піду в серйозну історичну розмову, у дискусію, у деталі, про які зазвичай не розповідають. Я підлаштовуюся під вас, а не навпаки.": "Но если вам хочется глубже — я только за. С удовольствием включусь в серьёзный исторический разговор, в дискуссию, в детали, о которых обычно не рассказывают. Я подстраиваюсь под вас, а не наоборот.",
+    "Формати, з якими я працюю щодня:": "Форматы, с которыми я работаю каждый день:",
+    "індивідуальні екскурсії Віднем — для пар, друзів, родин": "индивидуальные экскурсии по Вене — для пар, друзей, семей",
+    "Індивідуальний турист і автобусна група на 50 осіб — це дві абсолютно різні професії. Я вмію обидві. І саме тому спокійно збираю програму будь-якого формату: від романтичної прогулянки на дві години до тижневої подорожі з готелями, ресторанами й квитками.": "Индивидуальный турист и автобусная группа на 50 человек — это две совершенно разные профессии. Я владею обеими. И именно поэтому спокойно собираю программу любого формата: от романтической прогулки на два часа до недельного путешествия с отелями, ресторанами и билетами.",
+    "Не тільки екскурсія: я поруч на весь час вашої подорожі": "Не только экскурсия: я рядом на всё время вашего путешествия",
+    "Найчастіше після першої зустрічі мене питають: «Олю, а можете ще…?»": "Чаще всего после первой встречи меня спрашивают: «Оля, а можете ещё…?»",
+    "Можу.": "Могу.",
+    "Ідея проста: ви приїжджаєте — і далі просто отримуєте задоволення. Без нескінченних вкладок у браузері, без «а куди піти ввечері» і без відчуття, що ви щось важливе пропустили.": "Идея проста: вы приезжаете — и дальше просто получаете удовольствие. Без бесконечных вкладок в браузере, без «а куда пойти вечером» и без ощущения, что вы что-то важное пропустили.",
+    "Ви в надійних руках. Це те, за що мене найчастіше дякують.": "Вы в надёжных руках. Это то, за что меня чаще всего благодарят.",
+    "Індивідуальний тур під ваш запит": "Индивидуальный тур под ваш запрос",
+    "Це лише основні маршрути": "Это лишь основные маршруты",
+    "Усе, що описано вище, — мої найпопулярніші тури. Ті, які замовляють найчастіше і які я можу провести із заплющеними очима.": "Всё, что описано выше, — мои самые популярные туры. Те, которые заказывают чаще всего и которые я могу провести с закрытыми глазами.",
+    "Але це далеко не все, що я вмію показувати.": "Но это далеко не всё, что я умею показывать.",
+    "У запасі в мене ще десятки маршрутів Австрією: Зальцбург, альпійські озера, печери, водоспади, гірські дороги, гайкінги різної складності — від прогулянки, яку подолає дитина, до серйозного дня в горах. Щось із цього є в путівниках, а щось знають тільки місцеві.": "В запасе у меня ещё десятки маршрутов по Австрии: Зальцбург, альпийские озёра, пещеры, водопады, горные дороги, хайкинги разной сложности — от прогулки, с которой справится ребёнок, до серьёзного дня в горах. Что-то из этого есть в путеводителях, а что-то знают только местные.",
+    "Скажіть, чого вам хочеться, — і я зберу маршрут під вас. Не оберу відповідний із готових, а саме зберу: під ваш темп, ваш склад, ваш інтерес і ваш бюджет.": "Скажите, чего вам хочется, — и я соберу маршрут под вас. Не выберу подходящий из готовых, а именно соберу: под ваш темп, ваш состав, ваш интерес и ваш бюджет.",
+    "Багатоденні подорожі": "Многодневные путешествия",
+    "Якщо у вас є кілька днів, Австрію можна побачити зовсім інакше.": "Если у вас есть несколько дней, Австрию можно увидеть совсем иначе.",
+    "Я організовую багатоденні тури з ночівлями: з готелями, маршрутом, ресторанами й активностями на кожен день. Гори, озера, винні регіони, маленькі міста, куди звичайні тури не заїжджають. Ви просто прокидаєтеся і їдете далі, усе інше — мій клопіт.": "Я организую многодневные туры с ночёвками: с отелями, маршрутом, ресторанами и активностями на каждый день. Горы, озёра, винные регионы, маленькие города, куда обычные туры не заезжают. Вы просто просыпаетесь и едете дальше, всё остальное — моя забота.",
+    "І все, що навколо подорожі": "И всё, что вокруг путешествия",
+    "Екскурсія — це часто лише частина того, по що люди до мене звертаються. Решту я теж беру на себе:": "Экскурсия — это часто лишь часть того, за чем люди ко мне обращаются. Остальное я тоже беру на себя:",
+    "Давайте знайомитися": "Давайте знакомиться",
+    "Напишіть мені — розкажіть, скільки у вас днів, з ким ви їдете та що вам цікаво. Я запропоную маршрут, який підійде саме вам.": "Напишите мне — расскажите, сколько у вас дней, с кем вы едете и что вам интересно. Я предложу маршрут, который подойдёт именно вам.",
+    "Дуже чекаю на нашу прогулянку. Обіцяю: Відень та Австрія вас не відпустять.": "Очень жду нашей прогулки. Обещаю: Вена и Австрия вас не отпустят.",
+    "Мене звати Оля Лучіч.": "Меня зовут Оля Лучич.",
+    "Я підлаштовуюся під вас, а не навпаки.": "Я подстраиваюсь под вас, а не наоборот.",
+    "Я вмію обидві.": "Я владею обеими.",
+    "Ви в надійних руках.": "Вы в надёжных руках.",
+    "Відень, який": "Вена, которую",
+    "ви": "вы",
+    "полюбите": "полюбите",
+    "так само,": "так же,",
+    "як я": "как я",
+    "Дивитись тури": "Смотреть туры",
+    "групові автобусні тури": "групповые автобусные туры",
+    "Австрією та Європою щовихідних": "по Австрии и Европе каждые выходные",
+    "індивідуальні екскурсії": "индивидуальные экскурсии",
+    "Віднем — для пар, друзів, родин": "по Вене — для пар, друзей, семей",
+    "VIP-супровід": "VIP-сопровождение",
+    "і приватні програми під ключ": "и частные программы под ключ",
+    "екскурсії": "экскурсии",
+    "українською та російською мовами": "на украинском и русском языках",
+    "Мене звати": "Меня зовут",
+    "Оля Лучіч": "Оля Лучич",
+    "До Австрії я приїхала понад двадцять років тому за програмою au-pair — з однією валізою, кількома словами німецькою і дуже великими планами.": "В Австрию я приехала больше двадцати лет назад по программе au-pair — с одним чемоданом, несколькими словами на немецком и очень большими планами.",
+    "Ви приїхали відпочивати, а не складати іспит з історії.": "Вы приехали отдыхать, а не сдавать экзамен по истории.",
+    "Але якщо вам хочеться глибше — я тільки за.": "Но если вам хочется глубже — я только за.",
+    "Індивідуальний турист і автобусна група на 50 осіб — це дві абсолютно різні професії.": "Индивидуальный турист и автобусная группа на 50 человек — это две совершенно разные профессии.",
+    "Не тільки екскурсія": "Не только экскурсия",
+    "Це те, за що мене найчастіше дякують.": "Это то, за что меня чаще всего благодарят.",
+    "Повний опис екскурсії не надано. Нижче — лише наявні фрагменти та деталі.": "Полное описание экскурсии не предоставлено. Ниже — только имеющиеся фрагменты и детали.",
+    "Текст цього розділу не надано.": "Текст этого раздела не предоставлен.",
+    "Групи більшого розміру — за запитом.": "Группы большего размера — по запросу.",
+    "Що входить": "Что входит",
+    "Деталі": "Детали",
+    "Вартість": "Стоимость",
+    "Якщо ви у Відні вперше — починайте звідси.": "Если вы в Вене впервые — начните отсюда.",
+    "Ви не самі в чужому місті.": "Вы не одни в чужом городе.",
+    "«Keep Calm and love Vienna»": "«Keep Calm and love Vienna»",
+    "Ідеальне перше побачення з Віднем": "Идеальное первое свидание с Веной",
+    "3 години": "3 часа",
+    "від 390 €": "от 390 €",
+    "Тривалість: 3 години": "Продолжительность: 3 часа",
+    "1–2 особи — 390 €": "1–2 человека — 390 €",
+    "3–5 осіб — 420 €": "3–5 человек — 420 €",
+    "6–7 осіб — 450 € + оренда мінівена 55 €/год (615 € за 3-годинний тур)": "6–7 человек — 450 € + аренда минивэна 55 €/час (615 € за 3-часовой тур)",
+    "Ця екскурсія — для тих, хто любить ходити. Багато ходити.": "Эта экскурсия — для тех, кто любит ходить. Много ходить.",
+    "«Віденський марафон» — для тих, хто тут уже був. Хто бачив головне й тепер хоче зазирнути глибше: у двори, у деталі, у те, повз що пройшов першого разу.": "«Венский марафон» — для тех, кто здесь уже был. Кто видел главное и теперь хочет заглянуть глубже: во дворы, в детали, в то, мимо чего прошёл в первый раз.",
+    "«Віденський марафон»": "«Венский марафон»",
+    "Пішки центром, де найцікавіше заховано у дворах": "Пешком по центру, где самое интересное спрятано во дворах",
+    "2 години": "2 часа",
+    "300 € за екскурсію": "300 € за экскурсию",
+    "Про що ви дізнаєтеся дорогою": "О чём вы узнаете по дороге",
+    "Чесно: кому ця екскурсія НЕ підійде": "Честно: кому эта экскурсия НЕ подойдёт",
+    "Тривалість: 2 години": "Продолжительность: 2 часа",
+    "Формат: пішохідний, центр міста": "Формат: пешеходный, центр города",
+    "Вартість: 300 € за екскурсію": "Стоимость: 300 € за экскурсию",
+    "Це моя улюблена екскурсія. Справді.": "Это моя любимая экскурсия. Правда.",
+    "«Передмістя Відня і Віденський ліс»": "«Пригороды Вены и Венский лес»",
+    "4 години": "4 часа",
+    "від 550 €": "от 550 €",
+    "Фортеця Ліхтенштайн": "Крепость Лихтенштейн",
+    "Підземне озеро": "Подземное озеро",
+    "Монастир і реліквія": "Монастырь и реликвия",
+    "Історія принца Рудольфа": "История принца Рудольфа",
+    "Баден": "Баден",
+    "Тривалість: 4 години": "Продолжительность: 4 часа",
+    "1–2 особи — 550 €": "1–2 человека — 550 €",
+    "3–5 осіб — 590 €": "3–5 человек — 590 €",
+    "6–7 осіб — 590 € + оренда мінівена 55 €/год (810 € за 4-годинний тур)": "6–7 человек — 590 € + аренда минивэна 55 €/час (810 € за 4-часовой тур)",
+    "Вхід на підземне озеро — 19 € з людини, дітям знижка. Групи більшого розміру — за запитом.": "Вход на подземное озеро — 19 € с человека, детям скидка. Группы большего размера — по запросу.",
+    "Якщо Відень ви вже подивилися і до Віденського лісу з’їздили — час до Вахау.": "Если Вену вы уже посмотрели и в Венский лес съездили — пора в Вахау.",
+    "Долина Вахау": "Долина Вахау",
+    "6-7 годин": "6–7 часов",
+    "від 690 €": "от 690 €",
+    "Монастир Мельк": "Монастырь Мельк",
+    "Дюрнштайн": "Дюрнштайн",
+    "Дегустація": "Дегустация",
+    "Виноградники і Кремс": "Виноградники и Кремс",
+    "Цей день можна скласти зовсім інакше": "Этот день можно составить совсем иначе",
+    "Тривалість: 6-7 годин": "Продолжительность: 6–7 часов",
+    "1–2 особи — 690 €": "1–2 человека — 690 €",
+    "3–5 осіб — 710 €": "3–5 человек — 710 €",
+    "6–7 осіб — 710 € + оренда мінівена 55 €/год (1055 € за 7-годинний тур)": "6–7 человек — 710 € + аренда минивэна 55 €/час (1055 € за 7-часовой тур)",
+    "Є місця, які просто гарні. А є такі, після яких людина замовкає і кілька секунд просто дивиться.": "Есть места, которые просто красивы. А есть такие, после которых человек замолкает и несколько секунд просто смотрит.",
+    "Гальштат, Зальцкаммергут і оглядовий майданчик «5 пальців»": "Гальштат, Зальцкаммергут и смотровая площадка «5 пальцев»",
+    "Один день, заради якого варто виїхати з Відня": "Один день, ради которого стоит выехать из Вены",
+    "повний день": "полный день",
+    "за запитом": "по запросу",
+    "Що таке Зальцкаммергут": "Что такое Зальцкаммергут",
+    "Дорогою: Траунзее і Гмунден": "По дороге: Траунзее и Гмунден",
+    "Три варіанти цього дня": "Три варианта этого дня",
+    "Варіант 1. Неквапливий: озера і Гальштат": "Вариант 1. Неспешный: озёра и Гальштат",
+    "Варіант 2. Із соляною шахтою": "Вариант 2. С соляной шахтой",
+    "Варіант 3. «5 пальців» і Крижана печера": "Вариант 3. «5 пальцев» и Ледяная пещера",
+    "Як ми все це організуємо": "Как мы всё это организуем",
+    "Тривалість: повний день": "Продолжительность: полный день",
+    "Вартість: за запитом — залежить від обраного варіанта і кількості гостей": "Стоимость: по запросу — зависит от выбранного варианта и количества гостей",
+    "під ваш запит": "под ваш запрос",
+    "під ваш бюджет": "под ваш бюджет",
+    "ТУРИ": "ТУРЫ",
+    "Як це": "Как это",
+    "працює": "работает",
+    "Просто напишіть мені.": "Просто напишите мне.",
+    "Розкажіть, скільки у вас днів, з ким ви їдете, що вже бачили і чого хочеться, — і я запропоную варіант.": "Расскажите, сколько у вас дней, с кем вы едете, что уже видели и чего хочется, — и я предложу вариант.",
+    "Не треба формулювати красиво": "Не нужно формулировать красиво",
+    "Не треба формулювати красиво чи заздалегідь усе розуміти.": "Не нужно формулировать красиво или заранее во всём разбираться.",
+    "цього мені вже достатньо": "Этого мне уже достаточно",
+    "Найчастіше люди пишуть щось на кшталт «у нас чотири дні, двоє дорослих і дитина, хочемо гори і щоб не дуже втомитися» — цього мені вже достатньо.": "Чаще всего люди пишут что-то вроде «у нас четыре дня, двое взрослых и ребёнок, хотим горы и чтобы не очень устать» — этого мне уже достаточно.",
+    "Текст відгуку не надано. Тут має бути оригінальний відгук гостя або скріншот з Instagram / Telegram.": "Текст отзыва не предоставлен. Здесь должен быть оригинальный отзыв гостя или скриншот из Instagram / Telegram.",
+    "Місце для відгуку": "Место для отзыва",
+    "Дякуємо за прекрасну подорож Німеччиною та Францією (Нюнберг-Кольмар-Страсбург-Ротенбург на Тауері 13-15.12.2024р.). Ми з дитиною в захваті, купа емоцій, готуємося до нових турів разом з вами. Ви, Оля — чудовий гід, багато розповідали цікавих фактів і частували гостинцями, ваші колеги, які робили екскурсії по окремим містам справжні фахівці. Окрема подяка водію Василію. Дякуємо за різдвяний настрій! До нових зустрічей!": "Спасибо за прекрасное путешествие по Германии и Франции (Нюрнберг — Кольмар — Страсбург — Ротенбург-на-Таубере, 13–15.12.2024). Мы с ребёнком в восторге, море эмоций, уже готовимся к новым турам вместе с вами. Вы, Оля, замечательный гид: рассказывали много интересных фактов и угощали нас вкусностями. Ваши коллеги, проводившие экскурсии по отдельным городам, — настоящие профессионалы. Отдельная благодарность водителю Василию. Спасибо за рождественское настроение! До новых встреч!",
+    "Хочеться гідно оцінити вашу грандіозну організаційну роботу. Ви змогли передати людям величезну кількість корисної інформації про історію та побут у різних містах трьох європейських країн. Усе виконано винятково чудово й професійно. Неможливо не оцінити належним чином ваш ентузіазм і запал, турботу про кожного учасника цієї захопливої подорожі. З Вами добре, спокійно, легко і, головне, надійно.": "Хочется по достоинству оценить вашу грандиозную организационную работу. Вы смогли передать людям огромное количество полезной информации об истории и быте в разных городах трёх европейских стран. Всё было выполнено исключительно прекрасно и профессионально. Невозможно не отметить ваш энтузиазм, энергию и заботу о каждом участнике этого увлекательного путешествия. С вами хорошо, спокойно, легко и, главное, надёжно.",
+    "Я хочу щиро подякувати Олі за чудові 3 дні. Організація була на найвищому рівні. Чотири обрані місця були дуже приємними, і кожне мало свій особливий шарм. Звісно, велика подяка також нашому водієві Василію, який безпечно доставляв нас з одного місця в інше. Особливо сподобалося, що програма була насиченою, але без зайвого поспіху. Я із задоволенням знову приєднаюся до одного з турів — подивимося, що буде далі. 😃": "Хочу искренне поблагодарить Олю за замечательные 3 дня. Организация была на высшем уровне. Четыре выбранных места оказались очень приятными, и каждое имело свой особый шарм. Конечно, большое спасибо и нашему водителю Василию, который безопасно доставлял нас из одного места в другое. Особенно понравилось, что программа была насыщенной, но без лишней спешки. Я с удовольствием снова присоединюсь к одному из туров — посмотрим, что будет дальше. 😃",
+    "Ольго, величезна подяка вам за неймовірно красиву подорож, ми з донькою в захваті! Це була моя мрія 😌 Я дуже чекала на цю поїздку й до останнього не говорила доньці, куди ми їдемо і що там побачимо, тож для неї це був справжній сюрприз. Організація поїздки, стільки приємних моментів, чудова компанія та нові знайомства — усе склалося якнайкраще! Будемо стежити за новими поїздками й обов’язково хочемо знову приєднатися! 🤗": "Ольга, огромное спасибо вам за невероятно красивое путешествие, мы с дочкой в восторге! Это была моя мечта 😌 Я очень ждала эту поездку и до последнего не говорила дочери, куда мы едем и что там увидим, так что для неё это был настоящий сюрприз. Организация поездки, столько приятных моментов, отличная компания и новые знакомства — всё сложилось как нельзя лучше! Будем следить за новыми поездками и обязательно хотим присоединиться снова! 🤗",
+    "Леся": "Леся",
+    "Олександр": "Александр",
+    "Роберт": "Роберт",
+    "Анастасiя": "Анастасия",
+    "Напишіть мені": "Напишите мне",
+    "• індивідуальні екскурсії Віднем — для пар, друзів, родин": "• индивидуальные экскурсии по Вене — для пар, друзей, семей",
+    "• сімейні прогулянки з дітьми: без нудьги, у ритмі дитини, з інтерактивом": "• семейные прогулки с детьми: без скуки, в ритме ребёнка, с интерактивом",
+    "• VIP-супровід і приватні програми під ключ": "• VIP-сопровождение и частные программы под ключ",
+    "• групові автобусні тури Австрією та Європою щовихідних": "• групповые автобусные туры по Австрии и Европе каждые выходные",
+    "• авторські маршрути Австрією та сусідніми країнами — під ваш час, темп і настрій": "• авторские маршруты по Австрии и соседним странам — под ваше время, темп и настроение",
+    "• екскурсії українською та російською мовами": "• экскурсии на украинском и русском языках",
+    "• квитки на вистави, концерти, оперу, театр": "• билеты на спектакли, концерты, в оперу, театр",
+    "• закриті виставки та події, на які складно потрапити з вулиці": "• закрытые выставки и события, на которые сложно попасть с улицы",
+    "• бронювання ресторанів — від затишної кав’ярні до столика, який «уже нема»": "• бронирование ресторанов — от уютной кофейни до столика, которого «уже нет»",
+    "• супровід у форматі консьєржа протягом усього перебування в Австрії": "• сопровождение в формате консьержа на протяжении всего пребывания в Австрии",
+    "• планування маршруту, трансфери, організація всіх деталей": "• планирование маршрута, трансферы, организация всех деталей",
+    "• квитки в оперу, театри, на концерти й особливі вистави": "• билеты в оперу, театры, на концерты и особые спектакли",
+    "• закриті виставки та події, на які складно потрапити самостійно": "• закрытые выставки и события, на которые сложно попасть самостоятельно",
+    "• бронювання ресторанів — від маленької кав’ярні до місць, де «місць немає»": "• бронирование ресторанов — от маленькой кофейни до мест, где «мест нет»",
+    "• трансфери, планування днів, організація деталей, про які зазвичай згадують пізно": "• трансферы, планирование дней, организация деталей, о которых обычно вспоминают поздно",
+    "• зустріч біля вашого готелю або в зручному місці": "• встреча у вашего отеля или в удобном месте",
+    "• комфортне авто і вся дорога між точками": "• комфортный автомобиль и вся дорога между точками",
+    "• я з вами всі чотири години": "• я с вами все четыре часа",
+    "• зупинки на каву і фото будь-якої миті, коли захочеться": "• остановки на кофе и фото в любой момент, когда захочется",
+    "• маршрут підлаштовую під вас: з дітьми, з літніми батьками, з обмеженим часом — скажіть, і я його перезберу": "• маршрут подстраиваю под вас: с детьми, с пожилыми родителями, с ограниченным временем — скажите, и я его пересоберу",
+    "• комфортне авто і вся дорога": "• комфортный автомобиль и вся дорога",
+    "• я з вами весь день": "• я с вами весь день",
+    "• зупинки на каву, обід і фото тоді, коли захочеться вам": "• остановки на кофе, обед и фото тогда, когда захочется вам",
+    "• маршрут підлаштовую під вас: з дітьми, з літніми батьками, з особливим інтересом до вина — скажіть заздалегідь": "• маршрут подстраиваю под вас: с детьми, с пожилыми родителями, с особым интересом к вину — скажите заранее"
+};
+    const attributeTranslations = {
+    "На головну": "На главную",
+    "Відкрити меню": "Открыть меню",
+    "Попередній тур": "Предыдущий тур",
+    "Наступний тур": "Следующий тур",
+    "Попередній відгук": "Предыдущий отзыв",
+    "Наступний відгук": "Следующий отзыв",
+    "Австрія": "Австрия",
+    "Ісландія": "Исландия",
+    "Індія": "Индия",
+    "Доломіти": "Доломиты",
+    "Азори": "Азорские острова",
+    "Мадейра": "Мадейра",
+    "Венеція": "Венеция",
+    "Рим": "Рим",
+    "Париж": "Париж",
+    "Прага": "Прага",
+    "Оля Лучіч": "Оля Лучич",
+    "Фото-заглушка для відгуку": "Фото-заглушка для отзыва",
+    "Детальніше": "Подробнее",
+    "Закрити": "Закрыть"
+};
+    const normalize = text => text.trim().replace(/\s+/g, ' ');
+    const records = [];
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    while (walker.nextNode()) {
+        const node = walker.currentNode;
+        if (node.parentElement?.closest('script, style, [data-lang-label]')) continue;
+        const raw = node.nodeValue;
+        const key = normalize(raw);
+        if (!key || !Object.prototype.hasOwnProperty.call(translations, key)) continue;
+        const leading = raw.match(/^\s*/)?.[0] || '';
+        const trailing = raw.match(/\s*$/)?.[0] || '';
+        records.push({node, uk: raw, ru: leading + translations[key] + trailing});
+    }
+    const attributes = [];
+    document.querySelectorAll('[aria-label], [alt]').forEach(el => {
+        ['aria-label', 'alt'].forEach(name => {
+            const value = el.getAttribute(name);
+            if (value !== null && Object.prototype.hasOwnProperty.call(attributeTranslations, value)) {
+                attributes.push({el, name, uk: value, ru: attributeTranslations[value]});
+            }
         });
-    };
-
-    const translateAttributes = (map) => {
-        document.querySelectorAll('[aria-label], [alt]').forEach((el) => {
-            ['aria-label', 'alt'].forEach((attr) => {
-                if (!el.hasAttribute(attr)) return;
-                const value = el.getAttribute(attr);
-                if (value in map) el.setAttribute(attr, map[value]);
-            });
-        });
-    };
-
-    const updateDynamicAria = (lang) => {
+    });
+    const applyLanguage = (language, save = true) => {
+        const lang = language === 'ru' ? 'ru' : 'uk';
+        records.forEach(record => { record.node.nodeValue = record[lang]; });
+        attributes.forEach(record => record.el.setAttribute(record.name, record[lang]));
+        document.documentElement.lang = lang;
+        document.title = lang === 'ru' ? 'Оля Лучич — гид в Вене и Австрии' : 'Оля Лучіч — гід у Відні та Австрії';
         const isRu = lang === 'ru';
-        document.querySelectorAll('#dotsContainer button').forEach((dot, index) => {
-            dot.setAttribute('aria-label', isRu ? `Перейти к туру ${index + 1}` : `Перейти до туру ${index + 1}`);
-        });
-        document.querySelectorAll('#reviewsDotsContainer button').forEach((dot, index) => {
-            dot.setAttribute('aria-label', isRu ? `Перейти к отзыву ${index + 1}` : `Перейти до відгуку ${index + 1}`);
-        });
-    };
-
-    const updateLanguageButtons = (lang) => {
-        const isRu = lang === 'ru';
-        document.querySelectorAll('[data-lang-toggle]').forEach((button) => {
+        document.querySelectorAll('[data-lang-toggle]').forEach(button => {
             const label = button.querySelector('[data-lang-label]');
-            const mode = button.dataset.langMode || 'compact';
-            if (label) label.textContent = isRu
-                ? (mode === 'full' ? 'Українська' : 'UA')
-                : (mode === 'full' ? 'Русский' : 'RU');
+            const full = button.dataset.langMode === 'full';
+            if (label) label.textContent = isRu ? (full ? 'Українська' : 'UA') : (full ? 'Русский' : 'RU');
             button.setAttribute('aria-label', isRu ? 'Переключить на украинский' : 'Переключити на російську');
             button.setAttribute('title', isRu ? 'Українська' : 'Русский');
         });
-    };
-
-    const applyLanguage = (lang, save = true) => {
-        const target = lang === 'ru' ? 'ru' : 'uk';
-        const current = document.documentElement.lang === 'ru' ? 'ru' : 'uk';
-
-        if (current !== target) {
-            const textMap = target === 'ru' ? uaToRu : ruToUa;
-            const attrMap = target === 'ru' ? attrUaToRu : attrRuToUa;
-            translateTextNodes(textMap);
-            translateAttributes(attrMap);
-        }
-
-        document.documentElement.lang = target;
-        updateLanguageButtons(target);
-        updateDynamicAria(target);
-
+        document.querySelectorAll('#dotsContainer button').forEach((button, i) => {
+            button.setAttribute('aria-label', isRu ? `Перейти к туру ${i + 1}` : `Перейти до туру ${i + 1}`);
+        });
+        document.querySelectorAll('#reviewsDotsContainer button').forEach((button, i) => {
+            button.setAttribute('aria-label', isRu ? `Перейти к отзыву ${i + 1}` : `Перейти до відгуку ${i + 1}`);
+        });
         const menuBtn = document.getElementById('mobileMenuBtn');
         if (menuBtn) {
-            const isOpen = menuBtn.getAttribute('aria-expanded') === 'true';
-            menuBtn.setAttribute('aria-label', target === 'ru'
-                ? (isOpen ? 'Закрыть меню' : 'Открыть меню')
-                : (isOpen ? 'Закрити меню' : 'Відкрити меню'));
+            const open = menuBtn.getAttribute('aria-expanded') === 'true';
+            menuBtn.setAttribute('aria-label', isRu ? (open ? 'Закрыть меню' : 'Открыть меню') : (open ? 'Закрити меню' : 'Відкрити меню'));
         }
-
         if (save) {
-            try { localStorage.setItem('olya-lucic-lang', target); } catch (e) {}
+            try { localStorage.setItem('olya-lucic-lang', lang); } catch (_) {}
         }
     };
-
-    document.querySelectorAll('[data-lang-toggle]').forEach((button) => {
-        button.addEventListener('click', () => {
-            const next = document.documentElement.lang === 'ru' ? 'uk' : 'ru';
-            applyLanguage(next);
+    document.querySelectorAll('[data-lang-toggle]').forEach(button => {
+        button.addEventListener('click', () => applyLanguage(document.documentElement.lang === 'ru' ? 'uk' : 'ru'));
+    });
+    let saved = 'uk';
+    try { saved = localStorage.getItem('olya-lucic-lang') || 'uk'; } catch (_) {}
+    applyLanguage(saved, false);
+});
+</script><script>
+document.addEventListener('DOMContentLoaded', () => {
+    const dialog = document.getElementById('contentDialog');
+    const closeButton = document.getElementById('closeDetails');
+    if (!dialog || !closeButton) return;
+    let trigger = null;
+    const openDetails = (id, source) => {
+        const panel = document.getElementById(id);
+        if (!panel?.hasAttribute('data-detail-panel')) return;
+        trigger = source || null;
+        dialog.querySelectorAll('[data-detail-panel]').forEach(item => { item.hidden = item !== panel; });
+        dialog.setAttribute('aria-labelledby', `${id}-title`);
+        if (!dialog.open) dialog.showModal();
+        dialog.scrollTop = 0;
+        closeButton.focus({preventScroll: true});
+    };
+    document.querySelectorAll('[data-detail-open]').forEach(link => {
+        link.addEventListener('click', event => {
+            event.preventDefault();
+            openDetails(link.dataset.detailOpen, link);
         });
     });
-
-    let saved = 'uk';
-    try { saved = localStorage.getItem('olya-lucic-lang') || 'uk'; } catch (e) {}
-    applyLanguage(saved === 'ru' ? 'ru' : 'uk', false);
+    closeButton.addEventListener('click', () => dialog.close());
+    dialog.addEventListener('click', event => {
+        if (event.target !== dialog) return;
+        const rect = dialog.getBoundingClientRect();
+        if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close();
+    });
+    dialog.addEventListener('close', () => { trigger?.focus({preventScroll: true}); });
+    dialog.querySelector('[data-detail-contact]')?.addEventListener('click', () => dialog.close());
+    const openFromHash = () => {
+        const id = location.hash.slice(1);
+        if (id && document.getElementById(id)?.hasAttribute('data-detail-panel')) openDetails(id, null);
+    };
+    window.addEventListener('hashchange', openFromHash);
+    openFromHash();
 });
 </script>
-
 </body>
 </html>
