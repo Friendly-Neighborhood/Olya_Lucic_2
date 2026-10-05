@@ -562,20 +562,20 @@ img, svg {
 }
 
 
-/* === Mobile: keep all 5 travel icons in one row === */
+/* === Mobile: keep all 5 travel icons in one row, slightly larger === */
 @media (max-width: 767px) {
     .about-flags {
         display: grid !important;
         grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
-        gap: .35rem !important;
+        gap: .18rem !important;
         width: 100%;
         align-items: center;
         justify-items: center;
     }
 
     .about-flags .travel-icon {
-        width: clamp(2.6rem, 13vw, 3.5rem) !important;
-        height: clamp(2.6rem, 13vw, 3.5rem) !important;
+        width: clamp(2.9rem, 15.5vw, 4rem) !important;
+        height: clamp(2.9rem, 15.5vw, 4rem) !important;
         min-width: 0 !important;
         object-fit: cover;
     }
@@ -584,12 +584,12 @@ img, svg {
 @media (max-width: 380px) {
     .about-flags {
         grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
-        gap: .25rem !important;
+        gap: .12rem !important;
     }
 
     .about-flags .travel-icon {
-        width: clamp(2.35rem, 12.5vw, 3rem) !important;
-        height: clamp(2.35rem, 12.5vw, 3rem) !important;
+        width: clamp(2.7rem, 14.8vw, 3.5rem) !important;
+        height: clamp(2.7rem, 14.8vw, 3.5rem) !important;
     }
 }
 </style>
