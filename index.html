@@ -544,6 +544,21 @@ img, svg {
         transform: none !important;
     }
 }
+
+
+/* === iPhone carousel end-stop fix === */
+#slider,
+#reviewsSlider {
+    overscroll-behavior-x: none;
+    scroll-snap-stop: always;
+}
+
+.carousel-nav-btn:disabled {
+    opacity: .34 !important;
+    cursor: default !important;
+    pointer-events: none !important;
+    box-shadow: none !important;
+}
 </style>
 </link></head>
 <body class="bg-slate-100 text-slate-800 antialiased font-sans"><!--
@@ -1264,128 +1279,137 @@ CONTENT NOTES / ПРИМЕЧАНИЯ К КОНТЕНТУ
 </div>
 </article><div class="mt-8"><a class="inline-flex items-center justify-center bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 px-8 rounded-xl transition duration-300 shadow-xl text-lg border border-orange-400/30" data-detail-contact="" href="#contacts">Напишіть мені</a></div></dialog>
 <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const slider = document.getElementById('slider');
-            const prevBtn = document.getElementById('prevBtn');
-            const nextBtn = document.getElementById('nextBtn');
-            const dotsContainer = document.getElementById('dotsContainer');
+document.addEventListener('DOMContentLoaded', () => {
+    const initCarousel = ({ sliderId, itemSelector, prevId, nextId, dotsId, labelType }) => {
+        const slider = document.getElementById(sliderId);
+        const prevBtn = document.getElementById(prevId);
+        const nextBtn = document.getElementById(nextId);
+        const dotsContainer = document.getElementById(dotsId);
 
-            if (slider && prevBtn && nextBtn && dotsContainer) {
-                const totalDots = slider.querySelectorAll('.card-item').length;
-                
-                // Create exactly 6 dots dynamically
-                for (let i = 0; i < totalDots; i++) {
-                    const dot = document.createElement('button');
-                    dot.className = `h-3 rounded-full transition-all duration-300 ${i === 0 ? 'w-6 bg-orange-500' : 'w-3 bg-gray-300 hover:bg-gray-400'}`;
-                    dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
-                    dot.addEventListener('click', () => {
-                        const maxScroll = slider.scrollWidth - slider.clientWidth;
-                        const targetScroll = (maxScroll / (totalDots - 1)) * i;
-                        slider.scrollTo({ left: targetScroll, behavior: 'smooth' });
-                    });
-                    dotsContainer.appendChild(dot);
+        if (!slider || !prevBtn || !nextBtn || !dotsContainer) return;
+
+        const cards = Array.from(slider.querySelectorAll(itemSelector));
+        if (!cards.length) return;
+
+        let currentIndex = 0;
+        let scrollRaf = null;
+
+        const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
+        const maxScroll = () => Math.max(0, slider.scrollWidth - slider.clientWidth);
+
+        const cardCenter = (card) => {
+            // Both slider and cards share the same positioned ancestor in this layout.
+            return (card.offsetLeft - slider.offsetLeft) + card.offsetWidth / 2;
+        };
+
+        const targetLeftFor = (index) => {
+            const card = cards[index];
+            const target = (card.offsetLeft - slider.offsetLeft) - (slider.clientWidth - card.offsetWidth) / 2;
+            return clamp(target, 0, maxScroll());
+        };
+
+        const nearestIndex = () => {
+            const safeScrollLeft = clamp(slider.scrollLeft, 0, maxScroll());
+            const viewportCenter = safeScrollLeft + slider.clientWidth / 2;
+            let bestIndex = 0;
+            let bestDistance = Infinity;
+
+            cards.forEach((card, index) => {
+                const distance = Math.abs(cardCenter(card) - viewportCenter);
+                if (distance < bestDistance) {
+                    bestDistance = distance;
+                    bestIndex = index;
                 }
+            });
 
-                const updateDots = () => {
-                    const maxScroll = slider.scrollWidth - slider.clientWidth;
-                    if (maxScroll <= 0) return;
-                    const scrollFraction = slider.scrollLeft / maxScroll;
-                    const activeIndex = Math.min(
-                        totalDots - 1,
-                        Math.max(0, Math.round(scrollFraction * (totalDots - 1)))
-                    );
+            return bestIndex;
+        };
 
-                    const dots = dotsContainer.children;
-                    for (let i = 0; i < dots.length; i++) {
-                        if (i === activeIndex) {
-                            dots[i].className = 'w-6 h-3 bg-orange-500 rounded-full transition-all duration-300';
-                        } else {
-                            dots[i].className = 'w-3 h-3 bg-gray-300 hover:bg-gray-400 rounded-full transition-all duration-300';
-                        }
-                    }
-                };
+        const updateControls = (index) => {
+            currentIndex = clamp(index, 0, cards.length - 1);
 
-                slider.addEventListener('scroll', updateDots);
+            Array.from(dotsContainer.children).forEach((dot, i) => {
+                dot.className = i === currentIndex
+                    ? 'w-6 h-3 bg-orange-500 rounded-full transition-all duration-300'
+                    : 'w-3 h-3 bg-gray-300 hover:bg-gray-400 rounded-full transition-all duration-300';
+                dot.setAttribute('aria-current', i === currentIndex ? 'true' : 'false');
+            });
 
-                prevBtn.addEventListener('click', () => {
-                    const cardWidth = slider.querySelector('.card-item')?.offsetWidth || 380;
-                    slider.scrollBy({ left: -(cardWidth + 24), behavior: 'smooth' });
-                });
+            const atStart = currentIndex === 0;
+            const atEnd = currentIndex === cards.length - 1;
+            prevBtn.disabled = atStart;
+            nextBtn.disabled = atEnd;
+            prevBtn.setAttribute('aria-disabled', String(atStart));
+            nextBtn.setAttribute('aria-disabled', String(atEnd));
+        };
 
-                nextBtn.addEventListener('click', () => {
-                    const cardWidth = slider.querySelector('.card-item')?.offsetWidth || 380;
-                    slider.scrollBy({ left: cardWidth + 24, behavior: 'smooth' });
-                });
-            }
+        const goTo = (index, behavior = 'smooth') => {
+            const nextIndex = clamp(index, 0, cards.length - 1);
+            updateControls(nextIndex); // Disable the edge arrow immediately, before iOS momentum/bounce.
+            slider.scrollTo({ left: targetLeftFor(nextIndex), behavior });
+        };
+
+        dotsContainer.innerHTML = '';
+        cards.forEach((_, index) => {
+            const dot = document.createElement('button');
+            dot.type = 'button';
+            dot.className = index === 0
+                ? 'w-6 h-3 bg-orange-500 rounded-full transition-all duration-300'
+                : 'w-3 h-3 bg-gray-300 hover:bg-gray-400 rounded-full transition-all duration-300';
+            dot.setAttribute('aria-label', labelType === 'review'
+                ? `Go to review slide ${index + 1}`
+                : `Go to slide ${index + 1}`);
+            dot.addEventListener('click', () => goTo(index));
+            dotsContainer.appendChild(dot);
         });
-    </script>
-<script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const slider = document.getElementById('slider');
-            const prevBtn = document.getElementById('prevBtn');
-            const nextBtn = document.getElementById('nextBtn');
-            const dotsContainer = document.getElementById('dotsContainer');
 
-            if (slider && prevBtn && nextBtn && dotsContainer) {
-                // ... (здесь идет ваш существующий код для туров) ...
-            }
-
-            // === СЮДА НУЖНО ВСТАВИТЬ НОВЫЙ КОД ДЛЯ ОТЗЫВОВ ===
-            const reviewsSlider = document.getElementById('reviewsSlider');
-            const reviewsPrevBtn = document.getElementById('reviewsPrevBtn');
-            const reviewsNextBtn = document.getElementById('reviewsNextBtn');
-            const reviewsDotsContainer = document.getElementById('reviewsDotsContainer');
-
-            if (reviewsSlider && reviewsPrevBtn && reviewsNextBtn && reviewsDotsContainer) {
-                const totalReviewDots = reviewsSlider.querySelectorAll('.review-item').length;
-                
-                for (let i = 0; i < totalReviewDots; i++) {
-                    const dot = document.createElement('button');
-                    dot.className = `h-3 rounded-full transition-all duration-300 ${i === 0 ? 'w-6 bg-orange-500' : 'w-3 bg-gray-300 hover:bg-gray-400'}`;
-                    dot.setAttribute('aria-label', `Go to review slide ${i + 1}`);
-                    dot.addEventListener('click', () => {
-                        const maxScroll = reviewsSlider.scrollWidth - reviewsSlider.clientWidth;
-                        const targetScroll = (maxScroll / (totalReviewDots - 1)) * i;
-                        reviewsSlider.scrollTo({ left: targetScroll, behavior: 'smooth' });
-                    });
-                    reviewsDotsContainer.appendChild(dot);
-                }
-
-                const updateReviewDots = () => {
-                    const maxScroll = reviewsSlider.scrollWidth - reviewsSlider.clientWidth;
-                    if (maxScroll <= 0) return;
-                    const scrollFraction = reviewsSlider.scrollLeft / maxScroll;
-                    const activeIndex = Math.min(
-                        totalReviewDots - 1,
-                        Math.max(0, Math.round(scrollFraction * (totalReviewDots - 1)))
-                    );
-
-                    const dots = reviewsDotsContainer.children;
-                    for (let i = 0; i < dots.length; i++) {
-                        if (i === activeIndex) {
-                            dots[i].className = 'w-6 h-3 bg-orange-500 rounded-full transition-all duration-300';
-                        } else {
-                            dots[i].className = 'w-3 h-3 bg-gray-300 hover:bg-gray-400 rounded-full transition-all duration-300';
-                        }
-                    }
-                };
-
-                reviewsSlider.addEventListener('scroll', updateReviewDots);
-
-                reviewsPrevBtn.addEventListener('click', () => {
-                    const cardWidth = reviewsSlider.querySelector('.review-item')?.offsetWidth || 380;
-                    reviewsSlider.scrollBy({ left: -(cardWidth + 24), behavior: 'smooth' });
-                });
-
-                reviewsNextBtn.addEventListener('click', () => {
-                    const cardWidth = reviewsSlider.querySelector('.review-item')?.offsetWidth || 380;
-                    reviewsSlider.scrollBy({ left: cardWidth + 24, behavior: 'smooth' });
-                });
-            }
-            // ====================================================
-
+        prevBtn.addEventListener('click', (event) => {
+            event.preventDefault();
+            if (prevBtn.disabled) return;
+            goTo(currentIndex - 1);
         });
-    </script>
+
+        nextBtn.addEventListener('click', (event) => {
+            event.preventDefault();
+            if (nextBtn.disabled) return;
+            goTo(currentIndex + 1);
+        });
+
+        slider.addEventListener('scroll', () => {
+            if (scrollRaf !== null) cancelAnimationFrame(scrollRaf);
+            scrollRaf = requestAnimationFrame(() => {
+                updateControls(nearestIndex());
+                scrollRaf = null;
+            });
+        }, { passive: true });
+
+        // After orientation/viewport changes, keep the active card inside real bounds.
+        window.addEventListener('resize', () => {
+            requestAnimationFrame(() => goTo(currentIndex, 'auto'));
+        }, { passive: true });
+
+        updateControls(0);
+    };
+
+    initCarousel({
+        sliderId: 'slider',
+        itemSelector: '.card-item',
+        prevId: 'prevBtn',
+        nextId: 'nextBtn',
+        dotsId: 'dotsContainer',
+        labelType: 'tour'
+    });
+
+    initCarousel({
+        sliderId: 'reviewsSlider',
+        itemSelector: '.review-item',
+        prevId: 'reviewsPrevBtn',
+        nextId: 'reviewsNextBtn',
+        dotsId: 'reviewsDotsContainer',
+        labelType: 'review'
+    });
+});
+</script>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
     const menuBtn = document.getElementById('mobileMenuBtn');
