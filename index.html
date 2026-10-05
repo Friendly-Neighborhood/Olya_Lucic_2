@@ -5,12 +5,11 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Оля Лучіч — гід у Відні та Австрії</title>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><circle cx=%2216%22 cy=%2216%22 r=%2215%22 fill=%22none%22/><clipPath id=%22c%22><circle cx=%2216%22 cy=%2216%22 r=%2215%22/></clipPath><g clip-path=%22url(%23c)%22><rect width=%2232%22 height=%2232%22 fill=%22%23FFFFFF%22/><rect y=%220%22 width=%2232%22 height=%2210.6%22 fill=%22%23EF3340%22/><rect y=%2221.4%22 width=%2232%22 height=%2210.6%22 fill=%22%23EF3340%22/></g></svg>"> <!-- Tailwind Config Customization -->
- 
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><circle cx=%2216%22 cy=%2216%22 r=%2215%22 fill=%22none%22/><clipPath id=%22c%22><circle cx=%2216%22 cy=%2216%22 r=%2215%22/></clipPath><g clip-path=%22url(%23c)%22><rect width=%2232%22 height=%2232%22 fill=%22%23FFFFFF%22/><rect y=%220%22 width=%2232%22 height=%2210.6%22 fill=%22%23EF3340%22/><rect y=%2221.4%22 width=%2232%22 height=%2210.6%22 fill=%22%23EF3340%22/></g></svg>"> <!-- Tailwind Config Customization -->
- <!-- Fonts: Montserrat, Caveat -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22&gt;&lt;circle cx=%2216%22 cy=%2216%22 r=%2215%22 fill=%22none%22/&gt;&lt;clipPath id=%22c%22&gt;&lt;circle cx=%2216%22 cy=%2216%22 r=%2215%22/&gt;&lt;/clipPath&gt;&lt;g clip-path=%22url(%23c)%22&gt;&lt;rect width=%2232%22 height=%2232%22 fill=%22%23FFFFFF%22/&gt;&lt;rect y=%220%22 width=%2232%22 height=%2210.6%22 fill=%22%23EF3340%22/&gt;&lt;rect y=%2221.4%22 width=%2232%22 height=%2210.6%22 fill=%22%23EF3340%22/&gt;&lt;/g&gt;&lt;/svg&gt;" rel="icon"/> <!-- Tailwind Config Customization -->
+<link href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22&gt;&lt;circle cx=%2216%22 cy=%2216%22 r=%2215%22 fill=%22none%22/&gt;&lt;clipPath id=%22c%22&gt;&lt;circle cx=%2216%22 cy=%2216%22 r=%2215%22/&gt;&lt;/clipPath&gt;&lt;g clip-path=%22url(%23c)%22&gt;&lt;rect width=%2232%22 height=%2232%22 fill=%22%23FFFFFF%22/&gt;&lt;rect y=%220%22 width=%2232%22 height=%2210.6%22 fill=%22%23EF3340%22/&gt;&lt;rect y=%2221.4%22 width=%2232%22 height=%2210.6%22 fill=%22%23EF3340%22/&gt;&lt;/g&gt;&lt;/svg&gt;" rel="icon"/> <!-- Tailwind Config Customization -->
+<!-- Fonts: Montserrat, Caveat -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&amp;family=Montserrat:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
 <!-- Tailwind CSS CDN -->
 <script src="https://cdn.tailwindcss.com"></script>
@@ -281,191 +280,241 @@ img, svg {
         animation-iteration-count: 1 !important;
     }
 }
-    </style>
-</head>
+    
+
+/* === Full tour popups + mobile carousel controls === */
+#contentDialog {
+    max-height: 90vh;
+    max-height: calc(100dvh - 2rem);
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+}
+
+#contentDialog > .dialog-sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 60;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    margin: -2rem -2rem 1.5rem;
+    padding: 1.5rem 2rem 1rem;
+    border-bottom: 1px solid rgb(241 245 249);
+}
+
+#contentDialog .tour-full-copy h3 {
+    scroll-margin-top: 5rem;
+}
+
+@media (max-width: 767px) {
+    #contentDialog {
+        width: calc(100% - 1rem);
+        max-width: none;
+        max-height: 95vh;
+        max-height: calc(100dvh - 1rem);
+        padding: 1rem !important;
+        border-radius: 1.25rem !important;
+    }
+
+    #contentDialog > .dialog-sticky-header {
+        margin: -1rem -1rem 1rem;
+        padding: .85rem 1rem;
+    }
+
+    #contentDialog > .dialog-sticky-header p {
+        font-size: .9rem;
+    }
+
+    #closeDetails {
+        width: 2.75rem !important;
+        height: 2.75rem !important;
+        border: 1px solid rgb(226 232 240) !important;
+    }
+
+    /* Keep arrows visible on phones so horizontal swipe is obvious. */
+    #prevBtn, #nextBtn,
+    #reviewsPrevBtn, #reviewsNextBtn {
+        display: flex !important;
+        width: 2.5rem !important;
+        height: 2.5rem !important;
+        min-width: 2.5rem !important;
+        top: 50% !important;
+        z-index: 35 !important;
+        background: rgba(255, 255, 255, 0.94) !important;
+        box-shadow: 0 8px 24px rgba(15, 23, 42, 0.18) !important;
+        border: 1px solid rgba(226, 232, 240, 0.95) !important;
+        opacity: .96;
+    }
+
+    #prevBtn, #reviewsPrevBtn {
+        left: .2rem !important;
+    }
+
+    #nextBtn, #reviewsNextBtn {
+        right: .2rem !important;
+    }
+
+    #prevBtn svg, #nextBtn svg,
+    #reviewsPrevBtn svg, #reviewsNextBtn svg {
+        width: 1.25rem !important;
+        height: 1.25rem !important;
+    }
+
+    #slider, #reviewsSlider {
+        padding-left: .65rem !important;
+        padding-right: .65rem !important;
+        scroll-padding-inline: .65rem !important;
+    }
+}
+
+</style>
+</link></link></head>
 <body class="bg-slate-100 text-slate-800 antialiased font-sans"><!--
 CONTENT NOTES / ПРИМЕЧАНИЯ К КОНТЕНТУ
-- Only the supplied text is used. Descriptions of tours 1–5 were referenced but
-  not supplied in full. Missing paragraphs are explicitly marked in both languages.
-- The Wachau total 1055 € is copied verbatim. 710 + 55 * 7 = 1095; confirm the
-  client price before publication. No price is silently corrected.
-- Review copy is missing; visible placeholders replace template testimonials.
-- Existing contact URLs and all image sources are retained. Social account
-  details and the three local image files were not included in this upload.
+- Full descriptions of tours 1–5 and the custom-tour copy are taken from the supplied UA/RU PDF.
+- The Wachau total 1055 € is kept exactly as supplied in the source file.
+- Existing contact URLs and image sources are retained.
 -->
 <!-- ==================== HERO SECTION ==================== -->
-<section id="home" class="hero-bg relative min-h-screen text-white flex flex-col justify-between pt-6 pb-0 px-4 md:px-8 overflow-x-hidden overflow-y-hidden scroll-mt-4">
-
-    <div class="absolute inset-0 z-0 pointer-events-none"></div>
-
-    <!-- Навігація -->
-    <nav class="relative z-30 flex justify-between items-center mb-8 md:mb-12 max-w-7xl mx-auto w-full gap-4">
-
-        <a href="#home" class="block shrink-0" aria-label="На головну">
-            <h1 class="text-2xl sm:text-3xl font-bold tracking-tight">olya.lucic</h1>
-            <p class="text-[10px] sm:text-xs uppercase tracking-widest mt-1 opacity-80">Гід у Відні та Австрії</p>
-        </a>
-
-        <div class="flex items-center justify-end gap-2">
-
-            <div class="hidden lg:flex items-center justify-end gap-1 xl:gap-2 text-[11px] xl:text-[14px] font-semibold tracking-wide">
-                <a href="#about" class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-orange-300 transition-colors">Про мене</a>
-                <a href="#why-me" class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-orange-300 transition-colors">Переваги</a>
-                <a href="#tours" class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-orange-300 transition-colors">Тури</a>
-                <a href="#how-to-book" class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-orange-300 transition-colors">Бронювання</a>
-                <a href="#reviews" class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-orange-300 transition-colors">Відгуки</a>
-                <a href="#contacts" class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-orange-300 transition-colors">Контакти</a>
-            </div>
-
-            <button type="button" data-lang-toggle data-lang-mode="compact" aria-label="Переключити на російську" class="shrink-0 h-10 min-w-10 px-3 inline-flex items-center justify-center rounded-xl border border-white/60 bg-white/15 text-white font-extrabold text-sm tracking-wide backdrop-blur-md shadow-lg hover:bg-white hover:text-slate-900 active:scale-95 transition-all">
-                <span data-lang-label>RU</span>
-            </button>
-
-            <button id="mobileMenuBtn" type="button" aria-label="Відкрити меню" aria-controls="mobileMenu" aria-expanded="false" class="lg:hidden shrink-0 w-12 h-12 inline-flex items-center justify-center rounded-xl bg-white text-slate-900 shadow-xl border border-white/80 hover:bg-slate-100 active:scale-95 transition-all">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
-
-        </div>
-
-        <div id="mobileMenu" class="hidden lg:hidden absolute top-full left-0 right-0 mt-3 p-2.5 rounded-2xl bg-white/95 text-slate-900 backdrop-blur-xl border border-white/80 shadow-2xl">
-            <a href="#home" class="block px-4 py-3 rounded-xl text-sm font-semibold hover:bg-slate-100 active:bg-slate-200 transition-colors">Головна</a>
-            <a href="#about" class="block px-4 py-3 rounded-xl text-sm font-semibold hover:bg-slate-100 active:bg-slate-200 transition-colors">Про мене</a>
-            <a href="#why-me" class="block px-4 py-3 rounded-xl text-sm font-semibold hover:bg-slate-100 active:bg-slate-200 transition-colors">Переваги</a>
-            <a href="#tours" class="block px-4 py-3 rounded-xl text-sm font-semibold hover:bg-slate-100 active:bg-slate-200 transition-colors">Тури</a>
-            <a href="#how-to-book" class="block px-4 py-3 rounded-xl text-sm font-semibold hover:bg-slate-100 active:bg-slate-200 transition-colors">Бронювання</a>
-            <a href="#reviews" class="block px-4 py-3 rounded-xl text-sm font-semibold hover:bg-slate-100 active:bg-slate-200 transition-colors">Відгуки</a>
-            <a href="#contacts" class="block px-4 py-3 rounded-xl text-sm font-semibold hover:bg-slate-100 active:bg-slate-200 transition-colors">Контакти</a>
-        </div>
-
-    </nav>
-
-    <!-- Головний контент Hero -->
-    <div class="hero-main relative z-10 my-auto max-w-7xl mx-auto w-full py-8 flex flex-col lg:flex-row items-center justify-between gap-8">
-
-        <div class="hero-copy max-w-2xl lg:-ml-12 lg:mt-16">
-
-            <h2 class="hero-title text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 drop-shadow-lg">
-                Відень, який <br>
-                <span class="hero-line whitespace-nowrap">
-                    ви <span class="text-orange-400">полюбите</span><br>
+<section class="hero-bg relative min-h-screen text-white flex flex-col justify-between pt-6 pb-0 px-4 md:px-8 overflow-x-hidden overflow-y-hidden scroll-mt-4" id="home">
+<div class="absolute inset-0 z-0 pointer-events-none"></div>
+<!-- Навігація -->
+<nav class="relative z-30 flex justify-between items-center mb-8 md:mb-12 max-w-7xl mx-auto w-full gap-4">
+<a aria-label="На головну" class="block shrink-0" href="#home">
+<h1 class="text-2xl sm:text-3xl font-bold tracking-tight">olya.lucic</h1>
+<p class="text-[10px] sm:text-xs uppercase tracking-widest mt-1 opacity-80">Гід у Відні та Австрії</p>
+</a>
+<div class="flex items-center justify-end gap-2">
+<div class="hidden lg:flex items-center justify-end gap-1 xl:gap-2 text-[11px] xl:text-[14px] font-semibold tracking-wide">
+<a class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-orange-300 transition-colors" href="#about">Про мене</a>
+<a class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-orange-300 transition-colors" href="#why-me">Переваги</a>
+<a class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-orange-300 transition-colors" href="#tours">Тури</a>
+<a class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-orange-300 transition-colors" href="#how-to-book">Бронювання</a>
+<a class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-orange-300 transition-colors" href="#reviews">Відгуки</a>
+<a class="px-3 py-2 rounded-lg hover:bg-white/10 hover:text-orange-300 transition-colors" href="#contacts">Контакти</a>
+</div>
+<button aria-label="Переключити на російську" class="shrink-0 h-10 min-w-10 px-3 inline-flex items-center justify-center rounded-xl border border-white/60 bg-white/15 text-white font-extrabold text-sm tracking-wide backdrop-blur-md shadow-lg hover:bg-white hover:text-slate-900 active:scale-95 transition-all" data-lang-mode="compact" data-lang-toggle="" type="button">
+<span data-lang-label="">RU</span>
+</button>
+<button aria-controls="mobileMenu" aria-expanded="false" aria-label="Відкрити меню" class="lg:hidden shrink-0 w-12 h-12 inline-flex items-center justify-center rounded-xl bg-white text-slate-900 shadow-xl border border-white/80 hover:bg-slate-100 active:scale-95 transition-all" id="mobileMenuBtn" type="button">
+<svg aria-hidden="true" class="w-7 h-7" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></path>
+</svg>
+</button>
+</div>
+<div class="hidden lg:hidden absolute top-full left-0 right-0 mt-3 p-2.5 rounded-2xl bg-white/95 text-slate-900 backdrop-blur-xl border border-white/80 shadow-2xl" id="mobileMenu">
+<a class="block px-4 py-3 rounded-xl text-sm font-semibold hover:bg-slate-100 active:bg-slate-200 transition-colors" href="#home">Головна</a>
+<a class="block px-4 py-3 rounded-xl text-sm font-semibold hover:bg-slate-100 active:bg-slate-200 transition-colors" href="#about">Про мене</a>
+<a class="block px-4 py-3 rounded-xl text-sm font-semibold hover:bg-slate-100 active:bg-slate-200 transition-colors" href="#why-me">Переваги</a>
+<a class="block px-4 py-3 rounded-xl text-sm font-semibold hover:bg-slate-100 active:bg-slate-200 transition-colors" href="#tours">Тури</a>
+<a class="block px-4 py-3 rounded-xl text-sm font-semibold hover:bg-slate-100 active:bg-slate-200 transition-colors" href="#how-to-book">Бронювання</a>
+<a class="block px-4 py-3 rounded-xl text-sm font-semibold hover:bg-slate-100 active:bg-slate-200 transition-colors" href="#reviews">Відгуки</a>
+<a class="block px-4 py-3 rounded-xl text-sm font-semibold hover:bg-slate-100 active:bg-slate-200 transition-colors" href="#contacts">Контакти</a>
+</div>
+</nav>
+<!-- Головний контент Hero -->
+<div class="hero-main relative z-10 my-auto max-w-7xl mx-auto w-full py-8 flex flex-col lg:flex-row items-center justify-between gap-8">
+<div class="hero-copy max-w-2xl lg:-ml-12 lg:mt-16">
+<h2 class="hero-title text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 drop-shadow-lg">
+                Відень, який <br/>
+<span class="hero-line whitespace-nowrap">
+                    ви <span class="text-orange-400">полюбите</span><br/>
                     так само, <span class="text-orange-400">як я</span>
-                </span>
-            </h2>
-
-            <p class="hero-subtitle text-lg md:text-xl mb-8 leading-relaxed opacity-95 drop-shadow-md max-w-lg">
+</span>
+</h2>
+<p class="hero-subtitle text-lg md:text-xl mb-8 leading-relaxed opacity-95 drop-shadow-md max-w-lg">
                 Саме в такому Відні я колись зрозуміла, чим хочу займатися все життя.
             </p>
-
-            <div class="hero-actions flex flex-wrap items-center gap-3">
-
-                <a href="#tours" class="inline-flex items-center justify-center bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 px-8 rounded-xl transition duration-300 shadow-xl text-lg border border-orange-400/30">
+<div class="hero-actions flex flex-wrap items-center gap-3">
+<a class="inline-flex items-center justify-center bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 px-8 rounded-xl transition duration-300 shadow-xl text-lg border border-orange-400/30" href="#tours">
                     Дивитись тури
-                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                    </svg>
-                </a>
-
-                <!-- Socials -->
-                <a href="https://www.instagram.com/olya.lucic/" target="_blank" aria-label="Instagram" class="w-14 h-14 inline-flex items-center justify-center bg-gradient-to-r from-purple-600 via-pink-500 to-amber-500 hover:scale-105 text-white rounded-xl transition-all duration-300 shadow-xl border border-white">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
-                    </svg>
-                </a>
-
-                <a href="https://wa.me/436769688959" target="_blank" aria-label="WhatsApp" class="w-14 h-14 inline-flex items-center justify-center bg-[#25D366] hover:bg-[#20ba5a] hover:scale-105 text-white rounded-xl transition-all duration-300 shadow-xl border border-white">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path>
-                    </svg>
-                </a>
-
-                <a href="https://t.me/Olya_Lucic" target="_blank" aria-label="Telegram" class="w-14 h-14 inline-flex items-center justify-center bg-[#229ED9] hover:bg-[#1d8ec3] hover:scale-105 text-white rounded-xl transition-all duration-300 shadow-xl border border-white">
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"></path>
-                    </svg>
-                </a>
-
-            </div>
-        </div>
-
-        <!-- Декоративний знак -->
-        <div class="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 z-10 rotate-6 transform">
-            <div class="w-52 h-52 border-2 border-dashed border-white/80 rounded-full flex flex-col items-center justify-center text-center p-3 backdrop-blur-[2px] bg-black/40 shadow-xl">
-                <p class="font-bold leading-snug uppercase tracking-wider text-white drop-shadow-md" style="font-size: 21px;">
-                    <span class="text-sky-400">ТУРИ, ЯКІ</span><br>
-                    <span class="text-sky-400">ЗАКОХУЮТЬ</span><br>
-                    З ПЕРШОГО<br>
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+<!-- Socials -->
+<a aria-label="Instagram" class="w-14 h-14 inline-flex items-center justify-center bg-gradient-to-r from-purple-600 via-pink-500 to-amber-500 hover:scale-105 text-white rounded-xl transition-all duration-300 shadow-xl border border-white" href="https://www.instagram.com/olya.lucic/" target="_blank">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+</svg>
+</a>
+<a aria-label="WhatsApp" class="w-14 h-14 inline-flex items-center justify-center bg-[#25D366] hover:bg-[#20ba5a] hover:scale-105 text-white rounded-xl transition-all duration-300 shadow-xl border border-white" href="https://wa.me/436769688959" target="_blank">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24">
+<path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path>
+</svg>
+</a>
+<a aria-label="Telegram" class="w-14 h-14 inline-flex items-center justify-center bg-[#229ED9] hover:bg-[#1d8ec3] hover:scale-105 text-white rounded-xl transition-all duration-300 shadow-xl border border-white" href="https://t.me/Olya_Lucic" target="_blank">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24">
+<path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"></path>
+</svg>
+</a>
+</div>
+</div>
+<!-- Декоративний знак -->
+<div class="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 z-10 rotate-6 transform">
+<div class="w-52 h-52 border-2 border-dashed border-white/80 rounded-full flex flex-col items-center justify-center text-center p-3 backdrop-blur-[2px] bg-black/40 shadow-xl">
+<p class="font-bold leading-snug uppercase tracking-wider text-white drop-shadow-md" style="font-size: 21px;">
+<span class="text-sky-400">ТУРИ, ЯКІ</span><br/>
+<span class="text-sky-400">ЗАКОХУЮТЬ</span><br/>
+                    З ПЕРШОГО<br/>
                     ПОГЛЯДУ
                 </p>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- Плашка переваг -->
-    <div class="hero-benefits-wrap relative z-20 w-full mt-auto -mx-4 md:-mx-8 w-[calc(100%+2rem)] md:w-[calc(100%+4rem)]">
-
-        <div class="bg-white/95 backdrop-blur-md text-gray-800 py-4 px-6 shadow-2xl border-t border-white/40 w-full">
-
-            <div class="hero-benefits-grid max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 divide-y md:divide-y-0 md:divide-x divide-gray-200">
-
-                <div class="hero-benefit flex items-center space-x-4 pt-2 md:pt-0">
-                    <div class="flex-shrink-0 text-blue-500">
-                        <svg class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h8m-8 4h8m-9 8h10M5 3h14a2 2 0 012 2v11a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z"></path>
-                        </svg>
-                    </div>
-
-                    <div class="flex flex-col justify-center">
-                        <h4 class="font-bold text-xs md:text-sm tracking-wide text-gray-900 uppercase leading-tight">групові автобусні тури</h4>
-                        <p class="text-xs text-gray-500 mt-0.5 leading-tight">Австрією та Європою щовихідних</p>
-                    </div>
-                </div>
-
-                <div class="hero-benefit flex items-center space-x-4 pt-2 md:pt-0 md:pl-6">
-                    <div class="flex-shrink-0 text-orange-500">
-                        <svg class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-                        </svg>
-                    </div>
-
-                    <div class="flex flex-col justify-center">
-                        <h4 class="font-bold text-xs md:text-sm tracking-wide text-gray-900 uppercase leading-tight">індивідуальні екскурсії</h4>
-                        <p class="text-xs text-gray-500 mt-0.5 leading-tight">Віднем — для пар, друзів, родин</p>
-                    </div>
-                </div>
-
-                <div class="hero-benefit flex items-center space-x-4 pt-2 md:pt-0 md:pl-6">
-                    <div class="flex-shrink-0 text-blue-500">
-                        <svg class="w-9 h-9" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                        </svg>
-                    </div>
-
-                    <div class="flex flex-col justify-center">
-                        <h4 class="font-bold text-xs md:text-sm tracking-wide text-gray-900 uppercase leading-tight">VIP-супровід</h4>
-                        <p class="text-xs text-gray-500 mt-0.5 leading-tight">і приватні програми під ключ</p>
-                    </div>
-                </div>
-
-                <div class="hero-benefit flex items-center space-x-2.5 pt-2 md:pt-0 md:pl-3">
-                    <div class="flex-shrink-0 text-orange-500">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                        </svg>
-                    </div>
-
-                    <div class="flex flex-col justify-center min-w-0">
-                        <h4 class="font-bold text-xs md:text-sm tracking-wide text-gray-900 uppercase leading-tight whitespace-nowrap">екскурсії</h4>
-                        <p class="text-[11px] md:text-xs text-gray-500 mt-0.5 leading-tight whitespace-nowrap">українською та російською мовами</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
+</div>
+</div>
+</div>
+<!-- Плашка переваг -->
+<div class="hero-benefits-wrap relative z-20 w-full mt-auto -mx-4 md:-mx-8 w-[calc(100%+2rem)] md:w-[calc(100%+4rem)]">
+<div class="bg-white/95 backdrop-blur-md text-gray-800 py-4 px-6 shadow-2xl border-t border-white/40 w-full">
+<div class="hero-benefits-grid max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 divide-y md:divide-y-0 md:divide-x divide-gray-200">
+<div class="hero-benefit flex items-center space-x-4 pt-2 md:pt-0">
+<div class="flex-shrink-0 text-blue-500">
+<svg class="w-9 h-9" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 7h8m-8 4h8m-9 8h10M5 3h14a2 2 0 012 2v11a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div class="flex flex-col justify-center">
+<h4 class="font-bold text-xs md:text-sm tracking-wide text-gray-900 uppercase leading-tight">групові автобусні тури</h4>
+<p class="text-xs text-gray-500 mt-0.5 leading-tight">Австрією та Європою щовихідних</p>
+</div>
+</div>
+<div class="hero-benefit flex items-center space-x-4 pt-2 md:pt-0 md:pl-6">
+<div class="flex-shrink-0 text-orange-500">
+<svg class="w-9 h-9" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div class="flex flex-col justify-center">
+<h4 class="font-bold text-xs md:text-sm tracking-wide text-gray-900 uppercase leading-tight">індивідуальні екскурсії</h4>
+<p class="text-xs text-gray-500 mt-0.5 leading-tight">Віднем — для пар, друзів, родин</p>
+</div>
+</div>
+<div class="hero-benefit flex items-center space-x-4 pt-2 md:pt-0 md:pl-6">
+<div class="flex-shrink-0 text-blue-500">
+<svg class="w-9 h-9" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div class="flex flex-col justify-center">
+<h4 class="font-bold text-xs md:text-sm tracking-wide text-gray-900 uppercase leading-tight">VIP-супровід</h4>
+<p class="text-xs text-gray-500 mt-0.5 leading-tight">і приватні програми під ключ</p>
+</div>
+</div>
+<div class="hero-benefit flex items-center space-x-2.5 pt-2 md:pt-0 md:pl-3">
+<div class="flex-shrink-0 text-orange-500">
+<svg class="w-8 h-8" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<div class="flex flex-col justify-center min-w-0">
+<h4 class="font-bold text-xs md:text-sm tracking-wide text-gray-900 uppercase leading-tight whitespace-nowrap">екскурсії</h4>
+<p class="text-[11px] md:text-xs text-gray-500 mt-0.5 leading-tight whitespace-nowrap">українською та російською мовами</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
 <!-- ==================== ABOUT SECTION ==================== -->
 <section class="scroll-mt-4 bg-white py-14 md:py-20 overflow-hidden" id="about">
@@ -650,7 +699,6 @@ CONTENT NOTES / ПРИМЕЧАНИЯ К КОНТЕНТУ
 </button>
 <!-- Слайдер (с запасом для правой карточки) -->
 <div class="flex space-x-6 overflow-x-auto pb-6 pt-2 px-4 md:px-12 scroll-smooth scrollbar-none" id="slider" style="scrollbar-width: none; -ms-overflow-style: none;">
-
 <div class="card-item flex-shrink-0 w-full sm:w-[350px] md:w-[380px] bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-blue-100/60 flex flex-col">
 <div class="relative h-64 w-full overflow-hidden">
 <img alt="Венеція" class="w-full h-full object-cover" src="./artyom-B07-l6zhELw-unsplash.jpg"/>
@@ -671,7 +719,6 @@ CONTENT NOTES / ПРИМЕЧАНИЯ К КОНТЕНТУ
 </div>
 </div>
 </div>
-
 <div class="card-item flex-shrink-0 w-full sm:w-[350px] md:w-[380px] bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-blue-100/60 flex flex-col">
 <div class="relative h-64 w-full overflow-hidden">
 <img alt="Індія" class="w-full h-full object-cover" src="./dan-v-ZOw0x97sDJg-unsplash.jpg"/>
@@ -692,7 +739,6 @@ CONTENT NOTES / ПРИМЕЧАНИЯ К КОНТЕНТУ
 </div>
 </div>
 </div>
-
 <div class="card-item flex-shrink-0 w-full sm:w-[350px] md:w-[380px] bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-blue-100/60 flex flex-col">
 <div class="relative h-64 w-full overflow-hidden">
 <img alt="Австрія" class="w-full h-full object-cover" src="./sami-ullah-2aMs71Ok8tI-unsplash.jpg"/>
@@ -713,7 +759,6 @@ CONTENT NOTES / ПРИМЕЧАНИЯ К КОНТЕНТУ
 </div>
 </div>
 </div>
-
 <div class="card-item flex-shrink-0 w-full sm:w-[350px] md:w-[380px] bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-blue-100/60 flex flex-col">
 <div class="relative h-64 w-full overflow-hidden">
 <img alt="Рим" class="w-full h-full object-cover" src="./jakob-SUp4v9vl2d0-unsplash.jpg"/>
@@ -734,7 +779,6 @@ CONTENT NOTES / ПРИМЕЧАНИЯ К КОНТЕНТУ
 </div>
 </div>
 </div>
-
 <div class="card-item flex-shrink-0 w-full sm:w-[350px] md:w-[380px] bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-blue-100/60 flex flex-col">
 <div class="relative h-64 w-full overflow-hidden">
 <img alt="Париж" class="w-full h-full object-cover" src="./hasmik-ghazaryan-olson-LKBW3401d-0-unsplash.jpg"/>
@@ -755,7 +799,6 @@ CONTENT NOTES / ПРИМЕЧАНИЯ К КОНТЕНТУ
 </div>
 </div>
 </div>
-
 <div class="card-item flex-shrink-0 w-full sm:w-[350px] md:w-[380px] bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-blue-100/60 flex flex-col">
 <div class="relative h-64 w-full overflow-hidden">
 <img alt="Прага" class="w-full h-full object-cover" src="./jacek-dylag-IiQXLbTTQCw-unsplash (1).jpg"/>
@@ -776,10 +819,6 @@ CONTENT NOTES / ПРИМЕЧАНИЯ К КОНТЕНТУ
 </div>
 </div>
 </div>
-
-
-
-
 </div>
 <!-- Кнопка «Вправо» -->
 <button aria-label="Наступний тур" class="absolute -right-2 md:-right-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 bg-white/90 backdrop-blur-md text-gray-700 hover:text-blue-600 rounded-full shadow-md flex items-center justify-center transition-all hover:scale-110 focus:outline-none border border-blue-50" id="nextBtn">
@@ -884,9 +923,7 @@ CONTENT NOTES / ПРИМЕЧАНИЯ К КОНТЕНТУ
 <p class="text-gray-800 text-base sm:text-lg leading-relaxed font-medium mb-2">Хочеться гідно оцінити вашу грандіозну організаційну роботу. Ви змогли передати людям величезну кількість корисної інформації про історію та побут у різних містах трьох європейських країн. Усе виконано винятково чудово й професійно. Неможливо не оцінити належним чином ваш ентузіазм і запал, турботу про кожного учасника цієї захопливої подорожі. З Вами добре, спокійно, легко і, головне, надійно.</p>
 </div>
 <div class="flex items-center gap-4 mt-2 pt-3 border-t border-gray-100">
-<img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=200&q=80"
-     alt="Alexander"
-     class="w-12 h-12 rounded-full object-cover shadow-sm"><div>
+<img alt="Alexander" class="w-12 h-12 rounded-full object-cover shadow-sm" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&amp;fit=crop&amp;w=200&amp;q=80"/><div>
 <h3 class="font-bold text-gray-900 text-base">Олександр</h3>
 </div>
 </div>
@@ -905,11 +942,11 @@ CONTENT NOTES / ПРИМЕЧАНИЯ К КОНТЕНТУ
 Я із задоволенням знову приєднаюся до одного з турів — подивимося, що буде далі. 😃</p>
 </div>
 <div class="flex items-center gap-4 mt-2 pt-3 border-t border-gray-100">
-<img alt="Фото-заглушка для відгуку" class="w-12 h-12 rounded-full object-cover shadow-sm" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&amp;fit=crop&amp;w=200&amp;q=80"/>
+<img alt="Фото-заглушка для відгуку" class="w-12 h-12 rounded-full object-cover shadow-sm" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&amp;fit=crop&amp;w=200&amp;q=80">
 <div>
 <h3 class="font-bold text-gray-900 text-base">Роберт</h3>
 </div>
-</div>
+</img></div>
 </div>
 <!-- 4. Отзыв -->
 <div class="review-item flex-shrink-0 w-full bg-white/90 backdrop-blur-md text-gray-800 rounded-3xl p-8 sm:p-10 shadow-2xl border border-white flex flex-col self-start">
@@ -924,9 +961,7 @@ CONTENT NOTES / ПРИМЕЧАНИЯ К КОНТЕНТУ
 Будемо стежити за новими поїздками й обов’язково хочемо знову приєднатися! 🤗</p>
 </div>
 <div class="flex items-center gap-4 mt-2 pt-3 border-t border-gray-100">
-<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80"
-     alt="Фото гості"
-     class="w-12 h-12 rounded-full object-cover shadow-sm"><div>
+<img alt="Фото гості" class="w-12 h-12 rounded-full object-cover shadow-sm" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&amp;fit=crop&amp;w=200&amp;q=80"/><div>
 <h3 class="font-bold text-gray-900 text-base">Анастасiя</h3>
 </div>
 </div>
@@ -956,7 +991,7 @@ CONTENT NOTES / ПРИМЕЧАНИЯ К КОНТЕНТУ
 <div class="max-w-md mx-auto text-center">
 <!-- Логотип / Название -->
 <h3 class="text-2xl font-black text-gray-900 tracking-tight uppercase mb-2">Давайте знайомитися</h3>
-<p class="text-sm md:text-base text-gray-600 font-semibold mb-10">Напишіть мені — розкажіть, скільки у вас днів, з ким ви їдете та що вам цікаво. Я запропоную маршрут, який підійде саме вам.<br/><br/>Дуже чекаю на нашу прогулянку. Обіцяю: Відень та Австрія вас не відпустять.</p>
+<p class="text-sm md:text-base text-gray-600 font-semibold mb-10">Напишіть мені — розкажіть, скільки у вас днів, з ким ви їдете та що вам цікаво. Я запропоную маршрут, який підійде саме вам.<br><br>Дуже чекаю на нашу прогулянку. Обіцяю: Відень та Австрія вас не відпустять.</br></br></p>
 <!-- Кнопки связи -->
 <div class="flex flex-col space-y-4 mb-10">
 <!-- WhatsApp -->
@@ -991,7 +1026,7 @@ CONTENT NOTES / ПРИМЕЧАНИЯ К КОНТЕНТУ
             © 2026 Olya Lucic. Всі права захищені.
         </div>
 </div>
-</footer><dialog aria-label="Детальніше" class="w-full max-w-3xl bg-white rounded-3xl p-8 sm:p-10 text-slate-800 border border-slate-200 shadow-2xl" id="contentDialog"><div class="flex justify-between items-center gap-4 mb-8"><p class="font-bold text-slate-900">Детальніше</p><button aria-label="Закрити" class="shrink-0 w-12 h-12 inline-flex items-center justify-center rounded-xl bg-white text-slate-900 shadow-xl border border-white/80 hover:bg-slate-100 active:scale-95 transition-all" id="closeDetails" type="button"><svg aria-hidden="true" class="w-7 h-7" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M6 6l12 12M6 18L18 6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></path></svg></button></div><article data-detail-panel="" hidden="" id="about-story"><h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight mb-4" id="about-story-title">Про мене</h2><div class="space-y-4 text-slate-700 text-base md:text-lg leading-relaxed"><p>Уявіть ранковий Відень. Сонце ще м’яке, легкий туман тримається над бруківкою, десь б’ють соборні дзвони, а перші трамваї сонно розганяються вулицями. Місто прокидається неквапливо, ніби точно знає: поспішати тут нікуди.</p>
+</footer><dialog aria-label="Детальніше" class="w-full max-w-3xl bg-white rounded-3xl p-8 sm:p-10 text-slate-800 border border-slate-200 shadow-2xl" id="contentDialog"><div class="flex justify-between items-center gap-4 mb-8 dialog-sticky-header"><p class="font-bold text-slate-900">Детальніше</p><button aria-label="Закрити" class="shrink-0 w-12 h-12 inline-flex items-center justify-center rounded-xl bg-white text-slate-900 shadow-xl border border-white/80 hover:bg-slate-100 active:scale-95 transition-all" id="closeDetails" type="button"><svg aria-hidden="true" class="w-7 h-7" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M6 6l12 12M6 18L18 6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></path></svg></button></div><article data-detail-panel="" hidden="" id="about-story"><h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight mb-4" id="about-story-title">Про мене</h2><div class="space-y-4 text-slate-700 text-base md:text-lg leading-relaxed"><p>Уявіть ранковий Відень. Сонце ще м’яке, легкий туман тримається над бруківкою, десь б’ють соборні дзвони, а перші трамваї сонно розганяються вулицями. Місто прокидається неквапливо, ніби точно знає: поспішати тут нікуди.</p>
 <p>Саме в такому Відні я колись зрозуміла, чим хочу займатися все життя.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Мене звати Оля Лучіч.</h3><p>Мене звати Оля Лучіч. До Австрії я приїхала понад двадцять років тому за програмою au-pair — з однією валізою, кількома словами німецькою і дуже великими планами.</p>
 <p>Відень я побачила вперше у житті й закохалася миттєво: у палаци, у вузькі вулички, де за кожним рогом чиясь історія, у музику, що звучить тут буквально з кожного двору.</p>
 <p>Мені захотілося зрозуміти це місто зсередини. Не просто говорити з віденцями, а розуміти, про що вони жартують, чому пишаються і що співають. Я вивчила німецьку, роками читала, ходила, розпитувала, збирала історії — і в якийсь момент зрозуміла, що моє захоплення переросло звичайне хобі.</p>
@@ -1004,14 +1039,55 @@ CONTENT NOTES / ПРИМЕЧАНИЯ К КОНТЕНТУ
 <p>Можу.</p><ul class="space-y-3"><li>• квитки на вистави, концерти, оперу, театр</li><li>• закриті виставки та події, на які складно потрапити з вулиці</li><li>• бронювання ресторанів — від затишної кав’ярні до столика, який «уже нема»</li><li>• супровід у форматі консьєржа протягом усього перебування в Австрії</li><li>• планування маршруту, трансфери, організація всіх деталей</li></ul><p>Ідея проста: ви приїжджаєте — і далі просто отримуєте задоволення. Без нескінченних вкладок у браузері, без «а куди піти ввечері» і без відчуття, що ви щось важливе пропустили.</p>
 <p>Ви в надійних руках. Це те, за що мене найчастіше дякують.</p></div></article><article data-detail-panel="" hidden="" id="care-story"><h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight mb-4" id="care-story-title">Ви в надійних руках.</h2><div class="space-y-4 text-slate-700 text-base md:text-lg leading-relaxed"><h3 class="text-xl font-bold text-slate-900 mb-2">Не тільки екскурсія: я поруч на весь час вашої подорожі</h3><p>Найчастіше після першої зустрічі мене питають: «Олю, а можете ще…?»</p>
 <p>Можу.</p><ul class="space-y-3"><li>• квитки на вистави, концерти, оперу, театр</li><li>• закриті виставки та події, на які складно потрапити з вулиці</li><li>• бронювання ресторанів — від затишної кав’ярні до столика, який «уже нема»</li><li>• супровід у форматі консьєржа протягом усього перебування в Австрії</li><li>• планування маршруту, трансфери, організація всіх деталей</li></ul><p>Ідея проста: ви приїжджаєте — і далі просто отримуєте задоволення. Без нескінченних вкладок у браузері, без «а куди піти ввечері» і без відчуття, що ви щось важливе пропустили.</p>
-<p>Ви в надійних руках. Це те, за що мене найчастіше дякують.</p></div></article><article data-detail-panel="" hidden="" id="tour-keep-calm"><h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight mb-4" id="tour-keep-calm-title">«Keep Calm and love Vienna»</h2><div class="space-y-4 text-slate-700 text-base md:text-lg leading-relaxed"><p class="font-semibold text-slate-900">Ідеальне перше побачення з Віднем</p><p class="text-sm text-gray-500">Повний опис екскурсії не надано. Нижче — лише наявні фрагменти та деталі.</p><p>Якщо ви у Відні вперше — починайте звідси.</p><p>Ви не самі в чужому місті.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Деталі</h3><p>Тривалість: 3 години</p><h3 class="text-xl font-bold text-slate-900 mb-2">Вартість</h3><div class="space-y-3"><p>1–2 особи — 390 €</p><p>3–5 осіб — 420 €</p><p>6–7 осіб — 450 € + оренда мінівена 55 €/год (615 € за 3-годинний тур)</p></div><p>Групи більшого розміру — за запитом.</p></div></article><article data-detail-panel="" hidden="" id="tour-vienna-marathon"><h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight mb-4" id="tour-vienna-marathon-title">«Віденський марафон»</h2><div class="space-y-4 text-slate-700 text-base md:text-lg leading-relaxed"><p class="font-semibold text-slate-900">Пішки центром, де найцікавіше заховано у дворах</p><p class="text-sm text-gray-500">Повний опис екскурсії не надано. Нижче — лише наявні фрагменти та деталі.</p><p>Ця екскурсія — для тих, хто любить ходити. Багато ходити.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Про що ви дізнаєтеся дорогою</h3><p>Текст цього розділу не надано.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Чесно: кому ця екскурсія НЕ підійде</h3><p>Текст цього розділу не надано.</p><p>«Віденський марафон» — для тих, хто тут уже був. Хто бачив головне й тепер хоче зазирнути глибше: у двори, у деталі, у те, повз що пройшов першого разу.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Деталі</h3><p>Тривалість: 2 години</p>
-<p>Формат: пішохідний, центр міста</p>
-<p>Вартість: 300 € за екскурсію</p></div></article><article data-detail-panel="" hidden="" id="tour-vienna-woods"><h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight mb-4" id="tour-vienna-woods-title">«Передмістя Відня і Віденський ліс»</h2><div class="space-y-4 text-slate-700 text-base md:text-lg leading-relaxed"><p class="font-semibold text-slate-900">Це моя улюблена екскурсія. Справді.</p><p class="text-sm text-gray-500">Повний опис екскурсії не надано. Нижче — лише наявні фрагменти та деталі.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Фортеця Ліхтенштайн</h3><p>Текст цього розділу не надано.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Підземне озеро</h3><p>Текст цього розділу не надано.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Монастир і реліквія</h3><p>Текст цього розділу не надано.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Історія принца Рудольфа</h3><p>Текст цього розділу не надано.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Баден</h3><p>Текст цього розділу не надано.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Що входить</h3><ul class="space-y-3"><li>• зустріч біля вашого готелю або в зручному місці</li><li>• комфортне авто і вся дорога між точками</li><li>• я з вами всі чотири години</li><li>• зупинки на каву і фото будь-якої миті, коли захочеться</li><li>• маршрут підлаштовую під вас: з дітьми, з літніми батьками, з обмеженим часом — скажіть, і я його перезберу</li></ul><h3 class="text-xl font-bold text-slate-900 mb-2">Деталі</h3><p>Тривалість: 4 години</p><h3 class="text-xl font-bold text-slate-900 mb-2">Вартість</h3><div class="space-y-3"><p>1–2 особи — 550 €</p><p>3–5 осіб — 590 €</p><p>6–7 осіб — 590 € + оренда мінівена 55 €/год (810 € за 4-годинний тур)</p></div><p>Вхід на підземне озеро — 19 € з людини, дітям знижка. Групи більшого розміру — за запитом.</p></div></article><article data-detail-panel="" hidden="" id="tour-wachau"><h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight mb-4" id="tour-wachau-title">Долина Вахау</h2><div class="space-y-4 text-slate-700 text-base md:text-lg leading-relaxed"><p class="font-semibold text-slate-900">Якщо Відень ви вже подивилися і до Віденського лісу з’їздили — час до Вахау.</p><p class="text-sm text-gray-500">Повний опис екскурсії не надано. Нижче — лише наявні фрагменти та деталі.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Монастир Мельк</h3><p>Текст цього розділу не надано.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Дюрнштайн</h3><p>Текст цього розділу не надано.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Дегустація</h3><p>Текст цього розділу не надано.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Виноградники і Кремс</h3><p>Текст цього розділу не надано.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Цей день можна скласти зовсім інакше</h3><p>Текст цього розділу не надано.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Що входить</h3><ul class="space-y-3"><li>• зустріч біля вашого готелю або в зручному місці</li><li>• комфортне авто і вся дорога</li><li>• я з вами весь день</li><li>• зупинки на каву, обід і фото тоді, коли захочеться вам</li><li>• маршрут підлаштовую під вас: з дітьми, з літніми батьками, з особливим інтересом до вина — скажіть заздалегідь</li></ul><h3 class="text-xl font-bold text-slate-900 mb-2">Деталі</h3><p>Тривалість: 6-7 годин</p><h3 class="text-xl font-bold text-slate-900 mb-2">Вартість</h3><div class="space-y-3"><p>1–2 особи — 690 €</p><p>3–5 осіб — 710 €</p><p>6–7 осіб — 710 € + оренда мінівена 55 €/год (1055 € за 7-годинний тур)</p></div><p>Групи більшого розміру — за запитом.</p></div></article><article data-detail-panel="" hidden="" id="tour-hallstatt"><h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight mb-4" id="tour-hallstatt-title">Гальштат, Зальцкаммергут і оглядовий майданчик «5 пальців»</h2><div class="space-y-4 text-slate-700 text-base md:text-lg leading-relaxed"><p class="font-semibold text-slate-900">Один день, заради якого варто виїхати з Відня</p><p class="text-sm text-gray-500">Повний опис екскурсії не надано. Нижче — лише наявні фрагменти та деталі.</p><p>Є місця, які просто гарні. А є такі, після яких людина замовкає і кілька секунд просто дивиться.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Що таке Зальцкаммергут</h3><p>Текст цього розділу не надано.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Дорогою: Траунзее і Гмунден</h3><p>Текст цього розділу не надано.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Три варіанти цього дня</h3><h3 class="text-xl font-bold text-slate-900 mb-2">Варіант 1. Неквапливий: озера і Гальштат</h3><p>Текст цього розділу не надано.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Варіант 2. Із соляною шахтою</h3><p>Текст цього розділу не надано.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Варіант 3. «5 пальців» і Крижана печера</h3><p>Текст цього розділу не надано.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Як ми все це організуємо</h3><p>Текст цього розділу не надано.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Деталі</h3><p>Тривалість: повний день</p>
-<p>Вартість: за запитом — залежить від обраного варіанта і кількості гостей</p></div></article><article data-detail-panel="" hidden="" id="tour-custom"><h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight mb-4" id="tour-custom-title">Індивідуальний тур під ваш запит</h2><div class="space-y-4 text-slate-700 text-base md:text-lg leading-relaxed"><p class="font-semibold text-slate-900">Це лише основні маршрути</p><p>Усе, що описано вище, — мої найпопулярніші тури. Ті, які замовляють найчастіше і які я можу провести із заплющеними очима.</p>
-<p>Але це далеко не все, що я вмію показувати.</p>
-<p>У запасі в мене ще десятки маршрутів Австрією: Зальцбург, альпійські озера, печери, водоспади, гірські дороги, гайкінги різної складності — від прогулянки, яку подолає дитина, до серйозного дня в горах. Щось із цього є в путівниках, а щось знають тільки місцеві.</p>
-<p>Скажіть, чого вам хочеться, — і я зберу маршрут під вас. Не оберу відповідний із готових, а саме зберу: під ваш темп, ваш склад, ваш інтерес і ваш бюджет.</p><h3 class="text-xl font-bold text-slate-900 mb-2">Багатоденні подорожі</h3><p>Якщо у вас є кілька днів, Австрію можна побачити зовсім інакше.</p>
-<p>Я організовую багатоденні тури з ночівлями: з готелями, маршрутом, ресторанами й активностями на кожен день. Гори, озера, винні регіони, маленькі міста, куди звичайні тури не заїжджають. Ви просто прокидаєтеся і їдете далі, усе інше — мій клопіт.</p><h3 class="text-xl font-bold text-slate-900 mb-2">І все, що навколо подорожі</h3><p>Екскурсія — це часто лише частина того, по що люди до мене звертаються. Решту я теж беру на себе:</p><ul class="space-y-3"><li>• квитки в оперу, театри, на концерти й особливі вистави</li><li>• закриті виставки та події, на які складно потрапити самостійно</li><li>• бронювання ресторанів — від маленької кав’ярні до місць, де «місць немає»</li><li>• трансфери, планування днів, організація деталей, про які зазвичай згадують пізно</li></ul></div></article><div class="mt-8"><a class="inline-flex items-center justify-center bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 px-8 rounded-xl transition duration-300 shadow-xl text-lg border border-orange-400/30" data-detail-contact="" href="#contacts">Напишіть мені</a></div></dialog>
+<p>Ви в надійних руках. Це те, за що мене найчастіше дякують.</p></div></article><article data-detail-panel="" hidden="" id="tour-keep-calm">
+<h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight mb-4" id="tour-keep-calm-title">«Keep Calm and love Vienna»</h2>
+<div class="tour-full-copy space-y-4 text-slate-700 text-base md:text-lg leading-relaxed" data-tour-lang="uk" lang="uk">
+<p class="font-semibold text-slate-900">Ідеальне перше побачення з Віднем</p><p>Якщо ви у Відні вперше — починайте звідси.</p><p>Я продумала цей маршрут так, щоб за 3 години ви побачили абсолютно всі найголовніші місця міста. Нічого не пропустите, нікуди не бігтимете.</p><p>Ми зустрінемо вас біля готелю (або в будь-якому зручному для вас місці) і вирушимо вивчати Відень на комфортному авто.</p><p>Це не оглядова екскурсія у стилі «подивіться праворуч, подивіться ліворуч». Це справжня подорож в історію Відня та Австрії — без нудних дат і цифр, зате з живими історіями.</p><p>Ви дізнаєтеся, чим Австрія живе сьогодні: які тут традиції та звички, як влаштований бізнес, як мислять самі австрійці. Про політику — зовсім трішки, але вікна президента я вам обов'язково покажу. І розкажу, коли з ним можна зробити селфі.</p><h3 class="text-xl font-bold text-slate-900 pt-2">Ми нікуди не поспішаємо</h3><p>Час нас не підганяє.</p><p>Захотілося паузи, найсмачнішого штруделя й кави — зупиняємося, без жодних питань.</p><p>Захотілося фото — просто скажіть. Я ще й блогерка, тому знаю найкрасивіші ракурси Відня та місця, де виходять ті самі кадри.</p><p>Їдете з дітьми? За вашим бажанням я перебудую маршрут під них: будемо розгадувати загадки й заробляти бали. Нудно точно не буде — і це перевірено не одним десятком маленьких гостей.</p><h3 class="text-xl font-bold text-slate-900 pt-2">«А що саме ми побачимо?»</h3><p>Це найчастіше запитання. Відповідаю чесно.</p><p>Зайдіть після екскурсії в будь-яку сувенірну крамницю, візьміть путівник із картинками й погортайте. Ви побачите, що ми з вами вже були всюди.</p><h3 class="text-xl font-bold text-slate-900 pt-2">І ще дещо важливе</h3><p>Я покажу й розповім, у яких ресторанах варто поїсти та в яких магазинах що купувати. А головне — я залишуся з вами на зв'язку на весь час вашого перебування у Відні.</p><p>Будь-яке питання, будь-яка ідея, будь-яка розгубленість о дев'ятій вечора — пишіть. Ви не самі в чужому місті.</p><h3 class="text-xl font-bold text-slate-900 pt-2">Деталі</h3><p>Тривалість: 3 години</p><p class="font-semibold text-slate-900">Вартість:</p><div class="rounded-2xl bg-slate-50 border border-slate-200 p-4 space-y-2"><div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4"><span class="font-semibold text-slate-900">1–2 особи</span><span>390 €</span></div><div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4"><span class="font-semibold text-slate-900">3–5 осіб</span><span>420 €</span></div><div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4"><span class="font-semibold text-slate-900">6–7 осіб</span><span>450 € + оренда мінівена 55 €/год (615 € за 3-годинний тур)</span></div></div><p>Групи більшого розміру — за запитом.</p>
+</div>
+<div class="tour-full-copy space-y-4 text-slate-700 text-base md:text-lg leading-relaxed" data-tour-lang="ru" hidden="" lang="ru">
+<p class="font-semibold text-slate-900">Идеальное первое свидание с Веной</p><p>Если вы в Вене впервые — начинайте отсюда.</p><p>Я продумала этот маршрут так, чтобы за 3 часа вы увидели абсолютно все самые главные места города. Ничего не пропустите и никуда не будете бежать.</p><p>Мы встретим вас у отеля (или в любом удобном для вас месте) и отправимся изучать Вену на комфортном авто.</p><p>Это не обзорная экскурсия в стиле «посмотрите направо, посмотрите налево». Это настоящее путешествие в историю Вены и Австрии — без скучных дат и цифр, зато с живыми историями.</p><p>Вы узнаете, чем Австрия живёт сегодня: какие здесь традиции и привычки, как устроен бизнес, как мыслят сами австрийцы. О политике — совсем чуть-чуть, но окна президента я вам обязательно покажу. И расскажу, когда с ним можно сделать селфи.</p><h3 class="text-xl font-bold text-slate-900 pt-2">Мы никуда не спешим</h3><p>Время нас не подгоняет.</p><p>Захотелось паузы, самого вкусного штруделя и кофе — останавливаемся, без всяких вопросов.</p><p>Захотелось фото — просто скажите. Я ещё и блогер, поэтому знаю самые красивые ракурсы Вены и места, где получаются те самые кадры.</p><p>Едете с детьми? По вашему желанию я перестрою маршрут под них: будем разгадывать загадки и зарабатывать баллы. Скучно точно не будет — и это проверено не одним десятком маленьких гостей.</p><h3 class="text-xl font-bold text-slate-900 pt-2">«А что именно мы увидим?»</h3><p>Это самый частый вопрос. Отвечаю честно.</p><p>Зайдите после экскурсии в любую сувенирную лавку, возьмите путеводитель с картинками и полистайте. Вы увидите, что мы с вами уже были везде.</p><h3 class="text-xl font-bold text-slate-900 pt-2">И ещё кое-что важное</h3><p>Я покажу и расскажу, в каких ресторанах стоит поесть и в каких магазинах что покупать. А главное — я останусь с вами на связи на всё время вашего пребывания в Вене.</p><p>Любой вопрос, любая идея, любая растерянность в девять вечера — пишите. Вы не одни в чужом городе.</p><h3 class="text-xl font-bold text-slate-900 pt-2">Детали</h3><p>Продолжительность: 3 часа</p><p class="font-semibold text-slate-900">Стоимость:</p><div class="rounded-2xl bg-slate-50 border border-slate-200 p-4 space-y-2"><div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4"><span class="font-semibold text-slate-900">1–2 человека</span><span>390 €</span></div><div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4"><span class="font-semibold text-slate-900">3–5 человек</span><span>420 €</span></div><div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4"><span class="font-semibold text-slate-900">6–7 человек</span><span>450 € + аренда минивэна 55 €/час (615 € за 3-часовой тур)</span></div></div><p>Группы большего размера — по запросу.</p>
+</div>
+</article><article data-detail-panel="" hidden="" id="tour-vienna-marathon">
+<h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight mb-4" id="tour-vienna-marathon-title">«Віденський марафон»</h2>
+<div class="tour-full-copy space-y-4 text-slate-700 text-base md:text-lg leading-relaxed" data-tour-lang="uk" lang="uk">
+<p class="font-semibold text-slate-900">Пішки центром, де найцікавіше заховано у дворах</p><p>Ця екскурсія — для тих, хто любить ходити. Багато ходити.</p><p>Ми зустрічаємося біля головного входу до Віденської опери й просто вирушаємо гуляти. Без авто, без зупинок «за розкладом», без стояння біля пам'ятника по двадцять хвилин.</p><p>Колись у мене було кілька окремих маршрутів: легенди міста, містичний Відень, еротичний Відень, приховані двори та вулиці. А потім я подумала: навіщо змушувати людину обирати? І зібрала з них один — той, де залишилися тільки найсильніші історії.</p><p>Я знаю, що туристи не люблять довго стояти на місці й слухати довгі лекції. Тому ми йдемо, говоримо на ходу, і за 2 години ви встигаєте побачити весь центр і почути те, про що не пишуть у путівниках.</p><h3 class="text-xl font-bold text-slate-900 pt-2">Про що ви дізнаєтеся дорогою</h3><ul class="space-y-2 pl-1"><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>чому імператори заповідали розділити своє тіло на частини після смерті — і де ці частини лежать досі;</span></li></ul><ul class="space-y-2 pl-1"><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>шок-контент: Моцарт не був австрійцем, і його ніхто не труїв;</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>навіщо хлопчиків позбавляли можливості подорослішати заради голосу, а дівчат віддавали заміж у дванадцять;</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>історію імператриці, яка пила коктейлі на крові й возила в аптечці шприц із кокаїном;</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>побачите копію найвідомішої роботи Леонардо да Вінчі — і здивуєтеся, що збереглася вона краще за оригінал;</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>загадаєте бажання біля чудодійного каменя, про який не знають навіть самі віденці.</span></li></ul><p>Про камінь окремо: він справді працює. Мені про це пишуть гості — регулярно і з подробицями. Я вже перестала дивуватися.</p><p>І це лише частина. Решта — на місці.</p><h3 class="text-xl font-bold text-slate-900 pt-2">Чесно: кому ця екскурсія НЕ підійде</h3><p>Якщо ви у Відні вперше — краще візьміть оглядовий тур усім містом.</p><p>Усі ці історії я розповідаю й там, але до того ж ви побачите місто цілком, а не тільки його центр. Буде прикро поїхати, не побувавши в Шенбрунні й не зрозумівши, як Відень улаштований.</p><p>«Віденський марафон» — для тих, хто тут уже був. Хто бачив головне й тепер хоче зазирнути глибше: у двори, у деталі, у те, повз що пройшов першого разу.</p><h3 class="text-xl font-bold text-slate-900 pt-2">Деталі</h3><p><span class="font-semibold text-slate-900">Тривалість:</span> 2 години</p><p><span class="font-semibold text-slate-900">Формат:</span> пішохідний, центр міста</p><p><span class="font-semibold text-slate-900">Вартість:</span> 300 € за екскурсію</p>
+</div>
+<div class="tour-full-copy space-y-4 text-slate-700 text-base md:text-lg leading-relaxed" data-tour-lang="ru" hidden="" lang="ru">
+<p class="font-semibold text-slate-900">Пешком по центру, где самое интересное спрятано во дворах</p><p>Эта экскурсия — для тех, кто любит ходить. Много ходить.</p><p>Мы встречаемся у главного входа в Венскую оперу и просто уходим гулять. Без авто, без остановок «по расписанию», без стояния у памятника по двадцать минут.</p><p>Когда-то у меня было несколько отдельных маршрутов: легенды города, мистическая Вена, эротическая Вена, скрытые дворы и улицы. А потом я подумала: зачем заставлять человека выбирать? И собрала из них один — тот, где остались только самые сильные истории.</p><p>Я знаю, что туристы не любят долго стоять на месте и слушать длинные лекции. Поэтому мы идём, говорим на ходу, и за 2 часа вы успеваете увидеть весь центр и услышать то, о чём не пишут в путеводителях.</p><h3 class="text-xl font-bold text-slate-900 pt-2">О чём вы узнаете по дороге</h3><ul class="space-y-2 pl-1"><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>почему императоры завещали разделить своё тело на части после смерти — и где эти части лежат до сих пор;</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>шок-контент: Моцарт не был австрийцем, и его никто не травил;</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>зачем мальчиков лишали возможности повзрослеть ради голоса, а девочек выдавали замуж в двенадцать;</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>историю императрицы, которая пила коктейли на крови и возила в аптечке шприц с кокаином;</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>увидите копию самой знаменитой работы Леонардо да Винчи — и удивитесь, что сохранилась она лучше оригинала;</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>загадаете желание у чудотворного камня, о котором не знают даже сами венцы.</span></li></ul><p>Про камень отдельно: он правда работает. Мне об этом пишут гости — регулярно и с подробностями. Я уже перестала удивляться.</p><p>И это только часть. Остальное — на месте.</p><h3 class="text-xl font-bold text-slate-900 pt-2">Честно: кому эта экскурсия НЕ подойдёт</h3><p>Если вы в Вене впервые — лучше возьмите обзорный тур по всему городу.</p><p>Все эти истории я рассказываю и там, но вдобавок вы увидите город целиком, а не только его центр. Будет обидно уехать, не побывав в Шёнбрунне и не поняв, как Вена устроена.</p><p>«Венский марафон» — для тех, кто здесь уже был. Кто видел главное и теперь хочет забраться глубже: во дворы, в детали, в то, мимо чего прошёл в первый раз.</p><h3 class="text-xl font-bold text-slate-900 pt-2">Детали</h3><p><span class="font-semibold text-slate-900">Продолжительность:</span> 2 часа</p><p><span class="font-semibold text-slate-900">Формат:</span> пешеходный, центр города</p><p><span class="font-semibold text-slate-900">Стоимость:</span> 300 € за экскурсию</p>
+</div>
+</article><article data-detail-panel="" hidden="" id="tour-vienna-woods">
+<h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight mb-4" id="tour-vienna-woods-title">«Передмістя Відня і Віденський ліс»</h2>
+<div class="tour-full-copy space-y-4 text-slate-700 text-base md:text-lg leading-relaxed" data-tour-lang="uk" lang="uk">
+<p>Це моя улюблена екскурсія. Справді.</p><p>Від'їжджаєш від Відня зовсім трішки — а навколо вже села, поля, ліси й гори. Тиша і спокій. Поки не приїдемо ми з вами :)</p><p>І окремий плюс: ця поїздка гарна будь-якої пори року й за будь-якої погоди. Дощ, сніг, спека — маршрут працює завжди. Більша частина того, що ми побачимо, або під дахом, або під землею.</p><p>За чотири години ми встигаємо напрочуд багато. Я збирала цей маршрут роками й щоразу дивлюся, де можна скоротити дорогу й виграти ще трохи часу на саме місце. Зараз він налагоджений до хвилин.</p><h3 class="text-xl font-bold text-slate-900 pt-2">Фортеця Ліхтенштайн</h3><p>Починаємо із середньовічної фортеці на скелі, з якої відкривається вид на весь Віденський ліс.</p><p>Тут знімали дуже відомий фільм — який саме, скажу на місці, щоб не псувати сюрприз. А ще ми разом розгадаємо загадку про дивну коробочку на стіні. Її помічають майже всі, а що це таке, не знає майже ніхто.</p><h3 class="text-xl font-bold text-slate-900 pt-2">Підземне озеро</h3><p>Спускаємося під землю — до найбільшого підземного озера Європи.</p><p>Це колишня шахта, і всередині цілий рік прохолодно, тож у спеку тут порятунок. Ми сідаємо в човен і пливемо по воді, підсвіченій так, що вона здається несправжньою. Приблизно цим самим озером катався кардинал Рішельє — і це вже не метафора, тут справді знімали кіно.</p><p>Дітям тут зазвичай подобається найбільше.</p><h3 class="text-xl font-bold text-slate-900 pt-2">Монастир і реліквія</h3><p>Далі — один із найдавніших монастирів Австрії, якому понад вісімсот років.</p><p>Тут зберігається справжня реліквія: частинка того самого хреста. Ми на неї подивимося, і я розкажу, як вона сюди потрапила й чому в її справжність вірять серйозно.</p><p>А ще тутешні ченці — без перебільшення зірки. Їхній спів свого часу потрапив у світові чарти, і це не жарт. Якщо пощастить, ми їх побачимо й зробимо селфі. Якщо мені вдасться домовитися з оленями, вони теж прийдуть.</p><h3 class="text-xl font-bold text-slate-900 pt-2">Історія принца Рудольфа</h3><p>Саме у Віденському лісі сталася найстрашніша трагедія Габсбургів XIX століття.</p><p>Я розкажу про спадкоємця престолу: чому він був таким красивим і таким нещасним, що насправді сталося тієї ночі й чому через сто з гаком років про це досі сперечаються. Цю історію гості згадують найчастіше — вона тримає до останнього слова.</p><h3 class="text-xl font-bold text-slate-900 pt-2">Баден</h3><p>Завершуємо прогулянкою Баденом, найелітнішим курортним містечком в окрузі.</p><p>Сюди їздили лікуватися імператори, тут жив і працював Бетховен, тут розарій, термальні джерела й зовсім інше, курортне життя. Погуляємо центром, зайдемо на каву, якщо захочеться.</p><p>Заодно навчу вас відрізняти його від німецького Баден-Бадена — і більше ви їх ніколи не сплутаєте.</p><h3 class="text-xl font-bold text-slate-900 pt-2">Що входить</h3><ul class="space-y-2 pl-1"><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>зустріч біля вашого готелю або в зручному місці</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>комфортне авто і вся дорога між точками</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>я з вами всі чотири години</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>зупинки на каву і фото будь-якої миті, коли захочеться</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>маршрут підлаштовую під вас: з дітьми, з літніми батьками, з обмеженим часом — скажіть, і я його перезберу</span></li></ul><p>Тривалість: 4 години</p><p class="font-semibold text-slate-900">Вартість:</p><div class="rounded-2xl bg-slate-50 border border-slate-200 p-4 space-y-2"><div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4"><span class="font-semibold text-slate-900">1–2 особи</span><span>550 €</span></div><div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4"><span class="font-semibold text-slate-900">3–5 осіб</span><span>590 €</span></div><div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4"><span class="font-semibold text-slate-900">6–7 осіб</span><span>590 € + оренда мінівена 55 €/год (810 € за 4-годинний тур)</span></div></div><p>Вхід на підземне озеро — 19 € з людини, дітям знижка. Групи більшого розміру — за запитом.</p>
+</div>
+<div class="tour-full-copy space-y-4 text-slate-700 text-base md:text-lg leading-relaxed" data-tour-lang="ru" hidden="" lang="ru">
+<p>Это моя любимая экскурсия. Правда.</p><p>Отъезжаешь от Вены совсем чуть-чуть — а вокруг уже деревни, поля, леса и горы. Тишина и покой. Пока не приедем мы с вами :)</p><p>И отдельный плюс: эта поездка хороша в любое время года и в любую погоду. Дождь, снег, жара — маршрут работает всегда. Большая часть того, что мы увидим, либо под крышей, либо под землёй.</p><p>За четыре часа мы успеваем на удивление много. Я собирала этот маршрут годами и каждый раз смотрю, где можно сократить дорогу и выиграть ещё немного времени на само место. Сейчас он отлажен до минут.</p><h3 class="text-xl font-bold text-slate-900 pt-2">Крепость Лихтенштайн</h3><p>Начинаем со средневековой крепости на скале, с которой открывается вид на весь Венский лес.</p><p>Здесь снимали очень известный фильм — какой именно, скажу на месте, чтобы не портить сюрприз. А ещё мы вместе разгадаем загадку про странную коробочку на стене. Её замечают почти все, а что это такое, не знает почти никто.</p><h3 class="text-xl font-bold text-slate-900 pt-2">Подземное озеро</h3><p>Спускаемся под землю — к самому большому подземному озеру Европы.</p><p>Это бывшая шахта, и внутри круглый год прохладно, так что в жару здесь спасение. Мы садимся в лодку и плывём по воде, которая подсвечена так, что кажется ненастоящей. Примерно по этому же озеру катался кардинал Ришелье — и вот это уже не метафора, тут действительно снимали кино.</p><p>Детям здесь обычно нравится больше всего.</p><h3 class="text-xl font-bold text-slate-900 pt-2">Монастырь и реликвия</h3><p>Дальше — один из старейших монастырей Австрии, которому больше восьмисот лет.</p><p>Здесь хранится настоящая реликвия: частица того самого креста. Мы на неё посмотрим, и я расскажу, как она сюда попала и почему в её подлинность верят всерьёз.</p><p>А ещё здешние монахи — без преувеличения звёзды. Их пение в своё время попало в мировые чарты, и это не шутка. Если повезёт, мы их увидим и сделаем селфи. Если мне удастся договориться с оленями, они тоже придут.</p><h3 class="text-xl font-bold text-slate-900 pt-2">История принца Рудольфа</h3><p>Именно в Венском лесу произошла самая страшная трагедия Габсбургов XIX века.</p><p>Я расскажу о наследнике престола: почему он был таким красивым и таким несчастным, что на самом деле случилось той ночью и почему спустя сто с лишним лет об этом до сих пор спорят. Эту историю гости вспоминают чаще всего — она держит до последнего слова.</p><h3 class="text-xl font-bold text-slate-900 pt-2">Баден</h3><p>Заканчиваем прогулкой по Бадену, самому элитному курортному городку в округе.</p><p>Сюда ездили лечиться императоры, здесь жил и работал Бетховен, здесь розарий, термальные источники и совершенно другая, курортная жизнь. Погуляем по центру, зайдём на кофе, если захочется.</p><p>Заодно научу вас отличать его от немецкого Баден-Бадена — и больше вы их никогда не перепутаете.</p><h3 class="text-xl font-bold text-slate-900 pt-2">Что входит</h3><ul class="space-y-2 pl-1"><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>встреча у вашего отеля или в удобном месте</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>комфортное авто и вся дорога между точками</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>я с вами все четыре часа</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>остановки на кофе и фото в любой момент, когда захочется</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>маршрут подстраиваю под вас: с детьми, с пожилыми родителями, с ограниченным временем — скажите, и я пересоберу</span></li></ul><p>Продолжительность: 4 часа</p><p class="font-semibold text-slate-900">Стоимость:</p><div class="rounded-2xl bg-slate-50 border border-slate-200 p-4 space-y-2"><div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4"><span class="font-semibold text-slate-900">1–2 человека</span><span>550 €</span></div><div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4"><span class="font-semibold text-slate-900">3–5 человек</span><span>590 €</span></div><div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4"><span class="font-semibold text-slate-900">6–7 человек</span><span>590 € + аренда минивэна 55 €/час (810 € за 4-часовой тур)</span></div></div><p>Вход на подземное озеро — 19 € с человека, детям скидка. Группы большего размера — по запросу.</p>
+</div>
+</article><article data-detail-panel="" hidden="" id="tour-wachau">
+<h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight mb-4" id="tour-wachau-title">Долина Вахау</h2>
+<div class="tour-full-copy space-y-4 text-slate-700 text-base md:text-lg leading-relaxed" data-tour-lang="uk" lang="uk">
+<p>Якщо Відень ви вже подивилися і до Віденського лісу з'їздили — час до Вахау.</p><p>Це особливе місце. Свій мікроклімат, широкий Дунай, виноградники на кам'яних терасах, крихітні містечка, в яких час іде повільніше. І абрикоси, заради яких сюди їдуть з усієї Австрії. У сезон ми збираємо їх самі, просто з дерева.</p><p>Їхати туди далі, ніж до Віденського лісу, тому й день виходить довшим. Але саме через це Вахау й залишається в пам'яті найдовше: ви їдете не в передмістя, а в зовсім іншу Австрію.</p><h3 class="text-xl font-bold text-slate-900 pt-2">Монастир Мельк</h3><p>Величезний бароковий монастир над Дунаєм, що діє й досі.</p><p>Тут я розповім, навіщо раніше люди дарували одне одному цілі скелети святих — звучить дико, але причина була цілком логічна.</p><p>Ми зайдемо до старовинної бібліотеки, побачимо золоту церкву, від якої у всіх однакова реакція, і подивимося, як працювала труна багаторазового використання. Так, саме багаторазового. Поясню на місці.</p><h3 class="text-xl font-bold text-slate-900 pt-2">Дюрнштайн</h3><p>Маленьке містечко на березі з руїнами фортеці на скелі.</p><p>Саме тут сидів у полоні англійський король Річард Левове Серце. Погуляємо вузькими вуличками, подивимося на Дунай згори й поговоримо про те, як він сюди потрапив і в скільки обійшлося його визволення.</p><h3 class="text-xl font-bold text-slate-900 pt-2">Дегустація</h3><p>Куди ж без неї.</p><p>Лікер із пелюсток троянд, абрикосовий шнапс, віскі, варення з часником і чилі, шампанське. Цукерки, які тут називають «заячі какашки» — назва місцева, не моя. Смажені солоні абрикосові кісточки й «дунайські водяні камені», які ми теж будемо їсти.</p><p>І головне — «п'яний абрикос». Ось це ви точно ніде більше не куштували, і саме по нього потім повертаються.</p><h3 class="text-xl font-bold text-slate-900 pt-2">Виноградники і Кремс</h3><p>Проїдемося вздовж кам'яних терас, на яких росте виноград для найкращого вина Австрії. Такого ландшафту більше ніде в країні немає.</p><p>І завершимо в Кремсі — моєму улюбленому місті цієї долини. Тут є церква, яка свого часу стала кінотеатром. І тут, за місцевою легендою, живуть найслухняніші чоловіки Австрії. Історію розповім, вона чудова.</p><p>Це далеко не все, але решта хай буде сюрпризом.</p><h3 class="text-xl font-bold text-slate-900 pt-2">Цей день можна скласти зовсім інакше</h3><p>Те, що вище, — мій базовий маршрут. Але Вахау гарна тим, що її можна прожити десятком різних способів, і я залюбки зберу день під вас.</p><p>Наприклад:</p><ul class="space-y-2 pl-1"><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>пропливти частину шляху Дунаєм — замовимо кораблик, і ви побачите долину з води</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>спуститися у винні погреби на справжню дегустацію, з виноробом і розмовою про те, чим тутешнє вино відрізняється від усього іншого;</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>пообідати не «де вийде», а в гарних ресторанах — у мене є свої улюблені, і столик я забронюю заздалегідь;</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>погуляти пішки виноградниками й абрикосовими садами, якщо хочеться не стільки дивитися, скільки дихати;</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>проїхати вздовж Дунаю на велосипедах — тут одна з найкрасивіших велодоріжок Європи, а велосипеди ми візьмемо напрокат.</span></li></ul><p>Можна поєднати кілька пунктів, можна прибрати половину класики й зробити день повільним і гастрономічним. Просто напишіть, чого вам хочеться і на який бюджет ви розраховуєте, — я зберу маршрут під ваш запит.</p><h3 class="text-xl font-bold text-slate-900 pt-2">Що входить</h3><ul class="space-y-2 pl-1"><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>зустріч біля вашого готелю або в зручному місці</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>комфортне авто і вся дорога</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>я з вами весь день</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>зупинки на каву, обід і фото тоді, коли захочеться вам</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>маршрут підлаштовую під вас: з дітьми, з літніми батьками, з особливим інтересом до вина — скажіть заздалегідь</span></li></ul><p>Тривалість: 6-7 годин</p><p class="font-semibold text-slate-900">Вартість:</p><div class="rounded-2xl bg-slate-50 border border-slate-200 p-4 space-y-2"><div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4"><span class="font-semibold text-slate-900">1–2 особи</span><span>690 €</span></div><div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4"><span class="font-semibold text-slate-900">3–5 осіб</span><span>710 €</span></div><div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4"><span class="font-semibold text-slate-900">6–7 осіб</span><span>710 € + оренда мінівена 55 €/год (1055 € за 7-годинний тур)</span></div></div><p>Групи більшого розміру — за запитом.</p>
+</div>
+<div class="tour-full-copy space-y-4 text-slate-700 text-base md:text-lg leading-relaxed" data-tour-lang="ru" hidden="" lang="ru">
+<p>Если Вену вы уже посмотрели и в Венский лес съездили — пора в Вахау.</p><p>Это особенное место. Свой микроклимат, широкий Дунай, виноградники на каменных террасах, крошечные городки, в которых время идёт медленнее. И абрикосы, ради которых сюда едут со всей Австрии. В сезон мы собираем их сами, прямо с дерева.</p><p>Ехать туда дальше, чем в Венский лес, поэтому и день получается длиннее. Но именно из-за этого Вахау и остаётся в памяти дольше всего: вы уезжаете не из пригорода, а в совершенно другую Австрию.</p><h3 class="text-xl font-bold text-slate-900 pt-2">Монастырь Мельк</h3><p>Огромный барочный монастырь над Дунаем, действующий до сих пор.</p><p>Здесь я расскажу, зачем раньше люди дарили друг другу целые скелеты святых — звучит дико, но у этого была совершенно логичная причина.</p><p>Мы зайдём в старинную библиотеку, увидим золотую церковь, от которой у всех одинаковая реакция, и посмотрим, как работал гроб многоразового использования. Да, именно многоразового. Объясню на месте.</p><h3 class="text-xl font-bold text-slate-900 pt-2">Дюрнштайн</h3><p>Маленький городок на берегу с развалинами крепости на скале.</p><p>Именно здесь сидел в плену английский король Ричард Львиное Сердце. Погуляем по узким улочкам, посмотрим на Дунай сверху и поговорим о том, как он сюда попал и во сколько обошлось его освобождение.</p><h3 class="text-xl font-bold text-slate-900 pt-2">Дегустация</h3><p>Куда же без неё.</p><p>Ликёр из лепестков роз, абрикосовый шнапс, виски, варенье с чесноком и чили, шампанское. Конфеты, которые здесь называют «заячьи какашки» — название местное, не моё. Обжаренные солёные абрикосовые косточки и «дунайские водные камни», которые мы тоже будем есть.</p><p>И главное — «пьяный абрикос». Вот это вы точно нигде больше не пробовали, и именно за ним потом возвращаются.</p><h3 class="text-xl font-bold text-slate-900 pt-2">Виноградники и Кремс</h3><p>Проедемся вдоль каменных террас, на которых растёт виноград для лучшего вина Австрии. Такой ландшафт больше нигде в стране не встречается.</p><p>И закончим в Кремсе — моём любимом городе в этой долине. Здесь есть церковь, которая в какой-то момент стала кинотеатром. И здесь, по местной легенде, живут самые послушные мужья в Австрии. Историю расскажу, она прекрасна.</p><p>Это далеко не всё, но остальное пусть будет сюрпризом.</p><h3 class="text-xl font-bold text-slate-900 pt-2">Этот день можно собрать совсем иначе</h3><p>То, что выше, — мой базовый маршрут. Но Вахау хороша тем, что её можно прожить десятком разных способов, и я с удовольствием соберу день под вас.</p><p>Например:</p><ul class="space-y-2 pl-1"><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>проплыть часть пути по Дунаю — закажем кораблик, и вы увидите долину с воды</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>спуститься в винные погреба на настоящую дегустацию, с виноделом и разговором о том, чем здешнее вино отличается от всего остального;</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>пообедать не «где получится», а в хороших ресторанах — у меня есть свои любимые, и столик я забронирую заранее;</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>погулять пешком по виноградникам и абрикосовым садам, если хочется не столько смотреть, сколько дышать;</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>проехать вдоль Дуная на велосипедах — здесь одна из самых красивых велодорожек Европы, и велосипеды мы возьмём напрокат.</span></li></ul><p>Можно совместить несколько пунктов, можно убрать половину классики и сделать день медленным и гастрономическим. Просто напишите, чего вам хочется и на какой бюджет вы рассчитываете, — я соберу маршрут под ваш запрос.</p><h3 class="text-xl font-bold text-slate-900 pt-2">Что входит</h3><ul class="space-y-2 pl-1"><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>встреча у вашего отеля или в удобном месте</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>комфортное авто и вся дорога</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>я с вами весь день</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>остановки на кофе, обед и фото тогда, когда захочется вам</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>маршрут подстраиваю под вас: с детьми, с пожилыми родителями, с особым интересом к вину — скажите заранее</span></li></ul><p>Продолжительность: 6-7 часов</p><p class="font-semibold text-slate-900">Стоимость:</p><div class="rounded-2xl bg-slate-50 border border-slate-200 p-4 space-y-2"><div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4"><span class="font-semibold text-slate-900">1–2 человека</span><span>690 €</span></div><div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4"><span class="font-semibold text-slate-900">3–5 человек</span><span>710 €</span></div><div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 sm:gap-4"><span class="font-semibold text-slate-900">6–7 человек</span><span>710 € + аренда минивэна 55 €/час (1055 € за 7-часовой тур)</span></div></div><p>Группы большего размера — по запросу.</p>
+</div>
+</article><article data-detail-panel="" hidden="" id="tour-hallstatt">
+<h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight mb-4" id="tour-hallstatt-title">Гальштат, Зальцкаммергут і оглядовий майданчик «5 пальців»</h2>
+<div class="tour-full-copy space-y-4 text-slate-700 text-base md:text-lg leading-relaxed" data-tour-lang="uk" lang="uk">
+<p class="font-semibold text-slate-900">Один день, заради якого варто виїхати з Відня</p><p>Є місця, які просто гарні. А є такі, після яких людина замовкає і кілька секунд просто дивиться.</p><p>Зальцкаммергут — саме таке місце. І якщо у вас у поїздці є хоча б один вільний день, я б витратила його саме на нього.</p><h3 class="text-xl font-bold text-slate-900 pt-2">Що таке Зальцкаммергут</h3><p>Це озерний край між Верхньою Австрією, Зальцбургом і Штирією: десятки озер із прозорою водою, гори, що здіймаються просто з води, дерев'яні будиночки на берегах і тиша, якої у Відні не буває.</p><p>Назва перекладається як «соляне володіння» — і це не поезія, а буквальна історія. Тут тисячоліттями видобували сіль, і саме сіль зробила цей край багатим задовго до того, як сюди приїхав перший турист. Її називали білим золотом, і за контроль над нею велися справжні війни.</p><p>Австрійські імператори їздили сюди щоліта. Франц Йосиф проводив тут по кілька місяців на рік: полював, лікувався, відпочивав від Відня. Саме в цих краях він зустрів свою майбутню дружину — і після цього весь вищий світ потягнувся слідом. Те, що починалося як імператорська звичка, перетворилося на наймодніший курортний регіон країни.</p><p>Відтоді мало що змінилося. Самі австрійці їздять сюди цілий рік: улітку — купатися й ходити в гори, узимку — кататися й сидіти біля води, коли вона парує від холоду. Це не музей для туристів, це місце, куди країна їздить відпочивати по-справжньому.</p><h3 class="text-xl font-bold text-slate-900 pt-2">Дорогою: Траунзее і Гмунден</h3><p>Ми не їдемо до Гальштата навпростець — це було б прикро.</p><p>Орієнтовно на півдорозі зупинимося на Траунзее, одному з найглибших озер Австрії, над яким нависає гора, схожа на сплячого велетня. Просто з води підіймається замок на крихітному острові — той самий краєвид, який ви напевно вже бачили на фотографіях, не знаючи, де це знято.</p><p>Зазирнемо й до Гмундена — затишного містечка на березі, відомого своєю керамікою в зелену смужку. Її тут роблять кілька століть поспіль, і в кожному австрійському домі є хоча б одна така тарілка. Чудове місце для кави з видом на воду й для сувеніра, який справді місцевий.</p><h3 class="text-xl font-bold text-slate-900 pt-2">Три варіанти цього дня</h3><p>Гальштат і його околиці влаштовані так, що один маршрут на всіх не підходить. Багато залежить від сезону, погоди й від того, чого хочеться саме вам. Тому в мене є три готові сценарії — обираємо разом.</p><p>Варіант 1. Неквапливий: озера і Гальштат</p><p>Для тих, хто хоче не бігти, а побути.</p><p>Їдемо через Траунзее і Гмунден, а основний час проводимо в самому Гальштаті. Це крихітне містечко під прямовисною скелею, де будинки стоять так щільно до води, що здається, ніби вони зараз у неї зісковзнуть. Його вважають одним із найбільш фотографованих місць Європи, і, чесно кажучи, заслужено.</p><p>Погуляємо центром, зайдемо на головну оглядову точку, подивимося на знамениту кістницю з розписаними черепами, і у вас залишиться вільний час: пообідати біля води, покататися на човні озером, просто посидіти на березі.</p><p>Цей варіант працює цілий рік і за будь-якої погоди. Узимку Гальштат, до речі, ще красивіший, ніж улітку, і людей у рази менше.</p><p>Варіант 2. Із соляною шахтою</p><p>Те саме, плюс спуск у найдавнішу діючу соляну шахту світу.</p><p>Тут видобувають сіль понад сім тисяч років — це не обмовка. Люди працювали в цих горах, коли ще не було ні єгипетських пірамід, ні писемності в Європі.</p><p>Як це відбувається: нагору підіймаємося фунікулером, перевдягаємося в справжню шахтарську робу й спускаємося всередину гори. Усередині — дерев'яні гірки, якими шахтарі з'їжджали між рівнями і якими тепер з'їжджаєте ви. Підземне озеро з підсвіткою. Зала, де показують, який був тутешній побут тисячі років тому. І назад назовні — маленьким шахтарським поїздом.</p><p>Це один із тих рідкісних випадків, коли дорослі радіють навіть більше за дітей. Якщо ви їдете родиною — беріть цей варіант не вагаючись.</p><p>Варіант 3. «5 пальців» і Крижана печера</p><p>Найвидовищніший сценарій. Головна мета дня — гори, а Гальштат іде бонусом.</p><p>Оглядовий майданчик «5 пальців» — один із найвідоміших в Австрії. П'ять вузьких місточків виступають зі скелі, наче пальці розкритої долоні, і зависають над прірвою на висоті понад дві тисячі метрів. Під вами — озеро, гори й повітря. Фотографії звідти виходять такі, що друзі будуть упевнені, що ви їх згенерували.</p><p>Пішки йти нікуди не доведеться: нагору нас підіймає канатна дорога (її вартість уже включена в ціну туру), а далі — спокійна прогулянка пологим плато серед Альп просто до майданчика.</p><p>Крижана печера — друга частина цього дня. Усередині гори, цілий рік за мінусової температури, стоять застиглі крижані водоспади й зали, яким тисячі років. Назовні може бути плюс тридцять, а всередині ви йдете серед льоду — контраст, який запам'ятовується тілом, а не лише очима.</p><p>Після гір спускаємося в Гальштат на годину-дві: пройтися містом, випити кави біля води і поїхати з відчуттям, що день прожито сповна.</p><p>Важливо: цей варіант сезонний. Канатна дорога і печера працюють лише в теплу пору року й залежать від погоди в горах. В інший час я запропоную вам перший або другий сценарій — і, повірте, ви не пошкодуєте.</p><h3 class="text-xl font-bold text-slate-900 pt-2">Як ми все це організуємо</h3><ul class="space-y-2 pl-1"><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>зустрічаю вас біля готелю, виїжджаємо рано, щоб устигнути все без поспіху</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>уся дорога комфортним авто, між точками — найкрасивіші краєвиди, тож переїзди теж частина екскурсії</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>я з вами весь день: розповідаю, показую, знімаю вас на тлі</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>обід у місці, яке я оберу під вас, а не в туристичній пастці</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>у Гальштаті залишаю вам вільний час — гуляти тут дуже приємно</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>Якщо хочеться скласти день інакше — додати прогулянку корабликом озером, заїхати до Бад-Ішля на імператорську віллу, залишитися довше в горах — просто скажіть. Я зберу маршрут під ваш запит і ваш бюджет.</span></li></ul><h3 class="text-xl font-bold text-slate-900 pt-2">Деталі</h3><p><span class="font-semibold text-slate-900">Тривалість:</span> повний день</p><p><span class="font-semibold text-slate-900">Вартість:</span> за запитом — залежить від обраного варіанта і кількості гостей</p>
+</div>
+<div class="tour-full-copy space-y-4 text-slate-700 text-base md:text-lg leading-relaxed" data-tour-lang="ru" hidden="" lang="ru">
+<p class="font-semibold text-slate-900">Один день, ради которого стоит выехать из Вены</p><p>Есть места, которые красивы. А есть такие, после которых человек замолкает и несколько секунд просто смотрит.</p><p>Зальцкаммергут — именно такое место. И если у вас в поездке есть хотя бы один свободный день, я бы потратила его на него.</p><h3 class="text-xl font-bold text-slate-900 pt-2">Что такое Зальцкаммергут</h3><p>Это озёрный край между Верхней Австрией, Зальцбургом и Штирией: десятки озёр с прозрачной водой, горы, которые встают прямо из воды, деревянные домики на берегах и тишина, которой в Вене не бывает.</p><p>Название переводится как «соляное владение» — и это не поэзия, а буквальная история. Здесь тысячелетиями добывали соль, и именно соль сделала этот край богатым задолго до того, как сюда приехал первый турист. Её называли белым золотом, и ради контроля над ней велись настоящие войны.</p><p>Австрийские императоры ездили сюда каждое лето. Франц Иосиф проводил здесь по несколько месяцев в году: охотился, лечился, отдыхал от Вены. Именно в этих краях он встретил свою будущую жену — и после этого весь высший свет потянулся следом. То, что начиналось как императорская привычка, превратилось в самый модный курортный регион страны.</p><p>С тех пор мало что изменилось. Сами австрийцы ездят сюда круглый год: летом — купаться и ходить в горы, зимой — кататься и сидеть у воды, когда она дымится от холода. Это не музей для туристов, это место, куда страна ездит отдыхать по-настоящему.</p><h3 class="text-xl font-bold text-slate-900 pt-2">По дороге: Траунзее и Гмунден</h3><p>Мы не едем в Гальштат напрямую — это было бы обидно.</p><p>По пути остановимся на Траунзее, одном из самых глубоких озёр Австрии, над которым нависает гора, похожая на спящего великана. Прямо из воды поднимается замок на крошечном острове — тот самый вид, который вы наверняка уже видели на фотографиях, не зная, где это снято.</p><p>Заглянем и в Гмунден — уютный городок на берегу, знаменитый своей керамикой в зелёную полоску. Её здесь делают несколько веков подряд, и в каждом австрийском доме есть хотя бы одна такая тарелка. Отличное место для кофе с видом на воду и для сувенира, который действительно местный.</p><h3 class="text-xl font-bold text-slate-900 pt-2">Три варианта этого дня</h3><p>Гальштат и его окрестности устроены так, что один маршрут на всех не подходит. Многое зависит от сезона, погоды и того, чего хочется именно вам. Поэтому у меня есть три готовых сценария — выбираем вместе.</p><p>Вариант 1. Неспешный: озёра и Гальштат</p><p>Для тех, кто хочет не бежать, а побыть.</p><p>Едем через Траунзее и Гмунден, а основное время проводим в самом Гальштате. Это крошечный городок под отвесной скалой, где дома стоят так плотно к воде, что кажется, будто они сейчас в неё соскользнут. Его считают одним из самых фотографируемых мест Европы, и, честно говоря, заслуженно.</p><p>Прогуляемся по центру, зайдём на главную смотровую точку, посмотрим на знаменитую костницу с расписанными черепами, и у вас останется свободное время: пообедать у воды, покататься на лодке по озеру, просто посидеть на берегу.</p><p>Этот вариант работает круглый год и в любую погоду. Зимой Гальштат, кстати, ещё красивее, чем летом, и людей в разы меньше.</p><p>Вариант 2. С соляной шахтой</p><p>То же самое, плюс спуск в самую древнюю действующую соляную шахту в мире.</p><p>Здесь добывают соль больше семи тысяч лет — это не оговорка. Люди работали в этих горах, когда ещё не было ни египетских пирамид, ни письменности в Европе.</p><p>Как это происходит: наверх поднимаемся на фуникулёре, переодеваемся в настоящую шахтёрскую робу и спускаемся внутрь горы. Внутри — деревянные горки, по которым шахтёры съезжали между уровнями, и по которым теперь съезжаете вы. Подземное озеро с подсветкой. Зал, где показывают, как выглядела здешняя жизнь тысячи лет назад. И обратно наружу — на маленьком шахтёрском поезде.</p><p>Это один из тех редких случаев, когда взрослые радуются даже больше детей. Если вы едете с семьёй — берите этот вариант не раздумывая.</p><p>Вариант 3. «5 пальцев» и Ледяная пещера</p><p>Самый зрелищный сценарий. Главная цель дня — горы, а Гальштат идёт бонусом.</p><p>Смотровая площадка «5 пальцев» — одна из самых известных в Австрии. Пять узких мостиков выступают из скалы, как пальцы раскрытой ладони, и зависают над пропастью на высоте больше двух тысяч метров. Под вами — озеро, горы и воздух. Фотографии оттуда получаются такие, что друзья будут уверены, что вы их сгенерировали.</p><p>Пешком идти никуда не придётся: наверх нас поднимает канатная дорога, а дальше — спокойная прогулка по пологому плато среди Альп прямо к площадке.</p><p>Ледяная пещера — вторая часть этого дня. Внутри горы, круглый год при минусовой температуре, стоят застывшие ледяные водопады и залы, которым тысячи лет. Снаружи может быть плюс тридцать, а внутри вы идёте среди льда — контраст, который запоминается телом, а не только глазами.</p><p>После гор спускаемся в Гальштат на час-два: пройтись по городу, выпить кофе у воды и уехать с ощущением, что день был прожит целиком.</p><p>Важно: этот вариант сезонный. Канатная дорога и пещера работают только в тёплое время года и зависят от погоды в горах. В остальное время я предложу вам первый или второй сценарий — и, поверьте, вы не пожалеете.</p><h3 class="text-xl font-bold text-slate-900 pt-2">Как мы всё это организуем</h3><ul class="space-y-2 pl-1"><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>встречаю вас у отеля, выезжаем рано, чтобы успеть всё без спешки</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>вся дорога на комфортном авто, между точками — красивейшие виды, так что переезды тоже часть экскурсии</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>я с вами весь день: рассказываю, показываю, снимаю вас на фоне</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>обед в месте, которое я выберу под вас, а не в туристической ловушке</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>в Гальштате оставляю вам свободное время, гулять здесь приятно, а я буду всегда рядом</span></li></ul><p>Если хочется собрать день иначе — добавить прогулку на кораблике по озеру, заехать в Бад-Ишль к императорской вилле, остаться дольше в горах — просто скажите. Я соберу маршрут под ваш запрос и ваш бюджет.</p><h3 class="text-xl font-bold text-slate-900 pt-2">Детали</h3><p><span class="font-semibold text-slate-900">Продолжительность:</span> полный день около 12 часов</p><p><span class="font-semibold text-slate-900">Стоимость:</span> по запросу — зависит от выбранного варианта и количества гостей</p>
+</div>
+</article><article data-detail-panel="" hidden="" id="tour-custom">
+<h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 leading-tight mb-4" id="tour-custom-title">Індивідуальний тур під ваш запит</h2>
+<div class="tour-full-copy space-y-4 text-slate-700 text-base md:text-lg leading-relaxed" data-tour-lang="uk" lang="uk">
+<p class="font-semibold text-slate-900 text-lg">Це лише основні маршрути</p><p>Усе, що описано вище, — мої найпопулярніші тури. Ті, які замовляють найчастіше і які я можу провести із заплющеними очима.</p><p>Але це далеко не все, що я вмію показувати.</p><p>У запасі в мене ще десятки маршрутів Австрією: Зальцбург, альпійські озера, печери, водоспади, гірські дороги, гайкінги різної складності — від прогулянки, яку подолає дитина, до серйозного дня в горах. Щось із цього є в путівниках, а щось знають тільки місцеві.</p><p>Скажіть, чого вам хочеться, — і я зберу маршрут під вас. Не оберу відповідний із готових, а саме зберу: під ваш темп, ваш склад, ваш інтерес і ваш бюджет.</p><h3 class="text-xl font-bold text-slate-900 pt-2">Багатоденні подорожі</h3><p>Якщо у вас є кілька днів, Австрію можна побачити зовсім інакше.</p><p>Я організовую багатоденні тури з ночівлями: з готелями, маршрутом, ресторанами й активностями на кожен день. Гори, озера, винні регіони, маленькі міста, куди звичайні тури не заїжджають. Ви просто прокидаєтеся і їдете далі, усе інше — мій клопіт.</p><h3 class="text-xl font-bold text-slate-900 pt-2">І все, що навколо подорожі</h3><p>Екскурсія — це часто лише частина того, по що люди до мене звертаються. Решту я теж беру на себе:</p><ul class="space-y-2 pl-1"><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>квитки в оперу, театри, на концерти й особливі вистави</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>закриті виставки та події, на які складно потрапити самостійно</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>бронювання ресторанів — від маленької кав'ярні до місць, де «місць немає»</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>трансфери, планування днів, організація деталей, про які зазвичай згадують пізно</span></li></ul><h3 class="text-xl font-bold text-slate-900 pt-2">Як це працює</h3><p>Просто напишіть мені. Розкажіть, скільки у вас днів, з ким ви їдете, що вже бачили і чого хочеться, — і я запропоную варіант.</p><p>Не треба формулювати красиво чи заздалегідь усе розуміти. Найчастіше люди пишуть щось на кшталт «у нас чотири дні, двоє дорослих і дитина, хочемо гори і щоб не дуже втомитися» — цього мені вже достатньо.</p>
+</div>
+<div class="tour-full-copy space-y-4 text-slate-700 text-base md:text-lg leading-relaxed" data-tour-lang="ru" hidden="" lang="ru">
+<p class="font-semibold text-slate-900 text-lg">Это только основные маршруты</p><p>Всё, что описано выше, — мои самые популярные туры. Те, которые заказывают чаще всего и которые я могу провести с закрытыми глазами.</p><p>Но это далеко не всё, что я умею показывать.</p><p>В запасе у меня ещё десятки маршрутов по Австрии: Зальцбург, альпийские озёра, пещеры, водопады, горные дороги, хайкинги разной сложности — от прогулки, которую осилит ребёнок, до серьёзного дня в горах. Что-то из этого есть в путеводителях, а что-то знают только местные.</p><p>Скажите, чего вам хочется, — и я соберу маршрут под вас. Не выберу подходящий из готовых, а именно соберу: под ваш темп, ваш состав, ваш интерес и ваш бюджет.</p><h3 class="text-xl font-bold text-slate-900 pt-2">Многодневные путешествия</h3><p>Если у вас есть несколько дней, Австрию можно увидеть совсем иначе.</p><p>Я организую многодневные туры с ночёвками: с отелями, маршрутом, ресторанами и активностями на каждый день. Горы, озёра, винные регионы, маленькие города, куда обычные туры не заезжают. Вы просто просыпаетесь и едете дальше, всё остальное — моя забота.</p><h3 class="text-xl font-bold text-slate-900 pt-2">И всё, что вокруг поездки</h3><p>Экскурсия — это часто только часть того, зачем люди обращаются ко мне. Остальное я тоже беру на себя:</p><ul class="space-y-2 pl-1"><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>билеты в оперу, театры, на концерты и особые представления</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>закрытые выставки и события, на которые сложно попасть самостоятельно</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>бронирование ресторанов — от маленькой кофейни до мест, где «мест нет»</span></li><li class="flex gap-2"><span class="text-[#E67E22] font-black">•</span><span>трансферы, планирование дней, организация деталей, о которых обычно вспоминают поздно</span></li></ul><h3 class="text-xl font-bold text-slate-900 pt-2">Как это работает</h3><p>Просто напишите мне. Расскажите, сколько у вас дней, с кем вы едете, что уже видели и чего хочется, — и я предложу вариант.</p><p>Не нужно формулировать красиво или заранее всё понимать. Чаще всего люди пишут что-то вроде «у нас четыре дня, двое взрослых и ребёнок, хотим горы и чтобы не очень устать» — этого мне уже достаточно.</p>
+</div>
+</article><div class="mt-8"><a class="inline-flex items-center justify-center bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 px-8 rounded-xl transition duration-300 shadow-xl text-lg border border-orange-400/30" data-detail-contact="" href="#contacts">Напишіть мені</a></div></dialog>
 <script>
         document.addEventListener('DOMContentLoaded', () => {
             const slider = document.getElementById('slider');
@@ -1291,7 +1367,7 @@ document.addEventListener('DOMContentLoaded', () => {
     "Формат: пішохідний, центр міста": "Формат: пешеходный, центр города",
     "Вартість: 300 € за екскурсію": "Стоимость: 300 € за экскурсию",
     "Це моя улюблена екскурсія. Справді.": "Это моя любимая экскурсия. Правда.",
-    "«Передмістя Відня і Віденський ліс»": "«Пригороды Вены и Венский лес»",
+    "«Передмістя Відня і Віденський ліс»": "«Пригород Вены и Венский лес»",
     "4 години": "4 часа",
     "від 550 €": "от 550 €",
     "Фортеця Ліхтенштайн": "Крепость Лихтенштейн",
@@ -1318,7 +1394,7 @@ document.addEventListener('DOMContentLoaded', () => {
     "3–5 осіб — 710 €": "3–5 человек — 710 €",
     "6–7 осіб — 710 € + оренда мінівена 55 €/год (1055 € за 7-годинний тур)": "6–7 человек — 710 € + аренда минивэна 55 €/час (1055 € за 7-часовой тур)",
     "Є місця, які просто гарні. А є такі, після яких людина замовкає і кілька секунд просто дивиться.": "Есть места, которые просто красивы. А есть такие, после которых человек замолкает и несколько секунд просто смотрит.",
-    "Гальштат, Зальцкаммергут і оглядовий майданчик «5 пальців»": "Гальштат, Зальцкаммергут и смотровая площадка «5 пальцев»",
+    "Гальштат, Зальцкаммергут і оглядовий майданчик «5 пальців»": "Гальштат, Зальцкаммергут и смотровая «5 пальцев»",
     "Один день, заради якого варто виїхати з Відня": "Один день, ради которого стоит выехать из Вены",
     "повний день": "полный день",
     "за запитом": "по запросу",
@@ -1429,6 +1505,11 @@ document.addEventListener('DOMContentLoaded', () => {
         document.documentElement.lang = lang;
         document.title = lang === 'ru' ? 'Оля Лучич — гид в Вене и Австрии' : 'Оля Лучіч — гід у Відні та Австрії';
         const isRu = lang === 'ru';
+        document.querySelectorAll('[data-tour-lang]').forEach(block => {
+            const visible = block.dataset.tourLang === lang;
+            block.hidden = !visible;
+            block.setAttribute('aria-hidden', String(!visible));
+        });
         document.querySelectorAll('[data-lang-toggle]').forEach(button => {
             const label = button.querySelector('[data-lang-label]');
             const full = button.dataset.langMode === 'full';
